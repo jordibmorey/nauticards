@@ -1,0 +1,83 @@
+[
+  { "id": "acero", "name": "Acero" },
+  { "id": "aislamiento-termico", "name": "Aislamiento térmico" },
+  { "id": "amarres", "name": "Amarres" },
+  { "id": "andamiaje", "name": "Andamiaje" },
+  { "id": "anticontaminacion", "name": "Anticontaminación" },
+
+  {
+    "id": "antifouling-pintura",
+    "name": "Antifouling & Pintura",
+    "featured": true
+  },
+
+  { "id": "asesoria", "name": "Asesoría" , "featured": true},
+  { "id": "astillero", "name": "Astillero" },
+  { "id": "barnices", "name": "Barnices" },
+  { "id": "baterias", "name": "Baterías" },
+  { "id": "bunkering", "name": "Bunkering" },
+  { "id": "carpinteria", "name": "Carpintería", "featured": true },
+
+  {
+    "id": "charter",
+    "name": "Charter",
+    "featured": true
+  },
+
+  { "id": "club-nautico", "name": "Club Náutico" },
+  { "id": "cristal-metacrilato", "name": "Cristal & metacrilato" },
+
+  {
+    "id": "electrotecnia",
+    "name": "Electrotécnia",
+    "featured": true
+  },
+
+  { "id": "escuela-nautica", "name": "Escuela Náutica" },
+  { "id": "fibra", "name": "Fibra" },
+  { "id": "fontaneria", "name": "Fontanería" },
+  { "id": "gestoria", "name": "Gestoría" , "featured": true},
+  { "id": "hidraulica", "name": "Hidráulica" },
+  { "id": "hvac", "name": "Hvac" },
+  { "id": "helices", "name": "Hélices" },
+  { "id": "inox", "name": "Inox" },
+  { "id": "invernaje", "name": "Invernaje" },
+  { "id": "limpieza-pulido", "name": "Limpieza & pulido" },
+  { "id": "marina", "name": "Marina" },
+
+  {
+    "id": "mecanica",
+    "name": "Mecánica",
+    "featured": true
+  },
+
+  { "id": "peritaje", "name": "Peritaje" },
+  { "id": "project-management", "name": "Project Management" },
+  { "id": "protecciones-de-pintura", "name": "Protecciones de Pintura" },
+  { "id": "pupilaje", "name": "Pupilaje", "featured": true },
+  { "id": "refits-integrales", "name": "Refits Integrales" },
+  { "id": "rigging", "name": "Rigging" },
+  { "id": "seguros", "name": "Seguros" },
+  { "id": "semirrigidas", "name": "Semirrigídas" },
+  { "id": "soldadura-corte", "name": "Soldadura & corte" },
+  { "id": "tapiceria", "name": "Tapicería" },
+  { "id": "teka-cubierta", "name": "Teka & cubierta" },
+  { "id": "tienda-nautica", "name": "Tienda Náutica" },
+  { "id": "transmision", "name": "Transmisión" },
+  { "id": "traslados", "name": "Traslados" },
+  { "id": "tratamiento-de-osmosis", "name": "Tratamiento de osmosis" },
+
+  {
+    "id": "varaderos",
+    "name": "Varaderos",
+    "featured": true
+  },
+
+  { "id": "veleria", "name": "Velería" },
+
+  {
+    "id": "venta-de-embarcaciones",
+    "name": "Venta de embarcaciones",
+    "featured": true
+  }
+]
