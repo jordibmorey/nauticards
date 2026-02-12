@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "region_id": 1,
+    "name": "Costa Brava",
+    "slug": "costa-brava"
+  },
+  {
+    "id": 2,
+    "region_id": 1,
+    "name": "Barcelona y alrededores",
+    "slug": "barcelona"
+  },
+  {
+    "id": 3,
+    "region_id": 1,
+    "name": "Maresme",
+    "slug": "maresme"
+  },
+  {
+    "id": 4,
+    "region_id": 1,
+    "name": "Costa Daurada",
+    "slug": "costa-daurada"
+  },
+  {
+    "id": 5,
+    "region_id": 1,
+    "name": "Terres de l’Ebre",
+    "slug": "terres-ebre"
+  }
+]
