@@ -900,7 +900,7 @@ body[data-page="servicios"] .row.row--between{
   flex-shrink:0;
 }
 
-@media (max-width: 360px){
+@media (max-width: 550px){
   .company-header__row{
     flex-direction: column;
     align-items: flex-start;

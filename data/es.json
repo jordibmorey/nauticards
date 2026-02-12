@@ -150,7 +150,10 @@
 "home.faq.q4": "¿Cómo puedo añadir mi empresa?",
 "home.faq.a4": "Para añadir tu empresa, solo tienes que completar el formulario de alta. Con el nombre y la web se crea automáticamente un perfil inicial basado en información pública disponible. Recomendamos completar todos los campos y añadir imágenes para mejorar la presentación y visibilidad.",
 "search.empty": "Selecciona un puerto, un servicio o escribe al menos 3 letras para comenzar la búsqueda.",
-"nav.search": "Buscar"
+"nav.search": "Buscar",
+"nav.home": "Inicio",
+"nav.companies": "Empresas"
+
 
 
 

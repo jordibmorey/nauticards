@@ -150,8 +150,9 @@
 "home.faq.q4": "How can I add my business?",
 "home.faq.a4": "To add your business, simply complete the registration form. With the company name and website, an initial profile is automatically created based on publicly available information. We recommend completing all fields and adding images to improve presentation and visibility.",
 "search.empty": "Select a port, a service, or type at least 3 characters to start searching.",
-"nav.search": "Search"
-
+"nav.search": "Search",
+"nav.home": "Home",
+"nav.companies": "Companies"
 
 
 

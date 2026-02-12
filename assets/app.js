@@ -2161,20 +2161,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const page = document.body?.dataset?.page || "home";
   const fn = routes[page];
 
-  initServicesNavDropdown().catch(console.error);
-  if (typeof fn === "function") fn().catch(console.error);
-
-  // Inicializar formularios (home CTA + contacto)
+  // cosas que no dependen de i18n (si quieres, déjalas aquí)
   bindHomeCtaForm();
   bindContactForm();
-    initMobileMenu();
+  initMobileMenu();
 
+  const run = () => {
+    initServicesNavDropdown().catch(console.error);
+    if (typeof fn === "function") fn().catch(console.error);
+  };
 
-  // Browser Back/Forward should re-hydrate current page state
-  window.addEventListener("popstate", () => {
-    const p = rerenderCurrentPage();
-    if (p && typeof p.catch === "function") p.catch(console.error);
-  });
+  if (window.__t) run();
+  else window.addEventListener("i18n:ready", run, { once: true });
 });
+
 
 
