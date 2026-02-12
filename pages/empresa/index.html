@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Empresa | Directorio Náutico</title>
+  <meta name="description" content="Ficha de empresa en el directorio náutico." />
+  <link rel="stylesheet" href="../../assets/styles.css" />
+</head>
+
+<body data-page="company">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../index.html" aria-label="Ir a la home del Directorio Náutico" data-i18n-aria="a11y.homeLink">
+  <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+</a>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.services">
+            Servicios
+          </button>
+          <div class="nav-dropdown__panel" data-services-dropdown aria-label="Servicios"></div>
+        </div>
+
+        <a href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+        <a href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+
+      <div class="site-header__actions">
+
+  <!-- Idioma -->
+  <div class="lang-dropdown" id="langDropdown">
+     <button class="lang-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false">
+    <span id="langCurrent">ES</span>
+    <span class="lang-dropdown__arrow">▾</span>
+  </button>
+    <div class="lang-dropdown__menu">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="site-header__cta">
+    <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">
+      Añadir empresa
+    </a>
+  </div>
+
+</div>
+<button class="menu-toggle" type="button"
+  aria-label="Open menu"
+  aria-expanded="false"
+  aria-controls="mobileMenu">
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+</button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mobile-menu__overlay" data-close-menu></div>
+
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head">
+      <span class="mobile-menu__title">Menu</span>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
+    </div>
+
+    <div class="mobile-menu__body">
+
+      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
+<a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
+  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
+      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+      <div class="mobile-menu__divider"></div>
+
+      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
+        Añadir empresa
+      </a>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main id="main">
+    <article class="company-detail" aria-labelledby="company-name">
+      <header class="company-detail__header company-detail__header--brand">
+  <div class="container company-header">
+    <nav class="breadcrumbs" aria-label="Migas de pan">
+      <ol>
+        <li><a href="../../index.html" data-i18n="company.breadcrumb.home">Home</a></li>
+        <li><a href="../buscar/index.html" data-i18n="company.breadcrumb.search">Buscar</a></li>
+        <li aria-current="page" data-i18n="company.breadcrumb.company">Empresa</li>
+      </ol>
+    </nav>
+
+    <!-- Dinámico -->
+    <div class="company-header__row">
+      <div class="company-header__logo" aria-hidden="true">
+        <img id="company-logo" alt="">
+      </div>
+
+      <div class="company-header__info">
+        <h1 class="page-title" id="company-name">Cargando…</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <section class="section">
+        <div class="container split split--2-1">
+          <section class="stack company-main" aria-label="Descripción y servicios" data-i18n-aria="a11y.descServices">
+
+  <div class="company-block company-block--description">
+    <h2 class="section-title" data-i18n="company.section.description">Descripción</h2>
+    <p class="body-text" id="company-description">—</p>
+  </div>
+
+  <div class="company-block company-block--services">
+    <h2 class="section-title" data-i18n="company.section.services">Servicios</h2>
+    <ul class="company-services" id="company-services"></ul>
+  </div>
+
+  <div class="company-block company-block--gallery">
+    <h2 class="section-title" data-i18n="company.section.gallery">Galería</h2>
+    <div class="grid grid--cards" id="company-gallery" aria-label="Imágenes de la empresa" data-i18n-aria="a11y.images"></div>
+  </div>
+
+</section>
+
+
+          <aside aria-label="Información de contacto" data-i18n-aria="a11y.contactInfo">
+            <section class="company-contact stack">
+              <h2 class="section-title mt-0" data-i18n="company.section.contact">Contacto</h2>
+
+              <dl class="contact-list">
+                <!-- Dinámico -->
+                <div><dt data-i18n="company.field.port">Puerto</dt><dd id="company-port">—</dd></div>
+                <div><dt data-i18n="company.field.address">Dirección</dt><dd id="company-address">—</dd></div>
+                <div><dt data-i18n="company.field.phone">Teléfono</dt><dd id="company-phone">—</dd></div>
+                <div><dt data-i18n="company.field.email">Email</dt><dd id="company-email">—</dd></div>
+                <div><dt data-i18n="company.field.web">Web</dt><dd id="company-web">—</dd></div>
+
+              </dl>
+
+              <div class="company-card__footer">
+                <!-- El JS actualiza estos hrefs con el id/slug -->
+                <a class="button" id="company-contact-btn" href="../contacto/index.html?empresa=" data-i18n="company.action.contact">Contactar</a>
+                <a class="button button--ghost" id="company-fix-btn" href="../contacto/index.html?tipo=correccion&empresa=" data-i18n="company.action.suggestEdit">
+                  Sugerir corrección
+                </a>
+              </div>
+            </section>
+            <section class="company-map stack" aria-label="Mapa" data-i18n-aria="company.section.map">
+  <h2 class="section-title mt-0" data-i18n="company.section.map">Mapa</h2>
+
+  <div class="port-map" role="region" aria-label="Mapa de la empresa" data-i18n-aria="a11y.companyMap">
+    <iframe
+      id="company-map"
+      title="Mapa de la empresa" data-i18n-title="a11y.companyMap"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=2.150%2C41.350%2C2.190%2C41.390&layer=mapnik"
+    ></iframe>
+  </div>
+</section>
+          </aside>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-wrap">
+
+    <!-- Left -->
+    <div class="footer-brand">
+      <img src="/assets/img/Logo NC Blanco.webp" alt="NautiCards" class="footer-logo" />
+
+      <p class="footer-desc">
+        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
+      </p>
+
+      <p class="footer-copy">
+        © 2026 NautiCards
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-links">
+      <h4>Quick links</h4>
+
+      <a href="/" data-i18n="footer.home">Inicio</a>
+      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
+      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      <a href="#">Cookies</a>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- JS global (router + initCompanyPage) -->
+  <script type="module">
+  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "/assets/i18n.js";
+
+  (async () => {
+    const lang = getLang();
+    document.documentElement.lang = lang;
+
+    const t = await loadDict(lang);
+    applyI18n(t);
+    window.__t = t;
+    window.dispatchEvent(new Event("i18n:ready"));
+    applyMeta(t, "company");
+    initLangDropdown(lang);
+  })();
+  </script>
+
+  <script src="../../assets/app.js" defer></script>
+</body>
+</html>
+
+

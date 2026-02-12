@@ -1,0 +1,4751 @@
+[
+  {
+    "slug": "fibranautica",
+    "name": "FibraNáutica",
+    "description": "",
+    "service_ids": [
+      "refits-integrales",
+      "project-management",
+      "antifouling-pintura",
+      "andamiaje",
+      "teka-cubierta",
+      "fibra",
+      "barnices"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@fibranautica.com",
+    "website": "https://www.fibranautica.com/esp/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751645358789x113384370046607950/fibranautica.png",
+    "featured": false
+  },
+  {
+    "slug": "on-board-yacht-services",
+    "name": "On Board Yacht Services",
+    "description": "",
+    "service_ids": [
+      "limpieza-pulido",
+      "antifouling-pintura",
+      "mecanica",
+      "amarres"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@onboardyachtservices.com",
+    "website": "https://onboardyachtservices.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751647833042x460095773041987650/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "alfonso-de-prada-painting-services",
+    "name": "Alfonso de Prada Painting Services",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "barnices"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@yacht-painters.com",
+    "website": "https://yacht-painters.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751645817327x601456166840075900/adp.png",
+    "featured": false
+  },
+  {
+    "slug": "daniel-nautical-solutions",
+    "name": "Daniel Nautical Solutions",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "carpinteria",
+      "electrotecnia",
+      "mecanica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@dnauticalsolutions.com",
+    "website": "https://www.dnauticalsolutions.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751646060054x610171607619573100/danielnaut.png",
+    "featured": false
+  },
+  {
+    "slug": "barcelona-nautic-center",
+    "name": "Barcelona Nautic Center",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "bunkering",
+      "astillero",
+      "amarres",
+      "semirrigidas",
+      "refits-integrales",
+      "antifouling-pintura",
+      "baterias",
+      "carpinteria",
+      "limpieza-pulido",
+      "mecanica",
+      "rigging"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@bcnnauticcenter.com",
+    "website": "https://www.bcnnauticcenter.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751646643433x519786209173968640/barcelona%20nautic%20center.png",
+    "featured": false
+  },
+  {
+    "slug": "mestres-daixa-del-serrallo",
+    "name": "Mestres d'Aixa del Serrallo",
+    "description": "",
+    "service_ids": [
+      "barnices",
+      "antifouling-pintura",
+      "helices",
+      "teka-cubierta",
+      "refits-integrales"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "tgn@mestresdaixadelserrallo.es",
+    "website": "https://www.mestresdaixadelserrallo.es/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751646817992x747211754816967200/mestresdaixa.png",
+    "featured": false
+  },
+  {
+    "slug": "motortecnik",
+    "name": "Motortecnik",
+    "description": "",
+    "service_ids": [
+      "electrotecnia",
+      "mecanica",
+      "semirrigidas"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "977165600",
+    "website": "https://motortecnik.com/index.html",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751647100423x277222595187043070/motortecnik.png",
+    "featured": false
+  },
+  {
+    "slug": "nautia-seguros-nauticos",
+    "name": "Nautia Seguros Náuticos",
+    "description": "",
+    "service_ids": [
+      "seguros",
+      "gestoria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nautia.net",
+    "website": "https://www.nautia.net/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751647389137x182957567110428640/nautia.png",
+    "featured": false
+  },
+  {
+    "slug": "esla-yachts",
+    "name": "Esla Yachts",
+    "description": "",
+    "service_ids": [
+      "asesoria",
+      "seguros",
+      "project-management",
+      "gestoria",
+      "escuela-nautica"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@eslayachts.com",
+    "website": "https://eslayachts.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751647589661x162227090883760860/esla.png",
+    "featured": false
+  },
+  {
+    "slug": "hermanos-guasch",
+    "name": "Hermanos Guasch",
+    "description": "",
+    "service_ids": [
+      "gestoria",
+      "seguros",
+      "mecanica",
+      "invernaje",
+      "pupilaje",
+      "tienda-nautica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@hermanosguasch.com",
+    "website": "https://hermanosguasch.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751648055477x688119852990270800/hmosguasch.png",
+    "featured": false
+  },
+  {
+    "slug": "ibs-nautica",
+    "name": "IBS Nautica",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "mecanica",
+      "electrotecnia"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@ibsnautica.com",
+    "website": "https://ibsnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751648310482x145328150982169120/ibs.png",
+    "featured": false
+  },
+  {
+    "slug": "comercial-skualo",
+    "name": "Comercial Skualo",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "semirrigidas",
+      "traslados"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "comercial@comercialskualo.com",
+    "website": "https://comercialskualo.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751648548541x497108773914134400/comskualo.png",
+    "featured": false
+  },
+  {
+    "slug": "marine-wrap-studio",
+    "name": "Marine Wrap Studio",
+    "description": "",
+    "service_ids": [
+      "cristal-metacrilato",
+      "limpieza-pulido",
+      "protecciones-de-pintura",
+      "tapiceria"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinewrapstudio.com",
+    "website": "https://marinewrapstudio.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751648859011x297550845185395900/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "instalsub",
+    "name": "InstalSub",
+    "description": "",
+    "service_ids": [
+      "hidraulica",
+      "soldadura-corte"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@instalsub.es",
+    "website": "https://www.instalsub.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751649004631x880329287942434000/instalsub.png",
+    "featured": false
+  },
+  {
+    "slug": "infe-group",
+    "name": "INFE Group",
+    "description": "",
+    "service_ids": [
+      "aislamiento-termico",
+      "mecanica",
+      "hidraulica",
+      "soldadura-corte",
+      "hvac"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": " infe@infegroup.com",
+    "website": "https://www.infegroup.com/index.php?v=home&i=es&t=naval",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751649083605x628940251419079200/infe.png",
+    "featured": false
+  },
+  {
+    "slug": "barnacork",
+    "name": "BarnaCork",
+    "description": "",
+    "service_ids": [
+      "aislamiento-termico",
+      "teka-cubierta"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@barnacork.com",
+    "website": "https://www.barnacork.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751649387775x390956325421355700/barnacork.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-vela",
+    "name": "Marina Vela",
+    "description": "",
+    "service_ids": [
+      "marina",
+      "amarres",
+      "varaderos"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinavela.com",
+    "website": "https://marinavela.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751649583947x946726372883044400/marinavela.png",
+    "featured": false
+  },
+  {
+    "slug": "amarres-de-barcelona",
+    "name": "Amarres de Barcelona",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "anticontaminacion"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "932235838",
+    "website": "https://amarresbcn.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751649977010x690944423050204200/amarresbcn.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-port-vell",
+    "name": "Marina Port Vell",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "marina",
+      "bunkering"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "reception@marinaportvell.com",
+    "website": "https://www.marinaportvell.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751650138262x188275967634616830/marinaportvell.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautico-el-balis",
+    "name": "Club Náutico El Balís",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "club-nautico"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "hola@cnelbalis.com",
+    "website": "https://www.cnelbalis.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751650287543x145075735945210180/cnelbalis.png",
+    "featured": false
+  },
+  {
+    "slug": "tacmarine",
+    "name": "TacMarine",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "(+34) 93 799 88 03 / (+34) 609 459 123",
+    "website": "https://www.tacmarine.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751650521249x872047677261224400/tacmarine.png",
+    "featured": false
+  },
+  {
+    "slug": "mar-nautic",
+    "name": "Mar Nàutic",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "pupilaje"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "937 928 469 / 629 844 117",
+    "website": "https://www.google.com/search?q=Mar+N%C3%A0utic&client=firefox-b-d&tbm=lcl&sxsrf=AJOqlzW4g3BtmOKS3JRvMp-3qAQR2EQFHQ%3A1673903203588&ei=Y7zFY7DBI6OLxc8P5Jep2AM&ved=0ahUKEwjw_tmu_8z8AhWjRfEDHeRLCjsQ4dUDCAg&uact=5&oq=Mar+N%C3%A0utic&gs_lcp=Cg1nd3Mtd2l6LWxvY2FsEAMyBggAEBYQHjIICAAQFhAeEAoyAggmOgQIIxAnOgcIIxDqAhAnUKcEWNIGYOMIaAFwAHgAgAF6iAHcAZIBAzEuMZgBAKABAaABArABCsABAQ&sclient=gws-wiz-local#rlfi=hd:;si:5001961559217415764,l,CgtNYXIgTsOgdXRpY0iKpdehg7CAgAhaFRAAEAEYABgBIgttYXIgbsOgdXRpY5IBEGJvYXRfcmVwYWlyX3Nob3A;mv:[[41.7274416,2.9108194999999997],[41.233878,1.8691152999999998]]",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751650752984x617797994651837700/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "catmar",
+    "name": "Catmar",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "traslados",
+      "refits-integrales",
+      "carpinteria",
+      "tapiceria",
+      "antifouling-pintura",
+      "inox",
+      "electrotecnia"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@catmar.cat",
+    "website": "http://catmar.cat/?lang=es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751650918506x613013413349299100/catmar.png",
+    "featured": false
+  },
+  {
+    "slug": "iv-carpinteria-nautica",
+    "name": "IV Carpintería Náutica",
+    "description": "",
+    "service_ids": [
+      "carpinteria",
+      "teka-cubierta",
+      "barnices"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@ivcarpinterianautica.com",
+    "website": "https://www.ivcarpinterianautica.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751651053844x183407232249979600/ivcarp.png",
+    "featured": false
+  },
+  {
+    "slug": "travinautic",
+    "name": "TraviNautic",
+    "description": "",
+    "service_ids": [
+      "electrotecnia"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@travinautic.com",
+    "website": "https://travinautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751651216030x100525015586318880/travi.png",
+    "featured": false
+  },
+  {
+    "slug": "marivent-yachts",
+    "name": "Marivent Yachts",
+    "description": "",
+    "service_ids": [
+      "pupilaje",
+      "venta-de-embarcaciones",
+      "invernaje"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@mariventyachts.com",
+    "website": "https://www.mariventyachts.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751651432866x370340927616907650/marivent.png",
+    "featured": false
+  },
+  {
+    "slug": "mediterranean-rigging",
+    "name": "Mediterranean Rigging",
+    "description": "",
+    "service_ids": [
+      "rigging",
+      "veleria"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@mediterraneanrigging.com",
+    "website": "https://www.mediterraneanrigging.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751651733973x442654747904396300/medrig.png",
+    "featured": false
+  },
+  {
+    "slug": "milla-nautica",
+    "name": "Milla Náutica",
+    "description": "",
+    "service_ids": [
+      "invernaje",
+      "venta-de-embarcaciones",
+      "antifouling-pintura",
+      "mecanica",
+      "teka-cubierta",
+      "limpieza-pulido",
+      "traslados",
+      "fibra"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@millanautica.com",
+    "website": "https://millanautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751651773510x545883556838807600/millanaut.png",
+    "featured": false
+  },
+  {
+    "slug": "motyvel-yachts",
+    "name": "MOTYVEL Yachts",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "invernaje",
+      "amarres",
+      "gestoria",
+      "antifouling-pintura",
+      "limpieza-pulido",
+      "refits-integrales"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "93 792 73 06",
+    "website": "https://www.motyvel.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751652170203x408693419065564860/motyvel.png",
+    "featured": false
+  },
+  {
+    "slug": "tecniyacht-5",
+    "name": "Tecniyacht 5",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "invernaje",
+      "antifouling-pintura",
+      "carpinteria",
+      "fibra",
+      "mecanica"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "93 792 66 03",
+    "website": "https://tecniyacht.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751652345175x967184335581603700/techyact.png",
+    "featured": false
+  },
+  {
+    "slug": "real-club-nautico-de-barcelona",
+    "name": "Real Club Náutico de Barcelona",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@rcnb.com",
+    "website": "https://www.rcnb.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751652920988x460812149708397000/rcnb.png",
+    "featured": false
+  },
+  {
+    "slug": "escuela-nautica-altair",
+    "name": "Escuela Náutica Altair",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@escuelanauticaaltair.com",
+    "website": "https://www.escuelanauticaaltair.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751653093099x508084529357897000/altair.png",
+    "featured": false
+  },
+  {
+    "slug": "aa-manteniment",
+    "name": "AA Manteniment",
+    "description": "",
+    "service_ids": [
+      "carpinteria",
+      "mecanica",
+      "antifouling-pintura",
+      "electrotecnia"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "aamanteniment@gmail.com",
+    "website": "https://www.aamanteniment.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751653382504x348736382566960500/aamanten.png",
+    "featured": false
+  },
+  {
+    "slug": "appro",
+    "name": "A.P.Pro",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "appro@a-p-pro.com",
+    "website": "https://www.a-p-pro.com/botigaES/indexBotigaES.htm",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751653555103x308259469413219900/appro.png",
+    "featured": false
+  },
+  {
+    "slug": "euroyachts",
+    "name": "EuroYachts",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "asesoria",
+      "mecanica",
+      "electrotecnia",
+      "antifouling-pintura",
+      "tratamiento-de-osmosis"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@euro-yachts.es",
+    "website": "https://www.euro-yachts.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751653702608x901582820344892300/euroyachts.png",
+    "featured": false
+  },
+  {
+    "slug": "gas-nautic",
+    "name": "Gas Náutic",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia",
+      "antifouling-pintura",
+      "carpinteria",
+      "fibra",
+      "inox",
+      "soldadura-corte",
+      "limpieza-pulido"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info.gasnautic@gmail.com",
+    "website": "https://www.facebook.com/p/gas_nautic-100047005789268/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751653884229x958402858968351500/gasnaut.png",
+    "featured": false
+  },
+  {
+    "slug": "mr-lucho",
+    "name": "Mr. Lucho",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "fibra",
+      "carpinteria",
+      "acero"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "misterlucho@hotmail.com",
+    "website": [],
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751654185840x793327198285905400/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "nautecnic-maritim-sl",
+    "name": "Nautècnic Marítim SL",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautecnic@gmail.com",
+    "website": "https://portolimpic.barcelona/es/node/249",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751654293282x928813686730439000/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-dempuriabrava",
+    "name": "Marina d'Empuriabrava",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@empuriaport.com",
+    "website": "https://empuriaport.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751654636155x573273930363515900/empuria.png",
+    "featured": false
+  },
+  {
+    "slug": "ampurianautic",
+    "name": "AMPURIANAUTIC",
+    "description": "",
+    "service_ids": [
+      "electrotecnia",
+      "antifouling-pintura",
+      "helices",
+      "tienda-nautica",
+      "pupilaje",
+      "tratamiento-de-osmosis"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@ampurianautic.com",
+    "website": "https://www.ampurianautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751654839511x778752764294550900/ampnautic.png",
+    "featured": false
+  },
+  {
+    "slug": "interboat",
+    "name": "INTERBOAT",
+    "description": "",
+    "service_ids": [
+      "pupilaje",
+      "traslados",
+      "mecanica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@interboat.com",
+    "website": "http://www.interboatsa.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751655215111x847045483317839600/interboat.png",
+    "featured": false
+  },
+  {
+    "slug": "nautic-luis",
+    "name": "Nautic Luis",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "invernaje",
+      "electrotecnia",
+      "mecanica",
+      "carpinteria",
+      "tapiceria",
+      "asesoria",
+      "fibra",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nauticluis@nauticluis.com",
+    "website": "https://nauticluis.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751655482315x396231195216925950/nauticluis.png",
+    "featured": false
+  },
+  {
+    "slug": "nautic-service-07",
+    "name": "Nautic Service 07",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticservice.es",
+    "website": "https://nauticservice.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751655563483x710582562892043700/nautservice.png",
+    "featured": false
+  },
+  {
+    "slug": "nautivela",
+    "name": "NautiVela",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "mecanica",
+      "tienda-nautica",
+      "carpinteria",
+      "rigging",
+      "fibra",
+      "pupilaje"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautivela@nautivela.net",
+    "website": "https://nautivela.net/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751655978481x992412691347782400/nautivela.png",
+    "featured": false
+  },
+  {
+    "slug": "micanautic",
+    "name": "MicaNautic",
+    "description": "",
+    "service_ids": [
+      "inox",
+      "tapiceria",
+      "electrotecnia",
+      "mecanica",
+      "gestoria",
+      "antifouling-pintura"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@micanautic.com",
+    "website": "https://www.micanautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751656129045x189832339823953860/micanautic.png",
+    "featured": false
+  },
+  {
+    "slug": "motonautica-llonch",
+    "name": "Motonáutica Llonch",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "asesoria"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 972 452 161",
+    "website": "https://www.motonauticallonch.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751656325085x531841513977236540/motonautica%20llonch.png",
+    "featured": false
+  },
+  {
+    "slug": "helimotor",
+    "name": "Helimotor",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "venta-de-embarcaciones",
+      "tienda-nautica",
+      "invernaje",
+      "electrotecnia"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@helimotor.com",
+    "website": "https://helimotor.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751656575486x841676036777611500/heliomotor.png",
+    "featured": false
+  },
+  {
+    "slug": "port-nautic-castello",
+    "name": "Port Nàutic Castelló",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "invernaje",
+      "refits-integrales",
+      "tienda-nautica",
+      "asesoria"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@portnauticcastello.com",
+    "website": "https://portnauticcastello.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751658801693x850580861550100200/portnautic%20castello.png",
+    "featured": false
+  },
+  {
+    "slug": "nautictramit",
+    "name": "NauticTramit",
+    "description": "",
+    "service_ids": [
+      "asesoria",
+      "gestoria"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautictramit@yahoo.com",
+    "website": "https://www.nautictramit.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751659604616x552231175619506400/nautictrami.png",
+    "featured": false
+  },
+  {
+    "slug": "ona-yachts",
+    "name": "Ona Yachts",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia",
+      "pupilaje",
+      "invernaje",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "636 39 02 29",
+    "website": "https://www.onayachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751659884123x479357926637225860/onayachts.png",
+    "featured": false
+  },
+  {
+    "slug": "empuriabrava-sea-explorer",
+    "name": "Empuriabrava Sea Explorer",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "empuriabravaseaexplorer@gmail.com",
+    "website": "https://empuriabravaseaexplorer.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751660134447x813554604767181300/empseaexplor.png",
+    "featured": false
+  },
+  {
+    "slug": "outlet-nautic",
+    "name": "Outlet Nàutic",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@outletnautic.com",
+    "website": "https://www.outletnautic.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751660580586x412840869905546300/jetmarivent.png",
+    "featured": false
+  },
+  {
+    "slug": "invernautic-empuriabrava",
+    "name": "Invernautic Empuriabrava",
+    "description": "",
+    "service_ids": [
+      "pupilaje",
+      "mecanica",
+      "fibra",
+      "inox",
+      "helices",
+      "hidraulica",
+      "traslados",
+      "antifouling-pintura",
+      "tienda-nautica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@invernauticempuriabrava.com",
+    "website": "https://invernauticempuriabrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751660723351x415598978090280450/invernautic.png",
+    "featured": false
+  },
+  {
+    "slug": "seguranautics",
+    "name": "SeguraNautics",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia",
+      "antifouling-pintura",
+      "pupilaje",
+      "fibra"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@seguranautics.com",
+    "website": "https://www.nautica-empuriabrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751661967075x995099576789708800/SeguraNautics.png",
+    "featured": false
+  },
+  {
+    "slug": "metropol-nauticas",
+    "name": "Metropol Nauticas",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "seguros",
+      "antifouling-pintura",
+      "mecanica",
+      "fibra",
+      "invernaje",
+      "pupilaje",
+      "electrotecnia",
+      "carpinteria",
+      "tapiceria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 972 450 526",
+    "website": "https://www.metropol.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751662968196x264529508558602780/metropol.png",
+    "featured": false
+  },
+  {
+    "slug": "probrava-group",
+    "name": "Probrava Group",
+    "description": "",
+    "service_ids": [
+      "invernaje",
+      "carpinteria",
+      "tapiceria",
+      "antifouling-pintura",
+      "fibra",
+      "traslados",
+      "seguros"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@probrava.com",
+    "website": "https://www.probrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751663115279x849839736543279900/probrava.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-rio",
+    "name": "Nautica Rio",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "pupilaje",
+      "mecanica",
+      "fibra",
+      "tapiceria",
+      "antifouling-pintura",
+      "amarres"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "rio@rioiberica.com",
+    "website": "https://www.nautica-rio.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751663708776x293150517605351040/rio.png",
+    "featured": false
+  },
+  {
+    "slug": "miranautic",
+    "name": "Miranautic",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "antifouling-pintura",
+      "fibra",
+      "limpieza-pulido",
+      "traslados",
+      "mecanica"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "miranautic@miranautic.com",
+    "website": "https://miranautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751664165241x803116893540975100/miranautic.png",
+    "featured": false
+  },
+  {
+    "slug": "tot-nautic",
+    "name": "Tot Nautic",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "mecanica",
+      "fibra",
+      "electrotecnia",
+      "limpieza-pulido",
+      "soldadura-corte",
+      "amarres",
+      "seguros"
+    ],
+    "port_id": "marina-de-empuriabrava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@totnautic.com",
+    "website": "https://www.totnautic.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751664555475x558353003344247230/totnautic.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-asn",
+    "name": "Náutica ASN",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "mecanica",
+      "tienda-nautica",
+      "antifouling-pintura",
+      "inox",
+      "tapiceria",
+      "carpinteria",
+      "electrotecnia",
+      "gestoria",
+      "seguros",
+      "pupilaje"
+    ],
+    "port_id": "marina-de-los-canales-de-santa-margarida",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nauticaasn@gmail.com",
+    "website": "https://nauticaasn.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751725428622x993531598189779800/asnnaut.png",
+    "featured": false
+  },
+  {
+    "slug": "styx-motor",
+    "name": "STYX Motor",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "pupilaje",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-los-canales-de-santa-margarida",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@styxmotor.com",
+    "website": "https://styxmotor.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751725730479x322124143586679040/styx.png",
+    "featured": false
+  },
+  {
+    "slug": "nautic-center",
+    "name": "Nautic Center",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia",
+      "carpinteria",
+      "inox",
+      "antifouling-pintura",
+      "helices",
+      "gestoria",
+      "escuela-nautica"
+    ],
+    "port_id": "marina-de-los-canales-de-santa-margarida",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticcenter.com",
+    "website": "https://www.nauticcenter.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751726034762x939402280831004900/nauticcenter.png",
+    "featured": false
+  },
+  {
+    "slug": "immo-nautic-yachting",
+    "name": "Immo Nautic Yachting",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "amarres"
+    ],
+    "port_id": "marina-de-los-canales-de-santa-margarida",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@immonautic.com",
+    "website": "https://www.boatsspain.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751726247513x367335673480500700/immo.png",
+    "featured": false
+  },
+  {
+    "slug": "nautasystems",
+    "name": "NautaSystems",
+    "description": "",
+    "service_ids": [
+      "electrotecnia",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "marina-de-los-canales-de-santa-margarida",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nautasystems.com",
+    "website": "https://nautasystems.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751726390917x284596832408540380/nauta.png",
+    "featured": false
+  },
+  {
+    "slug": "roses-shipyard",
+    "name": "Roses Shipyard",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "barnices",
+      "fibra",
+      "carpinteria",
+      "mecanica",
+      "rigging"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "contact@roses-shipyard.com",
+    "website": "https://www.roses-shipyard.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751726509839x729325000387981200/roses.png",
+    "featured": false
+  },
+  {
+    "slug": "roses-nautic",
+    "name": "Roses Nautic",
+    "description": "",
+    "service_ids": [
+      "pupilaje",
+      "gestoria",
+      "amarres",
+      "tienda-nautica",
+      "venta-de-embarcaciones",
+      "mecanica",
+      "electrotecnia",
+      "semirrigidas",
+      "fibra",
+      "carpinteria",
+      "tapiceria",
+      "rigging"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "admin@rosesnautic.com",
+    "website": "https://www.rosesnautic.com/ca/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751726818317x438522971610557700/rosesnaut.png",
+    "featured": false
+  },
+  {
+    "slug": "gen-roses",
+    "name": "GEN Roses",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@genroses.cat",
+    "website": "https://genroses.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751727108411x250529459630985060/gen.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-de-roses",
+    "name": "Marina de Roses",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinaderoses.com",
+    "website": "https://www.marinaderoses.com/ca/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751727368850x820726967109830300/marinaroses.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-estrella",
+    "name": "Marina Estrella",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "comercial@marinaestrella.com",
+    "website": "https://marinaestrella.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751727557820x220221043494958080/marestre.png",
+    "featured": false
+  },
+  {
+    "slug": "maxiboats",
+    "name": "MaxiBoats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@maxiboats.com",
+    "website": "https://maxiboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751727735649x989309427647551200/maxiboats.png",
+    "featured": false
+  },
+  {
+    "slug": "restless-spirit",
+    "name": "Restless Spirit",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@restlessspirit.cat",
+    "website": "https://www.restlessspirit.cat/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751728002361x737045420301549600/restless.png",
+    "featured": false
+  },
+  {
+    "slug": "mon-nautic-cadaques",
+    "name": "Món Nàutic Cadaqués",
+    "description": "",
+    "service_ids": [
+      "invernaje",
+      "pupilaje",
+      "venta-de-embarcaciones",
+      "mecanica",
+      "antifouling-pintura",
+      "fibra",
+      "carpinteria",
+      "electrotecnia"
+    ],
+    "port_id": "puerto-de-roses",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "(+34) 665 224 191",
+    "website": "https://www.monnauticcadaques.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751729212672x435078163918240200/monanutic.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-palamos",
+    "name": "Marina Palamós",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "administracio@marinapalamos.com",
+    "website": "https://www.marinapalamos.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751729381765x882555105731670800/marina%20palam%C3%B3s.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-palamos",
+    "name": "Nàutica Palamós",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "asesoria",
+      "invernaje",
+      "electrotecnia",
+      "tratamiento-de-osmosis",
+      "gestoria",
+      "mecanica",
+      "tapiceria",
+      "carpinteria",
+      "inox"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticapalamos.com",
+    "website": "https://www.nauticapalamos.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751729506713x390896490698855500/nautpalam.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-palafrugell",
+    "name": "Nautica Palafrugell",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "antifouling-pintura",
+      "pupilaje",
+      "invernaje",
+      "fibra",
+      "traslados",
+      "gestoria",
+      "seguros"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "972304112",
+    "website": "https://www.nauticapalafrugell.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751729915966x630683246060803200/nauticapalafrugell.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-borrat",
+    "name": "Nàutica Borrat",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "carpinteria",
+      "gestoria",
+      "invernaje",
+      "antifouling-pintura",
+      "fibra",
+      "inox",
+      "tienda-nautica",
+      "tapiceria",
+      "traslados"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautica@borrat.com",
+    "website": "https://borrat.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751730297493x177870570983131420/borrat.png",
+    "featured": false
+  },
+  {
+    "slug": "palamos-boats-nautica",
+    "name": "Palamos Boats Nautica",
+    "description": "",
+    "service_ids": [
+      "pupilaje",
+      "invernaje",
+      "charter",
+      "gestoria",
+      "antifouling-pintura",
+      "mecanica",
+      "inox",
+      "tapiceria",
+      "tratamiento-de-osmosis"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "taller@palamosboats.com",
+    "website": "https://www.palamosboatsnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751730463364x777158804720625900/palamboat%C3%A7.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-avino",
+    "name": "Náutica Aviñó",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "electrotecnia",
+      "mecanica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "ventas@nauticaavinyo.com",
+    "website": "https://nauticaavinyo.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751730850295x192156928334437980/avi%C3%B1o.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-costa-brava",
+    "name": "Nautica Costa Brava",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "amarres",
+      "venta-de-embarcaciones",
+      "asesoria",
+      "seguros"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacostabrava.com",
+    "website": "https://www.nauticacostabrava.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751730931528x846116540765760800/ncb.png",
+    "featured": false
+  },
+  {
+    "slug": "easy-boat-costa-brava",
+    "name": "Easy Boat Costa Brava",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "palamos@escolanauticabaixemporda.com",
+    "website": "https://www.easyboatcostabrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751731181317x907918398585394700/easy.png",
+    "featured": false
+  },
+  {
+    "slug": "escola-nautica-palamos",
+    "name": "Escola Nautica Palamós",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "enp@escolanauticapalamos.com",
+    "website": "https://www.escolanauticapalamos.com/on-estem",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751731344971x354693021056415600/escolpal.png",
+    "featured": false
+  },
+  {
+    "slug": "escola-nautica-brava",
+    "name": "Escola Nàutica Brava",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@escolanauticabrava.com",
+    "website": "https://escolanauticabrava.com/es/inicio/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751731552261x731539606091039700/esncdsbc.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-voramar",
+    "name": "Nàutica Voramar",
+    "description": "",
+    "service_ids": [
+      "invernaje",
+      "antifouling-pintura",
+      "mecanica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautica@nauticavoramar.com",
+    "website": "https://www.nauticavoramar.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751731685313x313626800791913860/voramar.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-mato",
+    "name": "Nàutica Mató",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "fibra",
+      "mecanica",
+      "carpinteria",
+      "tapiceria",
+      "tienda-nautica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticamato.com",
+    "website": "https://www.nauticamato.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732086134x216381334781038370/mat%C3%B3.png",
+    "featured": false
+  },
+  {
+    "slug": "tg-la-nautica",
+    "name": "TG La Nautica",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "fibra",
+      "carpinteria",
+      "tapiceria",
+      "gestoria",
+      "invernaje",
+      "tienda-nautica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "tglanautica@tglanautica.com",
+    "website": "https://www.tglanautica.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732193701x313553506307515000/TG.png",
+    "featured": false
+  },
+  {
+    "slug": "mar-a-la-vista",
+    "name": "MAR A LA VISTA",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "sergi@maralavista.com",
+    "website": "https://maralavista.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732432075x874670741056690700/mar%20a%20la%20vista.png",
+    "featured": false
+  },
+  {
+    "slug": "marinello",
+    "name": "Marinello",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinello.es",
+    "website": "https://marinello.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732642162x572155852122398850/marinello.png",
+    "featured": false
+  },
+  {
+    "slug": "rexmaris",
+    "name": "Rexmaris",
+    "description": "",
+    "service_ids": [
+      "limpieza-pulido",
+      "teka-cubierta"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@rexmaris.com",
+    "website": "https://www.rexmaris.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732733452x258832200059652130/rexmaris.png",
+    "featured": false
+  },
+  {
+    "slug": "resort-padis",
+    "name": "Resort Padís",
+    "description": "",
+    "service_ids": [
+      "acero",
+      "inox"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@resorts-padis.com",
+    "website": "https://resorts-padis.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751732865965x373095225017105340/resortpadis.png",
+    "featured": false
+  },
+  {
+    "slug": "escuela-nautica-medinya",
+    "name": "Escuela Náutica Medinyà",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "972 31 67 22",
+    "website": "https://escolanauticamedinya.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751733020603x898934016534470100/rfbiu.png",
+    "featured": false
+  },
+  {
+    "slug": "navalmar-yacht-refit",
+    "name": "Navalmar Yacht Refit",
+    "description": "",
+    "service_ids": [
+      "refits-integrales",
+      "pupilaje",
+      "mecanica",
+      "antifouling-pintura",
+      "carpinteria",
+      "transmision",
+      "helices"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@navalmarpalamos.com",
+    "website": "http://www.navalmarpalamos.com/en/home",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751733130951x754864234403907600/navalmar.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-costa-brava",
+    "name": "Club Nàutic Costa Brava",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "cncb@cncostabrava.com",
+    "website": "https://www.cncostabrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751733365169x770860309129530200/cncb.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-port-daro",
+    "name": "Club Nàutic Port d'Aro",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@clubnauticportdaro.cat ",
+    "website": "https://clubnauticportdaro.cat/es/inici-espanol/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751733799168x593891939574820400/portd%27aro.png",
+    "featured": false
+  },
+  {
+    "slug": "varadero-playa-daro",
+    "name": "Varadero Playa d'Aro",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "limpieza-pulido",
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "transmision",
+      "protecciones-de-pintura"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@varadero.cat",
+    "website": "https://varadero.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734078607x873021107728880800/vararo.png",
+    "featured": false
+  },
+  {
+    "slug": "amp-charters",
+    "name": "AMP Charters",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "amp@ampcharters.com",
+    "website": "https://ampcharters.com/en/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734284667x119386877359555660/amp.png",
+    "featured": false
+  },
+  {
+    "slug": "bravanautic",
+    "name": "BravaNautic",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@bravanautic.com\n",
+    "website": "https://www.bravanautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734350415x637944805296327400/bravanautic.png",
+    "featured": false
+  },
+  {
+    "slug": "llar-nautic",
+    "name": "Llar Nàutic",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "ventas@llarnautic.com",
+    "website": "https://llarnautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734459712x604649345819540400/llar.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-casas",
+    "name": "Náutica Casas",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "invernaje",
+      "seguros",
+      "antifouling-pintura",
+      "mecanica",
+      "fibra",
+      "inox",
+      "carpinteria",
+      "tapiceria"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacasas.com",
+    "website": "https://www.nauticacasas.com/es/inicio.html",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734585983x300781941588635000/casas.png",
+    "featured": false
+  },
+  {
+    "slug": "waikiki-costa-brava",
+    "name": "Waikiki Costa Brava",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@waikikicostabrava.com",
+    "website": "https://waikikicostabrava.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734769811x694591179308030640/waikiki.png",
+    "featured": false
+  },
+  {
+    "slug": "european-yacht-brokers",
+    "name": "European Yacht Brokers",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "port-daro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@europeanyachtbrokers.com",
+    "website": "https://europeanyachtbrokers.com/es/corredores-de-yates/corredor-de-yates-europeos-port-daro-girona/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751734859393x943788807136874500/europeanyachtbrokers.png",
+    "featured": false
+  },
+  {
+    "slug": "h2o-experience",
+    "name": "H2O Experience",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "oficina@h2obarcelona.com",
+    "website": "https://h2oexperience.es/home-5884-7578",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751735050528x751158733379044100/h20.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-port-forum",
+    "name": "Marina Port Fòrum",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@portforum.com",
+    "website": "https://www.portforum.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751735172442x928446444323205000/forum.png",
+    "featured": false
+  },
+  {
+    "slug": "escuela-nautica-genova",
+    "name": "Escuela Náutica Génova",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "admin@nauticagenova.com",
+    "website": "https://nauticagenova.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751735302781x521650312747063740/nautgenov.png",
+    "featured": false
+  },
+  {
+    "slug": "seahost-bcn",
+    "name": "SeaHost Bcn",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-forum",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@seahostbcn.com",
+    "website": "https://seahostbcn.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751735640367x817058197056781600/seahost.png",
+    "featured": false
+  },
+  {
+    "slug": "veleros-bcn",
+    "name": "Veleros BCN",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@velerosbcn.com",
+    "website": "https://www.velerosbcn.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751735885914x540523446532868540/velerosbcn.png",
+    "featured": false
+  },
+  {
+    "slug": "electric-inside-boats",
+    "name": "Electric Inside Boats",
+    "description": "",
+    "service_ids": [
+      "astillero",
+      "electrotecnia",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@electricinsideboats.com",
+    "website": "https://www.electricinsideboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736056324x661118400285306500/elins.png",
+    "featured": false
+  },
+  {
+    "slug": "alamar-sailing",
+    "name": "Alamar Sailing",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "https://alamarsailing.com/",
+    "website": "https://alamarsailing.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736198852x980320700467928800/alamar.png",
+    "featured": false
+  },
+  {
+    "slug": "mdm-charter",
+    "name": "MDM Charter",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@mdm-charter.com",
+    "website": "https://www.mdm-charter.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736310468x226945292102116450/mdm.png",
+    "featured": false
+  },
+  {
+    "slug": "port-olimpic",
+    "name": "Port Olímpic",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "marina"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "portolimpic@bsmsa.cat",
+    "website": "https://portolimpic.barcelona/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736405329x381936931239190700/portolim.png",
+    "featured": false
+  },
+  {
+    "slug": "pegaso-sailing",
+    "name": "Pegaso Sailing",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "hola@pegasosailing.com",
+    "website": "https://www.pegasosailing.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736550835x531576444512302800/pegaso.png",
+    "featured": false
+  },
+  {
+    "slug": "sailing-tour-bcn",
+    "name": "Sailing Tour Bcn",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@sailingtourbarcelona.com",
+    "website": "https://sailingtourbarcelona.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736711939x191847960694875740/saiing.png",
+    "featured": false
+  },
+  {
+    "slug": "boats-solutions",
+    "name": "Boats Solutions",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "asesoria"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@boatssolutions.es",
+    "website": "https://boatssolutions.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736755197x535148469211295100/boatsolutions.png",
+    "featured": false
+  },
+  {
+    "slug": "getyourboat",
+    "name": "GetYourBoat",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 675 91 55 73",
+    "website": "https://www.getyourboatbarcelona.com/services-3",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736849992x218550492097052900/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "mistermarine",
+    "name": "Mistermarine",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "mistermarinebcn@gmail.com",
+    "website": "https://mistermarine.es/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751736940058x606261532303190800/mister.png",
+    "featured": false
+  },
+  {
+    "slug": "azul-sailing",
+    "name": "Azul Sailing ",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@azulsailing.es",
+    "website": "https://www.azulsailing.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751737098327x490883194714559550/azul.png",
+    "featured": false
+  },
+  {
+    "slug": "eos-nautic",
+    "name": "EOS Nautic",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@eosnautic.com",
+    "website": "https://eosnautic.webnode.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751737193202x265303335669327070/eos.png",
+    "featured": false
+  },
+  {
+    "slug": "son-a-mar",
+    "name": "SON A MAR",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "traslados",
+      "escuela-nautica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 617 366 362",
+    "website": "https://sonamar.net/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751737286708x398659398814031900/son%20a%20mar.png",
+    "featured": false
+  },
+  {
+    "slug": "aquitat",
+    "name": "AQUITAT",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@aquitat.com",
+    "website": "https://www.aquitat.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751737488267x791190708849142300/aquitat.png",
+    "featured": false
+  },
+  {
+    "slug": "anclademia",
+    "name": "Anclademia",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "port-olimpic",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@anclademia.com",
+    "website": "https://anclademia.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751737530173x941125367539709600/ancla.png",
+    "featured": false
+  },
+  {
+    "slug": "iddes-yachts",
+    "name": "Iddes Yachts",
+    "description": "",
+    "service_ids": [
+      "astillero"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@iddesyachts.com",
+    "website": "https://iddesyachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751829969921x163120348609923740/iddes.png",
+    "featured": false
+  },
+  {
+    "slug": "viudes-yachts",
+    "name": "VIUDES YACHTS",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@viudes.com",
+    "website": "https://viudes.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830123794x410860520581081340/viudes.png",
+    "featured": false
+  },
+  {
+    "slug": "nautichandler",
+    "name": "Nautichandler",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "web@nautichandler.com",
+    "website": "https://nautichandler.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830250498x821020724368081200/nautichandler.png",
+    "featured": false
+  },
+  {
+    "slug": "sinera-rigging",
+    "name": "Sinera Rigging",
+    "description": "",
+    "service_ids": [
+      "astillero",
+      "rigging",
+      "refits-integrales"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "technical@sinerarigging.com",
+    "website": "https://www.sineraservicesupply.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830453102x991792003733957600/sinera.png",
+    "featured": false
+  },
+  {
+    "slug": "mb92",
+    "name": "MB92",
+    "description": "",
+    "service_ids": [
+      "astillero",
+      "refits-integrales",
+      "project-management",
+      "varaderos"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info-barcelona@mb92.com",
+    "website": "https://mb92.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830584785x993434302882065800/mb.png",
+    "featured": false
+  },
+  {
+    "slug": "de-antonio-yachts",
+    "name": "De Antonio Yachts",
+    "description": "",
+    "service_ids": [
+      "astillero"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@deantonioyachts.com",
+    "website": "https://www.deantonioyachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830764421x360023243566020200/deant.png",
+    "featured": false
+  },
+  {
+    "slug": "zen-yachts",
+    "name": "Zen Yachts",
+    "description": "",
+    "service_ids": [
+      "astillero"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 687 450 597",
+    "website": "https://www.zenyachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751830857312x745716702698475400/zen.png",
+    "featured": false
+  },
+  {
+    "slug": "polar-star",
+    "name": "Polar Star",
+    "description": "",
+    "service_ids": [
+      "refits-integrales",
+      "antifouling-pintura",
+      "carpinteria",
+      "fibra",
+      "fontaneria",
+      "electrotecnia",
+      "helices",
+      "hidraulica",
+      "mecanica",
+      "inox",
+      "tapiceria",
+      "teka-cubierta",
+      "project-management",
+      "charter"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+39 334 669 6846",
+    "website": "https://www.polarstaryachtingservice.com/en/home",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831129626x907759536269650400/polar.png",
+    "featured": false
+  },
+  {
+    "slug": "pinmar-yacht-supply",
+    "name": "Pinmar Yacht Supply",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "limpieza-pulido",
+      "tienda-nautica"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@pinmaryachtsupply.com",
+    "website": "https://pinmaryachtsupply.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831258470x542767352563104500/pinmar.png",
+    "featured": false
+  },
+  {
+    "slug": "bcn-rigging",
+    "name": "BCN Rigging",
+    "description": "",
+    "service_ids": [
+      "rigging"
+    ],
+    "port_id": "port-vell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@bcnrigging.com",
+    "website": "https://www.bcnrigging.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831428712x910945894907145600/bcnrig.png",
+    "featured": false
+  },
+  {
+    "slug": "sailselect",
+    "name": "SailSelect",
+    "description": "",
+    "service_ids": [
+      "veleria",
+      "tapiceria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@sailselect.es",
+    "website": "https://sailselect.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831554426x359545706702082600/sailselect.png",
+    "featured": false
+  },
+  {
+    "slug": "quantum-sails",
+    "name": "Quantum Sails",
+    "description": "",
+    "service_ids": [
+      "veleria",
+      "tapiceria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+1 (888) 773-4889",
+    "website": "https://www.quantumsails.com/en/default",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831653568x918296750965216000/quantum.png",
+    "featured": false
+  },
+  {
+    "slug": "tack-velas",
+    "name": "TACK VELAS",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "veleria",
+      "tapiceria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@tackvelas.com",
+    "website": "https://www.tackvelas.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831832900x654852870424387200/tack.png",
+    "featured": false
+  },
+  {
+    "slug": "talleres-platero",
+    "name": "Talleres Platero",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@talleresplatero.com",
+    "website": "https://www.talleresplatero.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751831921597x641690099527945500/platero.png",
+    "featured": false
+  },
+  {
+    "slug": "chris-yachts",
+    "name": "Chris Yachts",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "traslados"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@chris-yachts.com",
+    "website": "https://www.chris-yachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832043311x821679561519108400/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "dh-nautica",
+    "name": "DH Nautica",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@depositohidrografico.com",
+    "website": "https://www.depositohidrografico.com/b2c/1",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832178692x559162119417489400/dh.png",
+    "featured": false
+  },
+  {
+    "slug": "velas-marinamar",
+    "name": "Velas Marinamar",
+    "description": "",
+    "service_ids": [
+      "veleria",
+      "tapiceria"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 934 146 115",
+    "website": "https://marinamar.net/2017/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832252449x981030083007201800/velasmarinamar.png",
+    "featured": false
+  },
+  {
+    "slug": "intermarinex",
+    "name": "IntermarineX",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@intermarinex.es",
+    "website": "https://www.intermarinex.net/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832438374x994816207305454500/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "a-yachts",
+    "name": "A Yachts",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "93 122 45 12",
+    "website": "https://www.ayachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832520796x657053201393970000/ayachts.png",
+    "featured": false
+  },
+  {
+    "slug": "abarloados",
+    "name": "Abarloados",
+    "description": "",
+    "service_ids": [
+      "baterias",
+      "electrotecnia",
+      "rigging",
+      "antifouling-pintura",
+      "limpieza-pulido"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 934 126 621",
+    "website": "https://www.abarloados.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751832986710x839238299718055200/abar.png",
+    "featured": false
+  },
+  {
+    "slug": "movilmotors",
+    "name": "MovilMotors",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "tienda-nautica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@movilmotors.com",
+    "website": "https://www.movilmotors.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833135540x349144074705503040/movil.png",
+    "featured": false
+  },
+  {
+    "slug": "escola-nautica-ginesta",
+    "name": "Escola Nàutica Ginesta",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@escolanauticaginesta.com",
+    "website": "https://escolanauticaginesta.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833233243x535353322263920830/escolanaut.png",
+    "featured": false
+  },
+  {
+    "slug": "nautidoc",
+    "name": "Nautidoc",
+    "description": "",
+    "service_ids": [
+      "gestoria",
+      "asesoria"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "gestoria@nautidoc.com",
+    "website": "https://nautidoc.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833312867x105418345603410350/nautidoc.png",
+    "featured": false
+  },
+  {
+    "slug": "garbi-nautic",
+    "name": "Garbí Nàutic",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "venta-de-embarcaciones",
+      "escuela-nautica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@garbinautic.com",
+    "website": "https://garbinautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833440743x674605755150703400/garbi.png",
+    "featured": false
+  },
+  {
+    "slug": "aurum-yachts",
+    "name": "Aurum Yachts",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "venta-de-embarcaciones",
+      "charter",
+      "amarres",
+      "gestoria",
+      "asesoria"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@aurumyacht.com",
+    "website": "https://www.aurumyacht.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833590352x997276666375565700/aurum.png",
+    "featured": false
+  },
+  {
+    "slug": "catamarancenter",
+    "name": "Catamarancenter",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@catamarancenter.com",
+    "website": "https://catamarancenter.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833719054x842821568977326600/catamaran.png",
+    "featured": false
+  },
+  {
+    "slug": "sugamar-nautica",
+    "name": "Sugamar Nautica",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "sugamarnautica@gmail.com",
+    "website": "https://www.sugamarnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751833924966x591142629991658500/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "nauticarivera",
+    "name": "Nauticarivera",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticarivera.com",
+    "website": "https://www.nauticarivera.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834002670x163880117940572000/nauticarivera.png",
+    "featured": false
+  },
+  {
+    "slug": "el-raco-de-la-nautica",
+    "name": "El racó de la nautica",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@elracodelanautica.com",
+    "website": "http://www.elracodelanautica.com/web/index.html",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834101867x709121803136318200/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "med-cat-yachts",
+    "name": "Med Cat Yachts",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@medcatyachts.com",
+    "website": "https://medcatyachts.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834205550x940357877363329700/medcatyachts.png",
+    "featured": false
+  },
+  {
+    "slug": "compas-nautica",
+    "name": "Compàs Nàutica",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@compasnautica.com",
+    "website": "https://www.compasnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834307006x632752038633757040/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "freedom-boat-club",
+    "name": "Freedom Boat CLub",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 971 571 344",
+    "website": "https://www.freedomboatclub.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834533645x439985823182433150/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "port-ginesta-premium-service",
+    "name": "Port Ginesta Premium Service",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "carpinteria",
+      "electrotecnia",
+      "fibra",
+      "veleria",
+      "project-management",
+      "invernaje",
+      "varaderos",
+      "teka-cubierta",
+      "tapiceria",
+      "mecanica"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "support@portginestapremium.com",
+    "website": "https://portginestapremium.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834706872x746122857395354900/prem.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-castelldefels",
+    "name": "Náutica Castelldefels",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "mecanica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacastelldefels.com",
+    "website": "https://nauticacastelldefels.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834803303x787224782446772600/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "ginesta-solutions",
+    "name": "Ginesta Solutions",
+    "description": "",
+    "service_ids": [
+      "limpieza-pulido",
+      "project-management"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@ginestasolutions.com",
+    "website": "https://ginestasolutions.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834880868x851712178936312700/gs.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-boats",
+    "name": "Marina Boats",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinaboats.com",
+    "website": "https://www.marinaboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751834982117x980961030681689900/marboats.png",
+    "featured": false
+  },
+  {
+    "slug": "mr-asesores-nauticos",
+    "name": "MR Asesores Náuticos",
+    "description": "",
+    "service_ids": [
+      "asesoria",
+      "gestoria"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "portginesta@mrasesoresnauticos.com",
+    "website": "https://mrasesoresnauticos.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751835073579x912428306751349000/mr.png",
+    "featured": false
+  },
+  {
+    "slug": "cormorant-marine-surveys",
+    "name": "Cormorant Marine Surveys",
+    "description": "",
+    "service_ids": [
+      "peritaje"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "m.rossetti@cormorantmarine.com",
+    "website": "https://cormorantmarine.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877345766x521590859444057500/cormorant.png",
+    "featured": false
+  },
+  {
+    "slug": "nautic-seamotors",
+    "name": "Nautic Seamotors",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "antifouling-pintura",
+      "transmision"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nauticseamotors@gmail.com",
+    "website": "https://nauticseamotors.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877527024x285575861147137060/seamotods.png",
+    "featured": false
+  },
+  {
+    "slug": "mare-nostrum-yachts",
+    "name": "MARE NOSTRUM YACHTS",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@mnyachts.com",
+    "website": "https://www.mnyachts.com/es/inicio.html",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877667228x362581739559890240/marenostrum.png",
+    "featured": false
+  },
+  {
+    "slug": "bababa",
+    "name": "Bababa",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "esteban@bababa.cat",
+    "website": "https://www.bababa.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877775239x802945207759425000/bababa.png",
+    "featured": false
+  },
+  {
+    "slug": "sailingnautic",
+    "name": "SailingNautic",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@sailingnautic.com",
+    "website": "https://sailingnautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877857184x674587143735294640/sn.png",
+    "featured": false
+  },
+  {
+    "slug": "moana-boats",
+    "name": "Moana Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "moanaboats@gmail.com",
+    "website": "https://www.moanaboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751877942218x217260667437053640/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "pedros-boat",
+    "name": "Pedro's Boat",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-balis",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "(+34) 628 62 08 91",
+    "website": "https://pedrosboat.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878302596x830755129591406200/pedrosboat.png",
+    "featured": false
+  },
+  {
+    "slug": "aiguablava-boats",
+    "name": "Aiguablava Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-aiguablava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@aiguablavaboats.com",
+    "website": "https://aiguablavaboats.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878391353x939327278222004700/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "aiguablava-experience",
+    "name": "Aiguablava Experience",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-aiguablava",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "reservas@aiguablavaexperience.com",
+    "website": "https://www.aiguablavaexperience.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878440949x706063212004025600/aiga.png",
+    "featured": false
+  },
+  {
+    "slug": "motor-nautic",
+    "name": "Motor Nàutic",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "puerto-de-arenys-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "600 58 23 10",
+    "website": "https://motornautic.com/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878531117x853820981564843400/motornautic.png",
+    "featured": false
+  },
+  {
+    "slug": "varador-2000",
+    "name": "Varador 2000",
+    "description": "",
+    "service_ids": [
+      "astillero",
+      "refits-integrales",
+      "varaderos",
+      "project-management",
+      "invernaje"
+    ],
+    "port_id": "puerto-de-arenys-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@varador2000.com",
+    "website": "https://varador2000.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878668777x507419766357163300/varador.png",
+    "featured": false
+  },
+  {
+    "slug": "drassanes-dalmau",
+    "name": "Drassanes Dalmau",
+    "description": "",
+    "service_ids": [
+      "astillero"
+    ],
+    "port_id": "puerto-de-arenys-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "dalmau@drassanes-dalmau.com",
+    "website": "https://drassanes-dalmau.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878734156x730884073353999200/dd.png",
+    "featured": false
+  },
+  {
+    "slug": "blanes-nautic",
+    "name": "Blanes Nautic",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "puerto-de-blanes",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "comercial@blanesnautic.com",
+    "website": "comercial@blanesnautic.com",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878903498x390011646732438400/bla%20nes.png",
+    "featured": false
+  },
+  {
+    "slug": "dream-boats-bcn",
+    "name": "Dream Boats BCN",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-arenys-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 629 786 490",
+    "website": "https://dreamboatsbcn.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751878993348x471593740180372700/dream.png",
+    "featured": false
+  },
+  {
+    "slug": "servisport-nautica",
+    "name": "Servisport Náutica",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-arenys-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@servisportnautica.com",
+    "website": "https://www.facebook.com/p/Servisport-N%C3%A1utica-100066378253636/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879118420x586524381513951100/servi.png",
+    "featured": false
+  },
+  {
+    "slug": "sailing-solutions",
+    "name": "Sailing Solutions",
+    "description": "",
+    "service_ids": [
+      "rigging"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "933207694",
+    "website": "https://www.linkedin.com/company/sailing-solutions/?originalSubdomain=es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879330929x447233903356809800/sailing.png",
+    "featured": false
+  },
+  {
+    "slug": "tango-sails",
+    "name": "Tango Sails",
+    "description": "",
+    "service_ids": [
+      "veleria",
+      "tapiceria"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "felipe@tangosails.com",
+    "website": "https://www.tangosails.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879476773x568190203277815000/tango.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-tradicio",
+    "name": "Nàutica Tradició",
+    "description": "",
+    "service_ids": [
+      "carpinteria",
+      "barnices",
+      "teka-cubierta"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticatradicio.com",
+    "website": "https://nauticatradicio.com/es/home/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879611460x890132566218519900/nat.png",
+    "featured": false
+  },
+  {
+    "slug": "carpinteria-nautica-jpascual",
+    "name": "Carpintería Náutica J.Pascual",
+    "description": "",
+    "service_ids": [
+      "carpinteria",
+      "seguros",
+      "limpieza-pulido",
+      "asesoria",
+      "gestoria"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@carpipascual.es",
+    "website": "https://carpipascual.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879769006x495421102518047700/jpascual.png",
+    "featured": false
+  },
+  {
+    "slug": "nautor-swan-global-service",
+    "name": "Nautor Swan Global Service",
+    "description": "",
+    "service_ids": [
+      "refits-integrales"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "badalona.gs@nautorswan.com",
+    "website": "https://nautorswanservice.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879874326x602640736153841900/nautorswan.png",
+    "featured": false
+  },
+  {
+    "slug": "stay-nautica",
+    "name": "Stay Náutica",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 935402825 / +34 935402883",
+    "website": "https://www.staynautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751879998802x438575196790612400/stay.png",
+    "featured": false
+  },
+  {
+    "slug": "qm-nautic",
+    "name": "QM Nautic",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "seguros",
+      "gestoria",
+      "escuela-nautica",
+      "tienda-nautica",
+      "rigging"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@qmnautic.com",
+    "website": "https://www.qmnautic.com/es/qm-nautic/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880149268x985733780900506000/qm.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-badalona",
+    "name": "Marina Badalona",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "port@marinabadalona.cat",
+    "website": "https://marinabadalona.cat/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880250730x937239914383323400/marinabadalona.png",
+    "featured": false
+  },
+  {
+    "slug": "centre-de-navegants",
+    "name": "Centre de Navegants",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@centredenavegants.com",
+    "website": "https://www.centredenavegants.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880377005x223186087109154430/centre.png",
+    "featured": false
+  },
+  {
+    "slug": "tanajet",
+    "name": "Tanajet",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@tanajet.es",
+    "website": "https://tanajet.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880459416x561745480972651000/tanajet.png",
+    "featured": false
+  },
+  {
+    "slug": "escola-de-vent",
+    "name": "Escola de Vent",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@escoladelvent.com",
+    "website": "https://escoladelvent.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880565367x728438195506686600/escoadevent.png",
+    "featured": false
+  },
+  {
+    "slug": "marc-forner-bravo",
+    "name": "Marc Forner Bravo",
+    "description": "",
+    "service_ids": [
+      "acero",
+      "inox",
+      "soldadura-corte"
+    ],
+    "port_id": "puerto-de-badalona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "667 03 21 14",
+    "website": [],
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751880678506x187643824635030720/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "escola-nautica-blanes",
+    "name": "Escola Nautica Blanes",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-blanes",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "972330950",
+    "website": "https://escolanauticablanes.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751886201636x539703726399400000/esnaut.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-cala-canyelles",
+    "name": "Club Nàutic Cala Canyelles",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-cala-canyelles",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "club@cncanyelles.com",
+    "website": "https://www.cncanyelles.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751886453452x908059659371882600/cnc.png",
+    "featured": false
+  },
+  {
+    "slug": "only-boats",
+    "name": "Only boats",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "mecanica",
+      "carpinteria",
+      "fibra",
+      "tapiceria",
+      "electrotecnia",
+      "invernaje",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "barcelona",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@onlyboats.es",
+    "website": "https://onlyboats.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751886603705x832307435571511400/onlyboats.png",
+    "featured": false
+  },
+  {
+    "slug": "port-calafat",
+    "name": "Port Calafat",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-calafat",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@portcalafat.com",
+    "website": "https://portcalafat.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751886992048x896221214337281200/calafat.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-javier-berga",
+    "name": "Nautica Javier Berga",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "mecanica",
+      "electrotecnia",
+      "pupilaje"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticajavierberga.com",
+    "website": "https://nauticajavierberga.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751890466933x467898937470727600/oejbv.png",
+    "featured": false
+  },
+  {
+    "slug": "hermanos-berga",
+    "name": "Hermanos Berga",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "helices",
+      "transmision",
+      "pupilaje",
+      "antifouling-pintura",
+      "protecciones-de-pintura",
+      "escuela-nautica",
+      "gestoria",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "pol@hermanosberga.com",
+    "website": "https://hermanosberga.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751890706376x251394328090702940/berga.png",
+    "featured": false
+  },
+  {
+    "slug": "cambrils-charter",
+    "name": "Cambrils Charter",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@cambrilscharter.com",
+    "website": "https://cambrilscharter.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751890787673x794219699337067400/chart.png",
+    "featured": false
+  },
+  {
+    "slug": "ababor",
+    "name": "Ababor",
+    "description": "",
+    "service_ids": [
+      "electrotecnia",
+      "hidraulica",
+      "traslados",
+      "limpieza-pulido",
+      "hvac"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "ababor.xb@gmail.com",
+    "website": "https://ababornautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751890859166x341633194480102100/ababaor.png",
+    "featured": false
+  },
+  {
+    "slug": "bruixa-de-mar",
+    "name": "Bruixa de mar",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@bruixademar.com",
+    "website": "https://www.bruixademar.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751891063166x347997460710054900/bruixademar.png",
+    "featured": false
+  },
+  {
+    "slug": "gesemar",
+    "name": "Gesemar",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica",
+      "gestoria"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@gesemar.com",
+    "website": "https://gesemar.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751891135450x491692778274312100/gesemar.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-cambrils",
+    "name": "Club Nautic Cambrils",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-cambrils",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@clubnauticcambrils.com",
+    "website": "https://www.clubnauticcambrils.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751891189160x127992904539913300/bcncdbncd.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-de-colera",
+    "name": "Club Nautic de Colera",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "antifouling-pintura",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-colera",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "clubnautic.colera@gmail.com",
+    "website": "https://www.portcolera.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751892380689x421901744705666750/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-coma-ruga",
+    "name": "Club Nautic Coma-ruga",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "varaderos",
+      "amarres"
+    ],
+    "port_id": "puerto-de-coma-ruga",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 977680120",
+    "website": "https://www.clubnautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751892663139x876374304781321500/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "boat-and-go",
+    "name": "Boat and go",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-coma-ruga",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "reservasboatandgo@gmail.com",
+    "website": "https://boatandgo.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751892719719x707529975950105300/boatandgo.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-arcadia",
+    "name": "Marina Arcadia",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "mecanica",
+      "charter",
+      "antifouling-pintura",
+      "invernaje",
+      "fibra",
+      "tratamiento-de-osmosis",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-coma-ruga",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marina-arcadia.cat",
+    "website": "https://marina-arcadia.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751892874126x446173168539687230/arcadia.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-comarruga",
+    "name": "Nàutica Comarruga",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter",
+      "gestoria",
+      "peritaje",
+      "mecanica",
+      "tapiceria",
+      "carpinteria",
+      "antifouling-pintura",
+      "fibra"
+    ],
+    "port_id": "puerto-de-coma-ruga",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacomarruga.com",
+    "website": "https://www.nauticacomarruga.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751892946429x467182531850305540/comarruga.png",
+    "featured": false
+  },
+  {
+    "slug": "embarcacions-badia-alfacs",
+    "name": "Embarcacions Badia Alfacs",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-deltebre",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "embarcacionsbadiaalfacs@hotmail.es",
+    "website": "https://www.alquilerembarcacionesenlarapita.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751893410820x550295909514421100/alfacs.png",
+    "featured": false
+  },
+  {
+    "slug": "pesca-ebro",
+    "name": "Pesca Ebro",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-deltebre",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "pescaebro@pescaebro.com",
+    "website": "https://www.pescaebro.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751893497669x535820730155973440/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "delta-nautic",
+    "name": "Delta Nautic",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "tratamiento-de-osmosis",
+      "antifouling-pintura",
+      "electrotecnia",
+      "baterias",
+      "varaderos",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-deltebre",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "oficina@deltanautic.es",
+    "website": "https://deltanautic.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751893549058x248076113428113100/delta.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-garraf",
+    "name": "Club Nàutic Garraf",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-garraf",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@clubnauticgarraf.com",
+    "website": "https://www.clubnauticgarraf.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751893773657x948764501336471400/cn%20garraf.png",
+    "featured": false
+  },
+  {
+    "slug": "mediterranean-shipyard-services",
+    "name": "Mediterranean Shipyard Services",
+    "description": "",
+    "service_ids": [
+      "project-management",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-lametlla-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@mshipyard.com",
+    "website": "https://mshipyard.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751895808738x910568753240221200/mss.png",
+    "featured": false
+  },
+  {
+    "slug": "onboats-rental",
+    "name": "Onboats Rental",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-lametlla-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "reservas@onboatsrental.com ",
+    "website": "https://onboatsrental.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751895895614x962897904948306200/onboats.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-lampolla",
+    "name": "Club Nautic l'Ampolla",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-lampolla",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "port@nauticampolla.com",
+    "website": "https://www.nauticampolla.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751896109305x416833310586232770/cnampolla.png",
+    "featured": false
+  },
+  {
+    "slug": "top-fisher",
+    "name": "TOP Fisher",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-lametlla-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "topfisherametlla@gmail.com",
+    "website": "https://www.topfisher.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751896267471x223936812999397950/topfisher.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-lescala",
+    "name": "Club Nàutic l'Escala",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-lescala",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "club@nauticescala.com",
+    "website": "https://nauticescala.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751896520673x384028996236051260/club%20nautic%20l%27escala.png",
+    "featured": false
+  },
+  {
+    "slug": "varador-lescala",
+    "name": "Varador l'Escala",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "hidraulica",
+      "electrotecnia",
+      "limpieza-pulido",
+      "fibra",
+      "carpinteria",
+      "mecanica",
+      "invernaje",
+      "helices",
+      "hvac",
+      "tienda-nautica"
+    ],
+    "port_id": "puerto-de-lescala",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@varadorlescala.com\n",
+    "website": "https://varadorlescala.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751896598751x100459670263635120/escala.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-el-port",
+    "name": "Nautica El Port",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "mecanica",
+      "teka-cubierta",
+      "tapiceria",
+      "semirrigidas",
+      "limpieza-pulido",
+      "antifouling-pintura",
+      "pupilaje",
+      "charter"
+    ],
+    "port_id": "puerto-de-lescala",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticaelportlescala.com",
+    "website": "https://www.nauticaelportlescala.com/ca/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751896750676x915491520589838200/nautricvaelport.png",
+    "featured": false
+  },
+  {
+    "slug": "rentboats-estartit",
+    "name": "Rentboats Estartit",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 683472179",
+    "website": "https://www.rentboatsestartit.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751897729945x589950007906740100/rentboats.png",
+    "featured": false
+  },
+  {
+    "slug": "costa-brava-boats",
+    "name": "Costa Brava Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@costabravaboats.com",
+    "website": "https://costabravaboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751897839819x772657049487299700/uhvwsu9v.png",
+    "featured": false
+  },
+  {
+    "slug": "estartit-rent-a-boat",
+    "name": "Estartit Rent a Boat",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@estartitrentaboat.com",
+    "website": "https://www.estartitrentaboat.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751897875210x831036752977898100/wsed90r8jhgvser.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-estartit",
+    "name": "Club Nàutic Estartit",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@cnestartit.com ",
+    "website": "https://cnestartit.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751898033748x320774098575524100/jvwgr.png",
+    "featured": false
+  },
+  {
+    "slug": "llevantina",
+    "name": "Llevantina",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "amarres"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "anllevantina@gmail.com",
+    "website": "https://www.llevantina.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751898093699x194533973026169920/fyjnhzrfdjn.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-colomi",
+    "name": "Nautica Colomí",
+    "description": "",
+    "service_ids": [
+      "invernaje",
+      "pupilaje",
+      "venta-de-embarcaciones",
+      "antifouling-pintura",
+      "electrotecnia",
+      "mecanica",
+      "carpinteria",
+      "teka-cubierta",
+      "fibra"
+    ],
+    "port_id": "puerto-de-lestartit",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacolomi.com",
+    "website": "https://www.nauticacolomi.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751898297715x636596684617141800/nautica%20colom%C3%AD.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-llafranc",
+    "name": "Club Nàutic Llafranc",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-llafranc",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticllafranc.net",
+    "website": "https://www.nauticllafranc.net/ca/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751898676657x710252238524767000/wvunwsuvb.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-llanca",
+    "name": "Club Nàutic Llançà",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-llanca",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "club@cnllanca.cat",
+    "website": "https://www.cnllanca.cat/es",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751898822206x515498410994772500/hicas9dub.png",
+    "featured": false
+  },
+  {
+    "slug": "port-mataro",
+    "name": "Port Mataró",
+    "description": "",
+    "service_ids": [
+      "amarres",
+      "varaderos",
+      "escuela-nautica",
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-mataro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info.portmataro@gencat.cat",
+    "website": "https://portmataro.org/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751899158367x524356648292278800/portmatar%C3%B3.png",
+    "featured": false
+  },
+  {
+    "slug": "stil-nautic",
+    "name": "Stil Nautic",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "venta-de-embarcaciones",
+      "veleria",
+      "tapiceria",
+      "antifouling-pintura",
+      "asesoria",
+      "mecanica"
+    ],
+    "port_id": "puerto-de-mataro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@stilnautic.com",
+    "website": "https://www.stilnautic.com/es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751899279055x919887631641254800/sn.png",
+    "featured": false
+  },
+  {
+    "slug": "la-escuela",
+    "name": "La Escuela",
+    "description": "",
+    "service_ids": [
+      "escuela-nautica"
+    ],
+    "port_id": "puerto-de-mataro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "­info@escolanautica.com",
+    "website": "https://www.escolanautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751899404633x342022752387859400/eiuvnhbwesr.png",
+    "featured": false
+  },
+  {
+    "slug": "varador-escar-mataro",
+    "name": "Varador Escar Mataró",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "antifouling-pintura",
+      "mecanica"
+    ],
+    "port_id": "puerto-de-mataro",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "629065640",
+    "website": "https://varadormataro.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751899586532x111691485470564850/varador.png",
+    "featured": false
+  },
+  {
+    "slug": "nwn-yachts",
+    "name": "Nwn Yachts",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "reservas@nwnyachts.com",
+    "website": "https://www.nwnyachts.com/ca/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900182228x662875170641114600/nwn.png",
+    "featured": false
+  },
+  {
+    "slug": "general-nautic",
+    "name": "General Nautic",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "gestoria",
+      "amarres",
+      "limpieza-pulido",
+      "antifouling-pintura",
+      "varaderos",
+      "fibra",
+      "helices",
+      "transmision",
+      "mecanica",
+      "teka-cubierta"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "generalnautic@generalnautic.com",
+    "website": "https://www.generalnautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900295516x471621393886507260/generalnautic.png",
+    "featured": false
+  },
+  {
+    "slug": "palamos-boats",
+    "name": "Palamos Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-palamos",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "hola@palamosboats.com",
+    "website": "https://www.palamosboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900447131x507447410738391300/palamos%20boats.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautico-portbou",
+    "name": "Club Nautico Portbou",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-portbou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "clubnauticportbou@gmail.com",
+    "website": "https://cnportbou.com/es/club",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900613504x138841977555673070/ufcgvbws9pyuv.png",
+    "featured": false
+  },
+  {
+    "slug": "proboat",
+    "name": "Proboat",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "puerto-de-premia-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 685 946 531",
+    "website": "https://www.instagram.com/proboatracing/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900775445x486323391000187650/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-port-premia",
+    "name": "Marina Port Premià",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-de-premia-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinapremia.com",
+    "website": "https://www.marinapremia.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900858919x469267768046556500/portpremia.png",
+    "featured": false
+  },
+  {
+    "slug": "vms-marine",
+    "name": "VMS Marine",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "helices",
+      "transmision",
+      "hidraulica",
+      "hvac",
+      "electrotecnia",
+      "soldadura-corte",
+      "antifouling-pintura",
+      "carpinteria"
+    ],
+    "port_id": "puerto-de-premia-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@vmsmarine.es",
+    "website": "https://vmsmarine.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751900920116x283076463754532000/vms.png",
+    "featured": false
+  },
+  {
+    "slug": "v-de-bravado",
+    "name": "V de Bravado",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "rigging",
+      "antifouling-pintura",
+      "carpinteria",
+      "mecanica",
+      "fibra",
+      "teka-cubierta",
+      "electrotecnia",
+      "refits-integrales"
+    ],
+    "port_id": "puerto-de-premia-de-mar",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "varadero@vdebravado.com",
+    "website": "https://vdebravado.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901070841x935489235868322700/vdebravado.png",
+    "featured": false
+  },
+  {
+    "slug": "varadero-port-bara",
+    "name": "Varadero Port Barà",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "electrotecnia",
+      "fibra",
+      "mecanica",
+      "invernaje",
+      "pupilaje",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-roda-de-bera",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@varaderoportbara.com",
+    "website": "https://varaderoportbara.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901381962x325878036624556160/varadero%20port%20bara.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-salou",
+    "name": "Club Nàutic Salou",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-salou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "club@clubnauticsalou.com",
+    "website": "https://clubnauticsalou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901599890x326713188395262500/wif0cvhbnw.png",
+    "featured": false
+  },
+  {
+    "slug": "jetboard-experience",
+    "name": "Jetboard Experience",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-salou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "611 724 725",
+    "website": "https://surfsalou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901674077x644469047261637900/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "rent-a-boat-salou",
+    "name": "Rent a Boat Salou",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-salou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 674 11 71 48",
+    "website": "https://rentaboatsalou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901838480x335400476405338640/wsrfgvwrg.png",
+    "featured": false
+  },
+  {
+    "slug": "charter-salou",
+    "name": "Charter Salou",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-salou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "chartersalou@gmail.com",
+    "website": "https://cys-chartersalou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751901946674x796952527620916000/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "saona-boats",
+    "name": "Saona Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@saona.boats",
+    "website": "https://www.saona.boats/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912339765x975860756884023800/saona%20boats.png",
+    "featured": false
+  },
+  {
+    "slug": "renteolo",
+    "name": "Renteolo",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@renteolo.com",
+    "website": "https://www.renteolo.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912387013x475941340350251460/RENTEOLO.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-sant-feliu-de-guixols",
+    "name": "Club Nàutic Sant Feliu de Guíxols",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "antifouling-pintura",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@cnsfg.cat",
+    "website": "https://cnsfg.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912441724x287184195965656480/werounifwru9b.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-mayor",
+    "name": "Nàutica Mayor",
+    "description": "",
+    "service_ids": [
+      "mecanica"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "administracio@nauticamayor.com",
+    "website": "https://www.nauticamayor.com/ca/inici.cfm",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912574001x469104919880738000/nauticamayor.png",
+    "featured": false
+  },
+  {
+    "slug": "giro-mar-nautica",
+    "name": "Giro Mar Nàutica",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "pupilaje",
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "fibra",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@giromarnautica.com",
+    "website": "https://giromarnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912704210x109698219377964980/giro.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-guixols",
+    "name": "Nautica Guixols",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "semirrigidas",
+      "tienda-nautica",
+      "invernaje",
+      "pupilaje"
+    ],
+    "port_id": "puerto-de-sant-feliu-de-guixols",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nauticaguixols@gmail.com",
+    "website": "https://www.nauticaguixols.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751912913006x481786248272044300/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "marina-sant-jordi",
+    "name": "Marina Sant Jordi",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-de-sant-jordi-dalfama",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 977 48 63 27",
+    "website": "https://portcalafat.com/port-marina-sant-jordi/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913133759x811048609574095400/aenidcu.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-centelles",
+    "name": "Nautica Centelles",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "mecanica",
+      "antifouling-pintura",
+      "pupilaje",
+      "invernaje",
+      "amarres",
+      "varaderos",
+      "gestoria",
+      "venta-de-embarcaciones"
+    ],
+    "port_id": "puerto-de-portbou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticacentelles.cat",
+    "website": "https://nauticacentelles.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913409167x802834253595164400/rfgvihnjwsrv.png",
+    "featured": false
+  },
+  {
+    "slug": "port-segur-calafell",
+    "name": "Port Segur-Calafell",
+    "description": "",
+    "service_ids": [
+      "marina",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-segur-de-calafell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "capitania@portsegurcalafell.com",
+    "website": "https://portsegurcalafell.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913597775x608151709061975700/segur.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-segur-calafell",
+    "name": "Nautica Segur Calafell",
+    "description": "",
+    "service_ids": [
+      "charter",
+      "pupilaje",
+      "traslados",
+      "antifouling-pintura",
+      "carpinteria",
+      "fibra",
+      "rigging",
+      "electrotecnia"
+    ],
+    "port_id": "puerto-de-segur-de-calafell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticasegur.com",
+    "website": "https://nauticasegur.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913732765x327262171224798100/stay.png",
+    "featured": false
+  },
+  {
+    "slug": "mar1",
+    "name": "MAR1",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-segur-de-calafell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 662 457 039",
+    "website": "https://www.mar.uno/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913798209x934972271524763600/oigvhnws.png",
+    "featured": false
+  },
+  {
+    "slug": "smjj",
+    "name": "SMJJ",
+    "description": "",
+    "service_ids": [
+      "tratamiento-de-osmosis",
+      "hidraulica",
+      "electrotecnia",
+      "mecanica",
+      "soldadura-corte",
+      "fibra",
+      "carpinteria",
+      "inox"
+    ],
+    "port_id": "puerto-de-segur-de-calafell",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@smjj.es\n",
+    "website": "https://smjj.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751913871291x782212121376895000/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-torredembarra",
+    "name": "Nautica Torredembarra",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "electrotecnia",
+      "hvac",
+      "helices",
+      "teka-cubierta",
+      "barnices"
+    ],
+    "port_id": "puerto-de-torredembarra",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@nauticatorredembarra.es",
+    "website": "https://nauticatorredembarra.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751914089974x461334454506844900/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "port-torredembarra",
+    "name": "Port Torredembarra",
+    "description": "",
+    "service_ids": [
+      "marina",
+      "varaderos",
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-torredembarra",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "+34 977 643 234",
+    "website": "https://port-torredembarra.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751914180241x461632831742033300/torredmeqdfn.png",
+    "featured": false
+  },
+  {
+    "slug": "north-star-yachts",
+    "name": "North Star Yachts",
+    "description": "",
+    "service_ids": [
+      "antifouling-pintura",
+      "limpieza-pulido",
+      "mecanica",
+      "veleria"
+    ],
+    "port_id": "puerto-de-torredembarra",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "chris@northstar-yachts.com",
+    "website": "https://www.marine-business-group.com/Marina-Roda-de-Bara/Technischer-Service/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751914472692x385730687022965100/LOGO%20SIN%20LETRA.png",
+    "featured": false
+  },
+  {
+    "slug": "marine-business",
+    "name": "Marine Business",
+    "description": "",
+    "service_ids": [
+      "gestoria",
+      "asesoria",
+      "seguros"
+    ],
+    "port_id": "puerto-de-roda-de-bera",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marine-business-group.com",
+    "website": "https://www.marine-business-group.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751914532223x140500024326191140/wsifucbvnhwsi.png",
+    "featured": false
+  },
+  {
+    "slug": "sym-naval",
+    "name": "SYM Naval",
+    "description": "",
+    "service_ids": [
+      "astillero"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "comercial@sym-naval.com",
+    "website": "https://sym-naval.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751914994624x729203036971288300/sym.png",
+    "featured": false
+  },
+  {
+    "slug": "pendennis-vilanova",
+    "name": "Pendennis Vilanova",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "refits-integrales",
+      "project-management",
+      "amarres",
+      "antifouling-pintura",
+      "aislamiento-termico",
+      "barnices",
+      "bunkering",
+      "baterias",
+      "carpinteria",
+      "cristal-metacrilato",
+      "electrotecnia",
+      "helices",
+      "hidraulica",
+      "hvac",
+      "inox",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "vilanova@pendennis.com",
+    "website": "https://www.pendennisvilanova.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751915121299x283828885719164000/pendennis.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-vilanova",
+    "name": "Club Nàutic Vilanova",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "cnv@cnvilanova.cat",
+    "website": "https://www.cnvilanova.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751915173048x236587697621172480/cv%20sghb.png",
+    "featured": false
+  },
+  {
+    "slug": "yates-azimut",
+    "name": "Yates Azimut",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "yatesazimut@yatesazimut.com",
+    "website": "https://www.yatesazimut.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751915228243x397874010448689540/sd%C3%B20iuv%20bn.png",
+    "featured": false
+  },
+  {
+    "slug": "damar-nautica",
+    "name": "Damar Nautica",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "antifouling-pintura",
+      "hidraulica",
+      "fibra",
+      "venta-de-embarcaciones",
+      "carpinteria",
+      "refits-integrales"
+    ],
+    "port_id": "puerto-de-vilanova-i-la-geltru",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@damarnautica.com",
+    "website": "https://damarnautica.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751915291821x570907806837961600/cnmsoujdvcn.png",
+    "featured": false
+  },
+  {
+    "slug": "sent-yacht",
+    "name": "Sent-Yacht",
+    "description": "",
+    "service_ids": [
+      "aislamiento-termico",
+      "venta-de-embarcaciones",
+      "project-management",
+      "antifouling-pintura",
+      "electrotecnia",
+      "mecanica",
+      "limpieza-pulido",
+      "hidraulica"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "609865215",
+    "website": "https://www.sentyacht.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751915602610x368913025258921200/cuhbsdpc9ui.png",
+    "featured": false
+  },
+  {
+    "slug": "port-masnou",
+    "name": "Port Masnou",
+    "description": "",
+    "service_ids": [
+      "marina"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "portmasnou@portmasnou.com",
+    "website": "https://www.portmasnou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917001771x956069804527501600/masnou.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-masnou",
+    "name": "Nautica Masnou",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "electrotecnia",
+      "tienda-nautica",
+      "gestoria",
+      "charter"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nauticamasnou@nauticamasnou.com",
+    "website": "https://nauticamasnou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917246387x176946595543965540/ioncwsuojfcvb.png",
+    "featured": false
+  },
+  {
+    "slug": "marinagrup",
+    "name": "MarinaGrup",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "charter"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@marinagrup.es",
+    "website": "https://marinagrup.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917336055x173683589715920130/jisedvi0aedn.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-el-masnou",
+    "name": "Club Nàutic El Masnou",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "(+34) 93 555 06 05",
+    "website": "https://nauticmasnou.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917405160x982764313262299900/nviorsn.png",
+    "featured": false
+  },
+  {
+    "slug": "jj-nautic",
+    "name": "JJ Nautic",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "varaderos",
+      "antifouling-pintura",
+      "carpinteria",
+      "veleria",
+      "fibra",
+      "inox",
+      "invernaje",
+      "limpieza-pulido",
+      "mecanica",
+      "rigging",
+      "pupilaje"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "93 540 45 79",
+    "website": "https://www.jjnautic.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917481028x791334304577085300/rjvrwsdi.png",
+    "featured": false
+  },
+  {
+    "slug": "dl-sailing",
+    "name": "DL Sailing",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "ocioenelmardlsailing@gmail.com",
+    "website": "https://www.dlsailing.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917662879x949840741631895300/dl.png",
+    "featured": false
+  },
+  {
+    "slug": "varadero-masnou",
+    "name": "Varadero Masnou",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "antifouling-pintura",
+      "tratamiento-de-osmosis",
+      "electrotecnia",
+      "mecanica",
+      "carpinteria",
+      "tienda-nautica",
+      "protecciones-de-pintura"
+    ],
+    "port_id": "puerto-del-masnou",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "administracion@varaderomasnou.es",
+    "website": "https://varaderomasnou.es/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751917751326x426405753344320640/masnou.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautic-port-de-la-selva",
+    "name": "Club Nàutic Port de la Selva",
+    "description": "",
+    "service_ids": [
+      "varaderos",
+      "club-nautico"
+    ],
+    "port_id": "puerto-del-port-de-la-selva",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "nautic@cnps.cat",
+    "website": "https://www.cnps.cat/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751918404333x739666139083036200/cns.png",
+    "featured": false
+  },
+  {
+    "slug": "nautica-juanola",
+    "name": "Náutica Juanola",
+    "description": "",
+    "service_ids": [
+      "mecanica",
+      "venta-de-embarcaciones",
+      "antifouling-pintura",
+      "fibra"
+    ],
+    "port_id": "puerto-del-port-de-la-selva",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "administracio@nauticajuanola.net",
+    "website": "https://nauticajuanola.net/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751918585173x912065798365299100/nauticaj8ahndxxola.png",
+    "featured": false
+  },
+  {
+    "slug": "club-nautico-la-rapita",
+    "name": "Club Náutico La Rápita",
+    "description": "",
+    "service_ids": [
+      "club-nautico",
+      "varaderos",
+      "antifouling-pintura",
+      "limpieza-pulido"
+    ],
+    "port_id": "puerto-de-la-rapita",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "977 74 11 03",
+    "website": "https://clubnauticlarapita.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751918852150x215267553571167680/fubsnvf.png",
+    "featured": false
+  },
+  {
+    "slug": "4boats",
+    "name": "4BOATS",
+    "description": "",
+    "service_ids": [
+      "tienda-nautica",
+      "antifouling-pintura",
+      "limpieza-pulido",
+      "fibra",
+      "fontaneria",
+      "teka-cubierta",
+      "rigging",
+      "electrotecnia",
+      "tratamiento-de-osmosis"
+    ],
+    "port_id": "puerto-de-la-rapita",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "store@4boats.es",
+    "website": "https://4boats.shop/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751918927110x682446377978594600/woifwub.png",
+    "featured": false
+  },
+  {
+    "slug": "sant-carles-boats",
+    "name": "Sant Carles Boats",
+    "description": "",
+    "service_ids": [
+      "charter"
+    ],
+    "port_id": "puerto-de-la-rapita",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "hola@santcarlesboats.com",
+    "website": "https://www.santcarlesboats.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751919078141x344444905795930240/santcarles.png",
+    "featured": false
+  },
+  {
+    "slug": "sant-carles-marina",
+    "name": "Sant Carles Marina",
+    "description": "",
+    "service_ids": [
+      "marina",
+      "varaderos"
+    ],
+    "port_id": "puerto-de-la-rapita",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "34 977745153",
+    "website": "https://www.mdlmarinas.co.uk/marinas/mdl-sant-carles-marina/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751919204338x462978705336862800/iovsdn.png",
+    "featured": false
+  },
+  {
+    "slug": "a-bordo",
+    "name": "A-bordo",
+    "description": "",
+    "service_ids": [
+      "venta-de-embarcaciones",
+      "electrotecnia",
+      "helices",
+      "hvac",
+      "hidraulica",
+      "rigging",
+      "gestoria",
+      "antifouling-pintura"
+    ],
+    "port_id": "puerto-de-aiguadolc",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@a-bordo.es",
+    "website": "https://abordonautica.net/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751919261086x253124435989833700/asicas.png",
+    "featured": false
+  },
+  {
+    "slug": "port-de-aiguadolc",
+    "name": "Port de Aiguadolç",
+    "description": "",
+    "service_ids": [
+      "club-nautico"
+    ],
+    "port_id": "puerto-de-aiguadolc",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": "info@portdesitges.com",
+    "website": "https://www.portdesitges.com/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751919436023x981556391667638700/iovcnsiocv.png",
+    "featured": false
+  },
+  {
+    "slug": "riggers-armengol",
+    "name": "Riggers Armengol",
+    "description": "",
+    "service_ids": [
+      "rigging"
+    ],
+    "port_id": "port-ginesta",
+    "secondary_port_ids": [],
+    "region_id": "cat",
+    "email": " info@nauticarmengol.com",
+    "website": "https://nauticarmengol.com/rigging/",
+    "logo": "//92bdeb27478473487e4c4c988f897c4e.cdn.bubble.io/f1751919639332x512443476550075400/ocvbwuoj.png",
+    "featured": false
+  }
+]

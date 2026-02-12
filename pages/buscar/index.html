@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buscar | Directorio Náutico</title>
+  <link rel="stylesheet" href="../../assets/styles.css" />
+
+  <!-- CSS mínimo específico SOLO para esta página (mismo estilo que Puertos) -->
+  <style>
+    body[data-page="buscar"] .search-shell{
+      display: grid;
+      gap: var(--space-4);
+      grid-template-columns: 340px 1fr;
+      align-items: start;
+    }
+    @media (max-width: 900px){
+      body[data-page="buscar"] .search-shell{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    body[data-page="buscar"] .search-sidebar{
+      position: sticky;
+      top: 16px;
+    }
+    @media (max-width: 900px){
+      body[data-page="buscar"] .search-sidebar{
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body data-page="buscar">
+  <!-- Global Header (NO TOCAR) -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../index.html" data-i18n-aria="a11y.homeLink" aria-label="Ir a la home del Directorio Náutico">
+  <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+</a>
+
+      <nav class="site-nav" data-i18n-aria="a11y.mainNav" aria-label="Navegación principal">
+        <div class="nav-dropdown">
+<button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.services">
+Servicios
+</button>
+<div class="nav-dropdown__panel" data-services-dropdown data-i18n-aria="nav.services" aria-label="Servicios"></div>
+</div>
+        <a href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+        <a href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="site-header__actions">
+
+  <!-- Idioma -->
+  <div class="lang-dropdown" id="langDropdown">
+     <button class="lang-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false">
+    <span id="langCurrent">ES</span>
+    <span class="lang-dropdown__arrow">▾</span>
+  </button>
+    <div class="lang-dropdown__menu">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="site-header__cta">
+    <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">
+      Añadir empresa
+    </a>
+  </div>
+
+</div>
+<button class="menu-toggle" type="button"
+  aria-label="Open menu"
+  aria-expanded="false"
+  aria-controls="mobileMenu">
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+</button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mobile-menu__overlay" data-close-menu></div>
+
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head">
+      <span class="mobile-menu__title">Menu</span>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
+    </div>
+
+    <div class="mobile-menu__body">
+
+      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
+<a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
+  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
+      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+      <div class="mobile-menu__divider"></div>
+
+      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
+        Añadir empresa
+      </a>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main id="main">
+    <!-- OJO: mantenemos class="section results" para que el scrollToResults del JS funcione -->
+    <section class="section results">
+      <div class="container stack">
+        <header class="stack">
+          <h1 class="page-title" data-i18n="search.title">Resultados</h1>
+          <p class="body-text muted" data-i18n="search.subtitle">Filtra por servicio, puerto o texto.</p>
+        </header>
+
+        <!-- Layout 2 columnas -->
+        <div class="search-shell" data-i18n-aria="a11y.filtersAndResults" aria-label="Filtros y resultados">
+
+          <!-- IZQUIERDA: filtros -->
+          <aside class="search-sidebar stack" data-i18n-aria="a11y.filters" aria-label="Filtros">
+            <div class="card stack">
+              <!-- IMPORTANTE: mantenemos form.filter-bar + names para que initHomePage() funcione -->
+              <form class="filter-bar filter-bar--compact" action="./index.html" method="get">
+                <fieldset>
+                  <legend class="sr-only" data-i18n="search.filters.title">Filtros</legend>
+
+                  <div class="stack" style="gap: var(--space-3);">
+
+                    <label class="filter-bar__field">
+                      <span data-i18n="search.filters.zone">Zona</span>
+                      <select name="area">
+                        <option value="" data-i18n="common.loading">Cargando…</option>
+                      </select>
+                    </label>
+
+                    <label class="filter-bar__field">
+                      <span data-i18n="search.filters.port">Puerto</span>
+                      <select name="puerto">
+                        <option value="" data-i18n="common.loading">Cargando…</option>
+                      </select>
+                    </label>
+
+                    <label class="filter-bar__field">
+                      <span data-i18n="search.filters.service">Servicio</span>
+                      <select name="servicio">
+                        <option value="" data-i18n="common.loading">Cargando…</option>
+                      </select>
+                    </label>
+
+                    <label class="filter-bar__field">
+                      <span data-i18n="search.filters.text">Texto</span>
+                      <input
+                        type="search"
+                        name="q" data-i18n-placeholder="search.filters.queryPlaceholder"
+                        placeholder="motor, antifouling, rigging…"
+                      />
+                    </label>
+
+
+                    <div class="filter-bar__actions" style="justify-content: stretch;">
+                      <button class="button" type="submit" style="width:100%;" data-i18n="search.filters.button">Buscar</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <!-- CTA lateral opcional (igual que Puertos) -->
+            <div class="card stack">
+              <h2 class="section-title" data-i18n="search.missing.title">¿Tu empresa no aparece?</h2>
+              <p class="body-text" data-i18n="search.missing.text">
+                Añádela al directorio para aparecer en los resultados y en los puertos donde trabajas.
+              </p>
+              <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">Añadir empresa</a>
+            </div>
+          </aside>
+
+          <!-- DERECHA: resultados -->
+          <section class="stack" aria-label="Listado de empresas">
+            <header class="results__header">
+              <h2 class="section-title" data-i18n="search.results.title">Empresas</h2>
+              <p class="small">
+                <span data-i18n="search.results.showing">Mostrando</span>
+                <strong>0</strong>
+                <span data-i18n="search.results.resultsWord">resultados</span>
+              </p>
+            </header>
+
+            <!-- GRID DINÁMICO (initHomePage pinta aquí) -->
+            <div id="companiesGrid" class="grid grid--cards" role="list"></div>
+
+            <!-- PAGINACIÓN (igual que Home) -->
+            <nav class="pagination" aria-label="Paginación de resultados">
+              <ul id="paginationList" class="pagination__list"></ul>
+            </nav>
+          </section>
+
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+  <div class="footer-wrap">
+
+    <!-- Left -->
+    <div class="footer-brand">
+      <img src="/assets/img/Logo NC Blanco.webp" alt="NautiCards" class="footer-logo" />
+
+      <p class="footer-desc" data-i18n="footer.tagline">
+        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
+      </p>
+
+      <p class="footer-copy">
+        © 2026 NautiCards
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-links">
+      <h4>Quick links</h4>
+
+      <a href="/" data-i18n="footer.home">Inicio</a>
+      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
+      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      <a href="#">Cookies</a>
+    </div>
+
+  </div>
+</footer>
+<script type="module">
+  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+
+  (async () => {
+    const lang = getLang();
+    document.documentElement.lang = lang;
+
+    const t = await loadDict(lang);
+
+    // Traduce todo lo que tenga data-i18n en el HTML
+    applyI18n(t);
+
+    // 🔑 Para que app.js (no-module) pueda usar traducciones desde JS
+    window.__t = t;
+    window.dispatchEvent(new Event("i18n:ready"));
+
+    // Meta + selector idioma (si lo usas)
+    applyMeta(t, "search");
+    initLangDropdown(lang);
+  })();
+</script>
+
+  <script src="../../assets/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
