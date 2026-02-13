@@ -152,7 +152,11 @@
 "search.empty": "Select a port, a service, or type at least 3 characters to start searching.",
 "nav.search": "Search",
 "nav.home": "Home",
-"nav.companies": "Companies"
+"nav.companies": "Companies",
+"meta.ports.description": "Explore ports and marinas and discover nautical companies and services on NautiCards.",
+"meta.ports.detailTitle": "{port} | Port | NautiCards",
+"meta.ports.detailDescription": "{port}: port info and contact. Discover associated nautical companies and services on NautiCards."
+
 
 
 
