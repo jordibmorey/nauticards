@@ -2046,7 +2046,7 @@ function safe(v) {
 }
 
 async function postJSON(path, payload) {
-  const url = new URL(path, SITE_ROOT).href; // SITE_ROOT ya lo tienes definido en tu app.js
+  const url = new URL(path, API_BASE).href; // SITE_ROOT ya lo tienes definido en tu app.js
   const res = await fetch(url, {
     method: "POST",
     headers: { "content-type": "application/json" },
