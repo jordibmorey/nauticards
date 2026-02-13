@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Directorio Náutico | NautiCards</title>
+  <meta name="description" content="Encuentra empresas náuticas por puerto y servicio en Cataluña." />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+
+<body data-page="home">
+
+  <main id="main">
+
+    <!-- HERO (incluye HEADER dentro para que la imagen lo cubra) -->
+    <section
+  class="section home-hero"
+  style="background: linear-gradient(rgba(0,0,0,.40), rgba(0,0,0,.40)),
+      url('/assets/img/hero.webp') center / cover no-repeat; padding-top: 0%;">
+
+      <!-- HEADER -->
+        <header class="site-header site-header--light" style="background: transparent; margin-top: 0;border-bottom: none;">
+          <div class="container site-header__inner">
+            <a class="brand" href="/" aria-label="BigBlue">
+              <img src="/assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+            </a>
+
+            <nav class="site-nav">
+              <!-- Servicios (dropdown A–Z, se rellena por JS desde la API) -->
+              <div class="nav-dropdown nav-dropdown--light">
+                <button
+                  class="nav-dropdown__trigger"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
+                  onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
+                  onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
+                  data-i18n="nav.services"
+                >
+                  Servicios
+                </button>
+
+                <div
+                  class="nav-dropdown__panel"
+                  data-services-dropdown
+                  aria-label="Servicios"
+                  data-i18n-aria="nav.services"
+                ></div>
+              </div>
+
+              <a href="/pages/puertos/index.html"
+                style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
+                onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
+                onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
+                data-i18n="nav.ports"
+              >Puertos</a>
+
+              <a href="/pages/contacto/index.html"
+                style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
+                onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
+                onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
+                data-i18n="nav.contact"
+              >Contacto</a>
+            </nav>
+
+            <div class="site-header__actions">
+            <!-- Language dropdown -->
+            <div class="lang-dropdown" id="langDropdown">
+              <button
+                class="lang-dropdown__trigger"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span id="langCurrent">ES</span>
+                <span class="lang-dropdown__arrow">▾</span>
+              </button>
+
+              <div class="lang-dropdown__menu" role="menu" aria-label="Language">
+                <button type="button" role="menuitem" data-lang="en">EN</button>
+              </div>
+            </div>
+
+            <div class="site-header__cta">
+              <a
+                class="button button--secondary"
+                href="/pages/contacto/index.html"
+                style="color:#fff; border-color: rgba(255,255,255,.85); background: transparent;"
+                data-i18n="nav.addCompany"
+              >
+                Añadir empresa
+              </a>
+            </div>
+            </div>
+            <button class="menu-toggle" type="button"
+  aria-label="Open menu"
+  aria-expanded="false"
+  aria-controls="mobileMenu">
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+</button>
+
+          </div>
+
+        <div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mobile-menu__overlay" data-close-menu></div>
+
+  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-menu__head">
+      <span class="mobile-menu__title">Menu</span>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
+    </div>
+
+    <div class="mobile-menu__body">
+
+      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
+       <a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
+  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
+      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+      <div class="mobile-menu__divider"></div>
+
+      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
+        Añadir empresa
+      </a>
+    </div>
+  </div>
+</div>
+
+        </header>
+
+
+      <!-- CONTENIDO HERO (padding grande aquí, no en la section) -->
+      <div class="container stack" style="padding-top: 8rem; padding-bottom: 10rem;">
+        <header class="stack" style="color: #fff;">
+          <h1 class="page-title" data-i18n="home.hero.title">
+            Encuentra empresas náuticas por puerto y servicio
+          </h1>
+          <p class="body-text" style="color: #fff;" data-i18n="home.hero.subtitle">
+            Talleres, mecánica, electricidad, velería, mantenimiento y más.
+          </p>
+        </header>
+
+        <!-- FILTROS -->
+        <form class="filter-bar filter-bar--hero" method="get">
+          <fieldset>
+            <legend class="sr-only" data-i18n="home.filters.legend">Filtros de búsqueda</legend>
+
+            <div class="filter-bar__row">
+              <label class="filter-bar__field">
+                <span data-i18n="home.filters.port">Puerto</span>
+                <select name="puerto">
+                  <option value="" data-i18n="common.any">Cualquiera</option>
+                  <option value="barcelona">Barcelona</option>
+                  <option value="badalona">Badalona</option>
+                  <option value="mataro">Mataró</option>
+                  <option value="port-olimpic">Port Olímpic</option>
+                  <option value="forum">Port Fòrum</option>
+                </select>
+              </label>
+
+              <label class="filter-bar__field">
+                <span data-i18n="home.filters.service">Servicio</span>
+                <select name="servicio">
+                  <option value="" data-i18n="common.any">Cualquiera</option>
+                  <option value="mecanica">Mecánica</option>
+                  <option value="mantenimiento">Mantenimiento</option>
+                  <option value="electricidad">Electricidad</option>
+                  <option value="veleria">Velería</option>
+                  <option value="fibra">Fibra</option>
+                </select>
+              </label>        
+
+              <label class="filter-bar__field">
+                <span data-i18n="home.filters.text">Texto</span>
+                <input
+                  type="search"
+                  name="q"
+                  placeholder="Busca tu empresa..." data-i18n-placeholder="home.search.placeholder"
+                />
+              </label>
+
+              <div class="filter-bar__actions">
+                <button class="button" type="submit" data-i18n="home.filters.button">Buscar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+<!-- NAUTICARDS -->
+<section class="section">
+  <div class="container">
+
+    
+      <div class="card__inner">
+
+        <div class="nc-hero">
+
+          <!-- IZQUIERDA -->
+          <div class="nc-hero__left">
+
+            <div class="nc-badge" data-i18n="home.about.badge">
+              Directorio náutico · Cataluña
+            </div>
+
+            <h1 class="nc-title">NautiCards...</h1>
+
+            <p class="nc-lead" data-i18n="home.about.lead">
+              Más de 270 empresas activas en los principales puertos de Cataluña, organizadas en un directorio digital estructurado y en constante crecimiento.
+            </p>
+
+            <p class="nc-paragraph" data-i18n="home.about.p1">
+              La plataforma clasifica la oferta de servicios náuticos para localizar proveedores de forma rápida, clara y precisa.
+            </p>
+
+            <p class="nc-paragraph" data-i18n="home.about.p2">
+              Desde mantenimiento técnico y reparación hasta charter, marinas y actividades especializadas, facilita la conexión directa entre profesionales del ecosistema náutico y usuarios que necesitan soluciones fiables en su entorno portuario.
+            </p>
+
+            <div class="nc-cta">
+              <a class="button" href="/pages/buscar/index.html" data-i18n="home.about.ctaSearch">
+                Explorar directorio
+              </a>
+
+              <a class="button button--secondary" href="/pages/puertos/index.html" data-i18n="home.about.ctaPorts">
+                Ver puertos →
+              </a>
+            </div>
+
+          </div>
+
+          <!-- DERECHA -->
+          <div class="nc-hero__right">
+            <div class="nc-image-wrapper">
+              <img src="/assets/img/about.webp" class="nc-image" alt="Puerto en Cataluña">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    
+
+  </div>
+</section>
+
+
+
+
+
+    <!-- SERVICIOS DESTACADOS (mismo bloque que "Servicios más populares" de /servicios) -->
+<section class="section">
+  <div class="container stack stack--xl">
+
+    <section class="stack" aria-labelledby="popular-services-title">
+      <h2 id="popular-services-title" class="section-title" style="margin-bottom: 24px; margin-top: 0px;" data-i18n="home.featured.title">
+        Servicios destacados
+      </h2>
+
+      <ul
+        id="servicesPopular"
+        class="grid grid--cards grid--featured"
+        aria-label="Servicios destacados"
+        data-i18n-aria="a11y.featuredServices"
+      >
+        <!-- fallback -->
+        <li class="card">
+          <div class="card__inner">
+            <p class="body-text" data-i18n="home.featured.loading">Cargando servicios…</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</section>
+
+ <!-- CTA (Contacto rápido) -->
+<section class="section cta-form">
+  <div class="container cta-form__inner">
+
+    <h2 class="section-title cta-form__title" data-i18n="home.cta.title">
+      ¿Tu empresa no aparece?
+    </h2>
+
+    <form class="cta-form__form">
+
+      <input
+        class="cta-form__field"
+  type="text"
+  name="nombre"
+  placeholder="Empresa / Nombre"
+  data-i18n-placeholder="home.cta.input1"
+  required
+      />
+
+      <input
+        class="cta-form__field"
+  type="email"
+  name="email"
+  placeholder="Email de contacto"
+  data-i18n-placeholder="home.cta.input2"
+  required
+      />
+
+      <textarea
+        class="cta-form__field cta-form__field--textarea"
+  name="mensaje"
+  rows="3"
+  placeholder="Cuéntanos servicios, puerto, web, teléfono…"
+  data-i18n-placeholder="home.cta.textarea"
+  required
+      ></textarea>
+
+      <div class="cta-form__actions">
+        <button type="submit" class="button button--secondary cta-form__button" data-i18n="home.cta.send">
+          Enviar
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+<section class="section how-faq">
+  <div class="container stack">
+    <header class="how-faq__head">
+      <h2 class="section-title" data-i18n="home.faq.title">Preguntas frecuentes</h2>
+    </header>
+
+    <div class="how-faq__list" aria-label="FAQ">
+      <details class="how-faq__item">
+        <summary class="how-faq__q" data-i18n="home.faq.q1">¿Qué es NautiCards?</summary>
+        <div class="how-faq__a body-text muted">
+          <p class="mb-0" data-i18n="home.faq.a1">
+            NautiCards surge ante la dificultad de encontrar proveedores y talleres para 
+            las necesidades de armadores y usuarios de embarcaciones. Es un directorio abierto 
+            que agrupa empresas por puerto y servicio, facilitando la búsqueda y el acceso directo 
+            a su web y datos de contacto.
+          </p>
+        </div>
+      </details>
+
+      <details class="how-faq__item">
+        <summary class="how-faq__q" data-i18n="home.faq.q2">¿Cómo encuentro una empresa?</summary>
+        <div class="how-faq__a body-text muted">
+          <p class="mb-0" data-i18n="home.faq.a2">
+            Accede a la sección Buscar y filtra por puerto o por tipo de servicio. El directorio 
+            está diseñado para ser útil tanto a embarcaciones amarradas como a navegantes en tránsito, e
+             incluye también proveedores ubicados fuera del recinto portuario.
+          </p>
+        </div>
+      </details>
+
+      <details class="how-faq__item">
+        <summary class="how-faq__q" data-i18n="home.faq.q3">¿Tiene algún coste aparecer en NautiCards?</summary>
+        <div class="how-faq__a body-text muted">
+          <p class="mb-0" data-i18n="home.faq.a3">
+            NautiCards es un directorio público cuya misión es ofrecer la máxima información 
+            posible a los usuarios. El alta de empresas y profesionales es completamente gratuita, 
+            así como la gestión de su perfil y la publicación de imágenes.
+          </p>
+        </div>
+      </details>
+
+      <details class="how-faq__item">
+        <summary class="how-faq__q" data-i18n="home.faq.q4">¿Cómo puedo añadir mi empresa?</summary>
+        <div class="how-faq__a body-text muted">
+          <p class="mb-0" data-i18n="home.faq.a4">
+            Para añadir tu empresa, solo tienes que completar el formulario de alta. Con el nombre y la web se crea automáticamente un perfil inicial basado en información pública disponible. Recomendamos completar todos los campos y añadir imágenes para mejorar la presentación y visibilidad.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+  <div class="footer-wrap">
+
+    <!-- Left -->
+    <div class="footer-brand">
+      <img src="/assets/img/Logo NC Blanco.webp" alt="NautiCards" class="footer-logo" />
+
+      <p class="footer-desc" data-i18n="footer.tagline">
+        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
+      </p>
+
+      <p class="footer-copy">
+        © 2026 NautiCards
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-links">
+      <h4  data-i18n="footer.quickLinks">Quick links</h4>
+
+      <a href="/" data-i18n="footer.home">Inicio</a>
+      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
+      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      <a href="#" data-i18n="footer.cookies">Cookies</a>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- JS -->
+  <script src="../../assets/app.js" defer></script>
+  <script type="module">
+  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "/assets/i18n.js";
+
+  (async () => {
+    const lang = getLang();
+    document.documentElement.lang = lang;
+
+    const t = await loadDict(lang);
+    applyI18n(t);
+    window.__t = t;
+    window.dispatchEvent(new Event("i18n:ready"));
+    applyMeta(t, "home");
+    initLangDropdown(lang);
+  })();
+</script>
+
+
+
+</body>
+</html>
+
+
