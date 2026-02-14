@@ -281,11 +281,27 @@ const API_BASE = "https://little-mouse-3bbe.jordibmorey.workers.dev";
 
 
 async function getCompanies() {
-  // ⚠️ LEGACY (evitar en Home/Buscar)
-  const r = await fetch(`${API_BASE}/api/companies?mode=full&lang=${window.__lang || "es"}`);
-  if (!r.ok) throw new Error(`Worker companies -> HTTP ${r.status}`);
+  // ✅ LITE: índice mínimo (para puertos/servicios)
+  const r = await fetch(`${API_BASE}/api/companies?mode=lite&lang=${window.__lang || "es"}`);
+  if (!r.ok) throw new Error(`Worker companies(lite) -> HTTP ${r.status}`);
   return r.json();
 }
+
+
+async function getCompany({ id = "", slug = "" } = {}) {
+  const u = new URL(`${API_BASE}/api/company`);
+  u.searchParams.set("lang", window.__lang || "es");
+
+  if (id) u.searchParams.set("id", id);
+  else if (slug) u.searchParams.set("slug", slug);
+  else throw new Error("getCompany: missing id/slug");
+
+  const r = await fetch(u.toString());
+  if (!r.ok) throw new Error(`Worker company -> HTTP ${r.status}`);
+  return r.json();
+}
+
+
 
 async function getCompaniesPaged({ q = "", servicio = "", puerto = "", page = 1, pageSize = 8 } = {}) {
   const u = new URL(`${API_BASE}/api/companies`);
@@ -1125,25 +1141,18 @@ async function initCompanyPage() {
   };
 
   try {
-    const [companies, servicesList, portsList, regionsList, areasList] = await Promise.all([
-      getCompanies(),
-      getServices(),
-      getPorts(),
-      getRegions(),
-      getAreas(),
-    ]);
+    const [company, servicesList, portsList, regionsList, areasList] = await Promise.all([
+  getCompany({ id: idParam || "", slug: slugParam || "" }),
+  getServices(),
+  getPorts(),
+  getRegions(),
+  getAreas(),
+]);
 
-    const servicesById = indexById(servicesList);
-    const portsById = indexById(portsList);
-    const regionsById = regionsList ? indexById(regionsList) : null;
+const servicesById = indexById(servicesList);
+const portsById = indexById(portsList);
+const regionsById = regionsList ? indexById(regionsList) : null;
 
-    let company = null;
-    if (idParam) {
-      company = companies.find((c) => String(c.id) === String(idParam));
-    } else if (slugParam) {
-      const wanted = String(slugParam).toLowerCase();
-      company = companies.find((c) => String(c.slug || "").toLowerCase() === wanted);
-    }
 
     if (!company) {
       setText("company-name", tr("company.notFound", "Empresa no encontrada"));
