@@ -22,13 +22,13 @@
 
       <nav class="site-nav" aria-label="Navegación principal">
         <div class="nav-dropdown">
-<button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false">
+<button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.services">
 Servicios
 </button>
 <div class="nav-dropdown__panel" data-services-dropdown aria-label="Servicios"></div>
 </div>
-        <a href="../puertos/index.html">Puertos</a>
-        <a href="./index.html">Contacto</a>
+        <a href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+        <a href="./index.html" data-i18n="nav.contact">Contacto</a>
       </nav>
 
       <div class="site-header__actions">
@@ -95,39 +95,39 @@ Servicios
     <section class="section">
       <div class="container stack">
         <header class="stack">
-          <h1 class="page-title">Contacto</h1>
-          <p class="body-text">Añadir empresa, corregir ficha o soporte.</p>
+          <h1 class="page-title" data-i18n="nav.contact">Contacto</h1>
+          <p class="body-text" data-i18n="contact.subtitle">Añadir empresa, corregir ficha o soporte.</p>
         </header>
 
         <form id="contactForm" class="card stack" action="#" method="post" aria-label="Formulario de contacto">
 
           <label>
-            <span>Nombre</span>
+            <span data-i18n="contact.name">Nombre</span>
             <input name="nombre" autocomplete="name" required />
           </label>
 
           <label>
-            <span>Email</span>
+            <span data-i18n="contact.email">Email</span>
             <input type="email" name="email" autocomplete="email" required />
           </label>
 
           <label>
-            <span>Motivo</span>
+            <span data-i18n="contact.reason">Motivo</span>
             <select name="motivo" required>
-              <option value="alta">Añadir empresa</option>
-              <option value="correccion">Corregir ficha</option>
-              <option value="soporte">Soporte</option>
+              <option value="alta" data-i18n="nav.addCompany">Añadir empresa</option>
+              <option value="correccion" data-i18n="contact.reason.fix">Corregir ficha</option>
+              <option value="soporte" data-i18n="contact.reason.support">Soporte</option>
             </select>
           </label>
 
           <label>
-            <span>Mensaje</span>
+            <span data-i18n="contact.message">Mensaje</span>
             <textarea name="mensaje" rows="6" required></textarea>
           </label>
 
           <div class="filter-bar__actions">
-            <button class="button" type="submit">Enviar</button>
-            <a class="button button--ghost" href="../../index.html">Volver</a>
+            <button class="button" type="submit" data-i18n="contact.send">Enviar</button>
+            <a class="button button--ghost" href="../../index.html" data-i18n="contact.back">Volver</a>
           </div>
 
           <p id="contactStatus" class="small muted mb-0" aria-live="polite"></p>
@@ -166,6 +166,27 @@ Servicios
 
   </div>
 </footer>
+
+<script type="module">
+  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+
+  (async () => {
+    const lang = getLang();
+    document.documentElement.lang = lang;
+
+    const t = await loadDict(lang);
+
+    applyI18n(t);
+
+    // Para que app.js pueda usar traducciones desde JS
+    window.__t = t;
+    window.dispatchEvent(new Event("i18n:ready"));
+
+    applyMeta(t, "contact");
+    initLangDropdown(lang);
+  })();
+</script>
+
 
 <script src="../../assets/app.js" defer></script>
 
