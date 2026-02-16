@@ -276,7 +276,11 @@ async function loadJSON(url) {
    DATA ACCESS LAYER (DAL)
 ========================================================= */
 
-const API_BASE = "https://little-mouse-3bbe.jordibmorey.workers.dev";
+const API_BASE =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "https://nauticards.es"
+    : "";
+
 
 
 
