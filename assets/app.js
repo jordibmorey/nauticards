@@ -293,7 +293,7 @@ async function getCompanies() {
 
 
 async function getCompany({ id = "", slug = "" } = {}) {
-  const u = new URL(`${API_BASE}/api/company`);
+  const u = new URL(`${(API_BASE || window.location.origin)}/api/company`);
   u.searchParams.set("lang", window.__lang || "es");
 
   if (id) u.searchParams.set("id", id);
@@ -308,7 +308,7 @@ async function getCompany({ id = "", slug = "" } = {}) {
 
 
 async function getCompaniesPaged({ q = "", servicio = "", puerto = "", page = 1, pageSize = 8 } = {}) {
-  const u = new URL(`${API_BASE}/api/companies`);
+  const u = new URL(`${(API_BASE || window.location.origin)}/api/companies`);
   u.searchParams.set("lang", window.__lang || "es");
   if (q) u.searchParams.set("q", q);
   if (servicio) u.searchParams.set("servicio", servicio);
