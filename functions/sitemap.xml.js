@@ -1,5 +1,3 @@
-// functions/sitemap.xml.js
-
 function xmlEscape(s) {
   return String(s ?? "")
     .replace(/&/g, "&amp;")
@@ -11,16 +9,11 @@ function xmlEscape(s) {
 
 async function sbGet(env, pathAndQuery) {
   const base = env.SUPABASE_URL;
-  const key =
-    env.SUPABASE_SERVICE_ROLE_KEY ||
-    env.SUPABASE_ANON_KEY;
+  const key = env.SUPABASE_SERVICE_ROLE_KEY || env.SUPABASE_ANON_KEY;
 
-  if (!base || !key) {
-    return { error: "Missing SUPABASE_URL or key env vars" };
-  }
+  const url = `${base}/rest/v1/${pathAndQuery}`;
 
-  const u = `${base}/rest/v1/${pathAndQuery}`;
-  const r = await fetch(u, {
+  const r = await fetch(url, {
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
@@ -28,81 +21,107 @@ async function sbGet(env, pathAndQuery) {
   });
 
   if (!r.ok) {
-    const body = await r.text().catch(() => "");
-    return { error: `Supabase error ${r.status}`, detail: body };
+    const body = await r.text();
+    console.error("Supabase error:", body);
+    return [];
   }
+
   return r.json();
 }
 
 export async function onRequestGet({ env }) {
-  const BASE = "https://nauticards.es/"; // canonical
+  const BASE = "https://nauticards.es/";
   const now = new Date().toISOString();
 
-  // URLs estáticas (según tu estructura actual)
-  const staticUrls = [
-    new URL("", BASE).href,
-    new URL("pages/buscar/", BASE).href,
-    new URL("pages/puertos/", BASE).href,
-    new URL("pages/servicios/", BASE).href,
-    new URL("pages/regiones/", BASE).href,
-    new URL("pages/contacto/", BASE).href,
-    new URL("pages/legal/aviso-legal.html", BASE).href,
-    new URL("pages/legal/privacidad.html", BASE).href,
-    new URL("pages/legal/cookies.html", BASE).href,
-  ];
+  const urls = [];
 
-  // Empresas: sacamos IDs (y si existe updated_at, mejor)
-  // Ajusta campos si tu tabla no tiene updated_at:
-  const companies = await sbGet(env, "companies?select=id,updated_at");
+  // ===== PÁGINAS ESTÁTICAS =====
 
-  if (companies?.error) {
-    return new Response(
-      `Sitemap error: ${companies.error}\n${companies.detail || ""}`,
-      { status: 500, headers: { "content-type": "text/plain; charset=utf-8" } }
-    );
+  urls.push(new URL("", BASE).href);
+  urls.push(new URL("pages/buscar/", BASE).href);
+  urls.push(new URL("pages/contacto/", BASE).href);
+
+  // ===== CARGAR DATOS =====
+
+  const [companies, services, ports] = await Promise.all([
+    sbGet(env, "companies?select=id"),
+    sbGet(env, "services?select=id"),
+    sbGet(env, "ports?select=id"),
+  ]);
+
+  // ===== EMPRESAS =====
+
+  if (Array.isArray(companies)) {
+    for (const c of companies) {
+      urls.push(
+        new URL(
+          `pages/empresa/?id=${encodeURIComponent(c.id)}`,
+          BASE
+        ).href
+      );
+    }
   }
 
-  const companyUrls = (companies || [])
-    .map((c) => {
-      const id = c?.id != null ? String(c.id) : "";
-      if (!id) return null;
+  // ===== PUERTOS =====
 
-      // Tu ficha actual es /pages/empresa/index.html?id=...
-      const loc = new URL(
-        `pages/empresa/index.html?id=${encodeURIComponent(id)}`,
-        BASE
-      ).href;
+  if (Array.isArray(ports)) {
+    for (const p of ports) {
+      urls.push(
+        new URL(
+          `pages/buscar/?puerto=${encodeURIComponent(p.id)}`,
+          BASE
+        ).href
+      );
+    }
+  }
 
-      // lastmod si existe updated_at
-      const lastmod = c?.updated_at ? new Date(c.updated_at).toISOString() : now;
-      return { loc, lastmod };
-    })
-    .filter(Boolean);
+  // ===== SERVICIOS =====
 
-  const entries = [
-    ...staticUrls.map((loc) => ({ loc, lastmod: now })),
-    ...companyUrls,
-  ];
+  if (Array.isArray(services)) {
+    for (const s of services) {
+      urls.push(
+        new URL(
+          `pages/buscar/?servicio=${encodeURIComponent(s.id)}`,
+          BASE
+        ).href
+      );
+    }
+  }
 
-  const xml =
-    `<?xml version="1.0" encoding="UTF-8"?>` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
-    entries
-      .map(
-        (u) =>
-          `<url>` +
-          `<loc>${xmlEscape(u.loc)}</loc>` +
-          `<lastmod>${xmlEscape(u.lastmod)}</lastmod>` +
-          `</url>`
-      )
-      .join("") +
-    `</urlset>`;
+  // ===== SERVICIO + PUERTO =====
+
+  if (Array.isArray(services) && Array.isArray(ports)) {
+    for (const s of services) {
+      for (const p of ports) {
+        urls.push(
+          new URL(
+            `pages/buscar/?servicio=${encodeURIComponent(
+              s.id
+            )}&puerto=${encodeURIComponent(p.id)}`,
+            BASE
+          ).href
+        );
+      }
+    }
+  }
+
+  // ===== GENERAR XML =====
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (u) => `<url>
+  <loc>${xmlEscape(u)}</loc>
+  <lastmod>${now}</lastmod>
+</url>`
+  )
+  .join("\n")}
+</urlset>`;
 
   return new Response(xml, {
-    status: 200,
     headers: {
-      "content-type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
+      "Content-Type": "application/xml",
     },
   });
 }
