@@ -21,6 +21,17 @@ function ensureCanonical() {
   return el;
 }
 
+function getLang() {
+  // Prioridad: <html lang="..">, luego localStorage
+  const htmlLang = (document.documentElement.lang || "").toLowerCase();
+  if (htmlLang.startsWith("en")) return "en";
+  if (htmlLang.startsWith("es")) return "es";
+
+  const ls = (localStorage.getItem("lang") || localStorage.getItem("language") || "").toLowerCase();
+  if (ls.startsWith("en")) return "en";
+  return "es";
+}
+
 // Canonical “limpio”: quita vacíos, quita page=1, NO mete q para evitar infinitas combinaciones
 function buildBuscarCanonical(filters) {
   const params = new URLSearchParams();
@@ -41,93 +52,111 @@ function buildBuscarCanonical(filters) {
 
 function buildEmpresaCanonical({ idParam, slugParam }) {
   const base = new URL("pages/empresa/", SITE_ROOT);
-  // Canonical estable: prioriza ID para evitar duplicados
+  // canonical estable: prioriza ID
   if (idParam) base.searchParams.set("id", String(idParam));
   else if (slugParam) base.searchParams.set("slug", String(slugParam));
   return base.href;
 }
 
+function pickName(obj, fallback) {
+  // Si en el futuro metes name_i18n, aquí es donde lo aprovecharías
+  // por ahora tiramos de .name
+  return (obj?.name || fallback || "").toString().trim();
+}
+
 /**
- * SEO para la página /pages/buscar/
- * - title / description / robots / canonical
- * - actualiza el H1 visible si existe: h1.page-title
+ * SEO para /pages/buscar/
  */
 export function updateBuscarSEO({ filters, lookups, total }) {
+  const lang = getLang();
+
   const servicioId = (filters?.servicio || "").toString().trim();
   const areaId = (filters?.area || "").toString().trim();
   const puertoId = (filters?.puerto || "").toString().trim();
   const q = (filters?.q || "").toString().trim();
 
-  const servicioName = servicioId
-    ? lookups?.services?.get(servicioId)?.name || servicioId
-    : "";
-  const areaName = areaId ? lookups?.areas?.get(areaId)?.name || areaId : "";
-  const puertoName = puertoId ? lookups?.ports?.get(puertoId)?.name || puertoId : "";
+  const servicioObj = servicioId ? lookups?.services?.get(servicioId) : null;
+  const areaObj = areaId ? lookups?.areas?.get(areaId) : null;
+  const puertoObj = puertoId ? lookups?.ports?.get(puertoId) : null;
+
+  const servicioName = servicioId ? pickName(servicioObj, servicioId) : "";
+  const areaName = areaId ? pickName(areaObj, areaId) : "";
+  const puertoName = puertoId ? pickName(puertoObj, puertoId) : "";
 
   const lugar = puertoName || areaName;
 
-  // --- Plantillas fijas
-  let h1 = "Resultados";
-  let title = "Buscar | NautiCards";
-  let description =
-    "Encuentra empresas y servicios náuticos. Directorio con información de contacto y ubicación.";
+  // --- Plantillas fijas ES/EN
+  let h1, title, description;
 
-  if (servicioName && lugar) {
-    h1 = `${servicioName} en ${lugar}`;
-    title = `${servicioName} en ${lugar} | NautiCards`;
-    description = `Encuentra empresas de ${servicioName} en ${lugar}. Directorio de servicios náuticos con información de contacto y ubicación.`;
-  } else if (servicioName) {
-    h1 = `Empresas de ${servicioName}`;
-    title = `Empresas de ${servicioName} | NautiCards`;
-    description = `Encuentra empresas de ${servicioName}. Directorio de servicios náuticos con información de contacto y ubicación.`;
-  } else if (lugar) {
-    h1 = `Empresas náuticas en ${lugar}`;
-    title = `Empresas náuticas en ${lugar} | NautiCards`;
-    description = `Encuentra empresas náuticas en ${lugar}. Directorio con información de contacto y ubicación.`;
+  if (lang === "en") {
+    h1 = "Results";
+    title = "Search | NautiCards";
+    description = "Find nautical companies and services. Directory with contact details and location.";
+
+    if (servicioName && lugar) {
+      h1 = `${servicioName} in ${lugar}`;
+      title = `${servicioName} in ${lugar} | NautiCards`;
+      description = `Find ${servicioName} companies in ${lugar}. Nautical services directory with contact details and location.`;
+    } else if (servicioName) {
+      h1 = `${servicioName} companies`;
+      title = `${servicioName} companies | NautiCards`;
+      description = `Find ${servicioName} companies. Nautical services directory with contact details and location.`;
+    } else if (lugar) {
+      h1 = `Nautical companies in ${lugar}`;
+      title = `Nautical companies in ${lugar} | NautiCards`;
+      description = `Find nautical companies in ${lugar}. Directory with contact details and location.`;
+    }
+  } else {
+    h1 = "Resultados";
+    title = "Buscar | NautiCards";
+    description = "Encuentra empresas y servicios náuticos. Directorio con información de contacto y ubicación.";
+
+    if (servicioName && lugar) {
+      h1 = `${servicioName} en ${lugar}`;
+      title = `${servicioName} en ${lugar} | NautiCards`;
+      description = `Encuentra empresas de ${servicioName} en ${lugar}. Directorio de servicios náuticos con información de contacto y ubicación.`;
+    } else if (servicioName) {
+      h1 = `Empresas de ${servicioName}`;
+      title = `Empresas de ${servicioName} | NautiCards`;
+      description = `Encuentra empresas de ${servicioName}. Directorio de servicios náuticos con información de contacto y ubicación.`;
+    } else if (lugar) {
+      h1 = `Empresas náuticas en ${lugar}`;
+      title = `Empresas náuticas en ${lugar} | NautiCards`;
+      description = `Encuentra empresas náuticas en ${lugar}. Directorio con información de contacto y ubicación.`;
+    }
   }
 
   // Robots: conservador
-  // - q libre: noindex
-  // - sin filtros útiles: noindex
-  // - sin resultados: noindex
   const hasUseful = Boolean(servicioId || puertoId || areaId);
   const robots =
-    (q && q.length >= 1) ||
-    !hasUseful ||
-    (typeof total === "number" && total === 0)
+    (q && q.length >= 1) || !hasUseful || (typeof total === "number" && total === 0)
       ? "noindex,follow"
       : "index,follow";
 
-  // Aplicar
   document.title = title;
   ensureMeta("description").setAttribute("content", description);
   ensureMeta("robots").setAttribute("content", robots);
   ensureCanonical().setAttribute("href", buildBuscarCanonical(filters));
 
-  // H1 visible (tu buscar tiene h1.page-title)
   const h1El = document.querySelector("h1.page-title");
   if (h1El) h1El.textContent = h1;
 }
 
 /**
- * SEO para la página /pages/empresa/
- * Manteniendo URL actual con query params.
- *
- * Llamada recomendada:
- * updateEmpresaSEO({
- *   company,
- *   seoPortName,   // string opcional (p.ej. "Port Fòrum" o "Barcelona")
- *   idParam,       // valor del query param id (si existe)
- *   slugParam      // valor del query param slug (si existe)
- * })
+ * SEO para /pages/empresa/
+ * - Usa el MISMO esquema ES/EN, sin frases por servicio.
  */
 export function updateEmpresaSEO({ company, seoPortName, idParam, slugParam }) {
-  // Si no hay company (error, id inválido, etc.) => no indexar
+  const lang = getLang();
+
+  // si no hay empresa => noindex
   if (!company) {
-    document.title = "Empresa | NautiCards";
+    document.title = lang === "en" ? "Company | NautiCards" : "Empresa | NautiCards";
     ensureMeta("description").setAttribute(
       "content",
-      "Ficha de empresa en el directorio náutico."
+      lang === "en"
+        ? "Company profile in the nautical directory."
+        : "Ficha de empresa en el directorio náutico."
     );
     ensureMeta("robots").setAttribute("content", "noindex,follow");
     ensureCanonical().setAttribute("href", new URL("pages/empresa/", SITE_ROOT).href);
@@ -136,23 +165,20 @@ export function updateEmpresaSEO({ company, seoPortName, idParam, slugParam }) {
 
   const name = (company?.name || company?.title || "Empresa").toString().trim();
   const lugar = (seoPortName || "").toString().trim();
-  const placePart = lugar ? ` en ${lugar}` : "";
+  const placePart =
+    lugar ? (lang === "en" ? ` in ${lugar}` : ` en ${lugar}`) : "";
 
-  // Plantilla fija (como en buscar)
   const title = `${name}${placePart} | NautiCards`;
-  const description = `Encuentra información de ${name}${placePart}. Directorio de servicios náuticos con información de contacto y ubicación.`;
+  const description =
+    lang === "en"
+      ? `Find information about ${name}${placePart}. Nautical services directory with contact details and location.`
+      : `Encuentra información de ${name}${placePart}. Directorio de servicios náuticos con información de contacto y ubicación.`;
 
   document.title = title;
   ensureMeta("description").setAttribute("content", description);
   ensureMeta("robots").setAttribute("content", "index,follow");
+  ensureCanonical().setAttribute("href", buildEmpresaCanonical({ idParam, slugParam }));
 
-  // Canonical estable (preferimos id)
-  ensureCanonical().setAttribute(
-    "href",
-    buildEmpresaCanonical({ idParam, slugParam })
-  );
-
-  // (Opcional) si tu empresa tiene h1.page-title o un h1 específico
   const h1El = document.querySelector("h1.page-title");
   if (h1El) h1El.textContent = name;
 }
