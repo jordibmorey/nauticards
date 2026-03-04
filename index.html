@@ -13,6 +13,9 @@
 
   <!-- CSS global -->
   <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 </head>
 
 <body data-page="home">
@@ -199,6 +202,7 @@
       </div>
     </section>
 
+
 <!-- NAUTICARDS -->
 <section class="section">
   <div class="container">
@@ -211,9 +215,7 @@
           <!-- IZQUIERDA -->
           <div class="nc-hero__left">
 
-            <div class="nc-badge" data-i18n="home.about.badge">
-              Directorio náutico · Cataluña
-            </div>
+            
 
             <h1 class="nc-title">NautiCards...</h1>
 
@@ -257,7 +259,18 @@
 </section>
 
 
+<section class="section home-map">
+  <div class="container stack">
+    <header class="home-map__header">
 
+    </header>
+
+    <div class="map-card">
+      <div id="portsMap" class="ports-map" role="region" aria-label="Mapa interactivo de puertos"></div>
+      
+    </div>
+  </div>
+</section>
 
 
     <!-- SERVICIOS DESTACADOS (mismo bloque que "Servicios más populares" de /servicios) -->
@@ -427,7 +440,9 @@
 </footer>
 
   <!-- JS -->
-  <script src="../../assets/app.js" defer></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+  <script type="module" src="../../assets/js/main.js" defer></script>
   <script type="module">
   import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "/assets/i18n.js";
 
@@ -443,8 +458,6 @@
     initLangDropdown(lang);
   })();
 </script>
-
-
 
 </body>
 </html>
