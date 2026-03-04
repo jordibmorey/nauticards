@@ -39,7 +39,6 @@ export async function onRequestGet({ env }) {
 
   urls.push(new URL("", BASE).href);
   urls.push(new URL("pages/buscar/", BASE).href);
-  urls.push(new URL("pages/contacto/", BASE).href);
 
   // ===== CARGAR DATOS =====
 
