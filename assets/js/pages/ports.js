@@ -2,6 +2,29 @@ import { SITE_ROOT } from "../config.js";
 import { getPorts, getPServices, getCompanies, getAreas } from "../dal.js";
 import { safeText, safeAttr, indexById, sortByName, normalize, tr } from "../utils.js";
 
+const PORT_SERVICE_ICON_BY_ID = {
+  "agua": "droplet",
+  "alquiler-coches": "car",
+  "aseos": "bath",
+  "bicicletas": "bike",
+  "carburante": "fuel",
+  "duchas": "shower-head",
+  "electricidad": "zap",
+  "grua-elevacion": "layers-2",
+  "lavanderia": "shirt",
+  "rampa-botadura": "move-up-right",
+  "reciclaje": "recycle",
+  "recuperacion-aguas-residuales": "waves",
+  "venta-hielo": "snowflake",
+  "videovigilancia": "cctv",
+  "vigilante-nocturno": "shield",
+  "wifi": "wifi"
+};
+
+function getPortServiceIconById(serviceId = "") {
+  return PORT_SERVICE_ICON_BY_ID[String(serviceId).trim()] || "anchor";
+}
+
 
 export async function initPortsPage() {
   // ANTES: const searchEl = document.getElementById("portsSearch");
@@ -58,6 +81,25 @@ export async function initPortsPage() {
       view: window,
     });
     selectEl.dispatchEvent(evt);
+  };
+
+    const isMobileLayout = () => window.matchMedia("(max-width: 1023px)").matches;
+
+  const scrollToPortDetail = () => {
+    const headerEl = document.querySelector(".site-header");
+    const targetEl =
+      heroImgEl?.closest(".bg-white.rounded-xl.shadow-sm.border.border-gray-100.overflow-hidden") ||
+      heroImgEl;
+
+    if (!targetEl) return;
+
+    const headerOffset = (headerEl?.offsetHeight || 0) + 12;
+    const top = targetEl.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   };
 
   let portsList = [];
@@ -362,15 +404,32 @@ if (!p) {
   // Servicios (chips)
   const sIds = Array.isArray(p.service_ids) ? p.service_ids.map(String) : [];
   if (!sIds.length) {
-    servicesEl.innerHTML = `<li><span class="tag">—</span></li>`;
+    servicesEl.innerHTML = `
+  <li class="port-service-chip">
+    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+      —
+    </span>
+  </li>
+`;
   } else {
     servicesEl.innerHTML = sIds
       .map((sid) => {
         const s = servicesById.get(String(sid));
         const label = s?.name || sid;
-        return `<li class="service-row">${safeText(label)}</li>`;
+        const icon = getPortServiceIconById(s?.id || sid);
+
+        return `
+  <li class="port-service-chip">
+    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+      <i data-lucide="${safeAttr(icon)}" class="w-4 h-4 mr-1.5 text-gray-500"></i>
+      ${safeText(label)}
+    </span>
+  </li>
+`;
       })
       .join("");
+
+    if (window.lucide) window.lucide.createIcons();
 
   }
 
@@ -462,9 +521,15 @@ const allPorts = sortPorts((portsList || []).filter((p) => !isCityPseudoPort(p))
     });
   }
 
-  selectEl.addEventListener("change", () => {
+    selectEl.addEventListener("change", () => {
     currentId = selectEl.value || "";
     applyFilterAndRender();
+
+    if (currentId && isMobileLayout()) {
+      requestAnimationFrame(() => {
+        setTimeout(scrollToPortDetail, 60);
+      });
+    }
   });
 
   // Render inicial

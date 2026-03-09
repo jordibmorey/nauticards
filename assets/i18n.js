@@ -20,6 +20,8 @@ export function applyI18n(t) {
     if (t[key] != null) el.textContent = t[key];
   });
 
+  
+
   // placeholder
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");

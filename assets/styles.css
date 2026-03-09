@@ -6,6 +6,7 @@
 /* -------------------------
    0) Reset suave + base
 -------------------------- */
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -384,51 +385,7 @@ label > span{
 /* -------------------------
    7) Filter-bar (hero / compacto / mobile)
 -------------------------- */
-.filter-bar{
-  border: 1px solid var(--border);
-  border-radius: var(--radius-2);
-  background: var(--bg-card);
-  padding: var(--space-4);
-  box-shadow: var(--shadow-1);
-}
 
-.filter-bar__row{
-  display: grid;
-  gap: var(--space-3);
-  align-items: end;
-  grid-template-columns: 1fr 1fr 1fr auto; /* desktop */
-}
-
-.filter-bar__field{ display: block; }
-
-.filter-bar__actions{
-  display: flex;
-  gap: var(--space-2);
-  justify-content: flex-end;
-}
-
-.filter-bar--hero{
-  padding: var(--space-5);
-  border-radius: calc(var(--radius-2) + 4px);
-}
-
-.filter-bar--compact{
-  padding: var(--space-3);
-  box-shadow: none;
-}
-
-@media (max-width: 900px){
-  .filter-bar__row{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px){
-  .filter-bar__row{
-    grid-template-columns: 1fr;
-  }
-  .filter-bar__actions{ justify-content: stretch; }
-  .filter-bar__actions .button{ width: 100%; }
-}
 
 /* -------------------------
    8) Company-card and category card (normal / destacado / incompleto)
@@ -610,14 +567,7 @@ label > span{
 /* -------------------------
    10) Results / listados + paginación
 -------------------------- */
-.results__header{
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: var(--space-3);
-}
+
 
 .pagination{
   margin-top: var(--space-4);
@@ -684,11 +634,7 @@ label > span{
   color: var(--muted);
 }
 
-.company-services{
-  margin: 0;
-  padding-left: 18px;
-}
-.company-services li{ margin: 6px 0; }
+
 
 .company-contact{
   border: 1px solid var(--border);
@@ -1008,7 +954,7 @@ body[data-page="servicios"] .row.row--between{
 }
 
 .site-footer {
-  background: #2CB1A6;
+  background: #1a1f2e;
   color: white;
   padding: 24px 0;
 }
@@ -1082,54 +1028,45 @@ body[data-page="servicios"] .row.row--between{
 }
 
 .header-logo {
-  height: 40px;
+  height: 36px;
   width: auto;
   display: block;
-  border-radius: var(--radius-1);
+  border-radius: 6px;
 }
 
-/* un pelín más grande en desktop */
 @media (min-width: 768px) {
   .header-logo {
-    height: 60px;
+    height: 42px;
   }
 }
 
-#portServices {
-  display: block;        /* fuerza columna única */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#portServices .service-row {
+.footer-logo{
+  height: 38px;
+  width: auto;
+  border-radius: 6px;
   display: block;
-  width: 100%;          /* línea a ancho completo */
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
-#portServices .service-row:last-child {
-  border-bottom: none;
+@media (max-width: 768px){
+
+  .footer-logo{
+    height: 32px;
+  }
+
 }
 
-#company-services{
-  display: block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.brand-text{
+  display: inline-block;
 }
 
-#company-services .service-row{
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,.08);
+@media (max-width: 1000px){
+  .brand-text{
+    display: none;
+  }
 }
 
-#company-services .service-row:last-child{
-  border-bottom: none;
-}
+
+
 
 
 
@@ -1212,6 +1149,16 @@ button.is-disabled {
 
 .site-header--light .lang-dropdown__trigger{
   color: #fff;
+}
+
+.site-header--light .site-nav a:hover{
+  background: rgba(255,255,255,.08);
+  text-decoration: none;
+}
+
+.site-header--light .nav-dropdown__trigger:hover,
+.site-header--light .nav-dropdown.is-open .nav-dropdown__trigger{
+  background: rgba(255,255,255,.08);
 }
 
 
@@ -1701,34 +1648,6 @@ body.menu-open .mobile-menu__panel{
   justify-content: center;
 }
 
-/* breakpoint: header compacto */
-@media (max-width: 770px){
-
-  /* fuera navegación */
-  .site-nav{
-    display: none !important;
-  }
-
-  /* mantenemos acciones (EN/ES) y las mandamos a la derecha */
-  .site-header__actions{
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
-    margin-left: auto;
-  }
-
-  /* ocultamos SOLO el CTA (Añadir empresa) */
-  .site-header__cta{
-    display: none !important;
-  }
-
-  /* mostramos la hamburguesa (al lado del idioma) */
-  .menu-toggle{
-    display: inline-flex;
-    margin-left: 8px;   /* separación respecto al EN/ES */
-  }
-}
-
 
 /* body lock cuando el menú está abierto */
 body.menu-open{
@@ -1752,21 +1671,25 @@ body.menu-open{
 /* En páginas normales (header blanco): negro ya por defecto */
 @media (max-width: 770px){
 
-  /* ocultamos navegación */
-  .site-nav{ display: none !important; }
-
-  /* ocultamos SOLO el CTA */
-  .site-header__cta{ display: none !important; }
-
-  /* layout móvil: left = burger, center = logo, right = idioma */
-  .site-header__inner{
-    position: relative;
-    justify-content: center;         /* centro real */
-    padding-left: 52px;              /* hueco para burger */
-    padding-right: 92px;             /* hueco para idioma (ajustable) */
+  .site-nav{
+    display: none !important;
   }
 
-  /* burger izquierda */
+  .site-header__cta{
+    display: none !important;
+  }
+
+  .site-header__inner{
+    position: relative;
+    justify-content: center;
+    padding-left: 56px;
+    padding-right: 64px;
+  }
+
+  .brand{
+    margin: 0 auto;
+  }
+
   .menu-toggle{
     display: inline-flex;
     position: absolute;
@@ -1774,24 +1697,27 @@ body.menu-open{
     top: 50%;
     transform: translateY(-50%);
     margin: 0;
+    z-index: 2;
   }
 
-  /* logo centrado */
-  .brand{
-    justify-self: center;
-    margin: 0;
-  }
-
-  /* idioma derecha */
   .site-header__actions{
     display: flex !important;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     margin: 0;
+    z-index: 2;
+  }
+
+  .lang-dropdown{
+    margin-right: 0;
+  }
+
+  .lang-dropdown__trigger{
+    padding: .5rem .65rem;
   }
 }
 
@@ -1827,21 +1753,113 @@ body.menu-open{
    HOME: Interactive Ports Map
 ========================= */
 
+/* Overlay para activar zoom con CTRL */
+
+.map-overlay{
+  position:absolute;
+  inset:0;
+  z-index:800;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,0,0,0.35);
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:opacity .2s ease;
+}
+
+.map-overlay.is-visible{
+  opacity: 1;
+  pointer-events: none;
+}
+
+.map-overlay-message{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 16px;
+
+  background:rgba(0,0,0,0.75);
+  color:#fff;
+
+  border-radius:999px;
+  font-size:14px;
+}
+
+.map-overlay-key{
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  padding:4px 8px;
+  border-radius:6px;
+  font-weight:600;
+}
+
 :root { --nc: #2CB1A6; }
 
-.home-map__header{ max-width: 760px; }
-
-.map-card{
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-1);
-  background: var(--bg-card);
+.home-map{
+  background: #f8fafc;
+  padding-top: 90px;
+  padding-bottom: 0;
 }
+
+.home-map__header{
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* “más blanco” y menos tarjeta */
+.map-card{
+  position: relative; /* <- AÑADIR */
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: none;
+  background: #fff;
+}
+
+
 
 .ports-map{
   width: 100%;
   height: 520px;
+}
+
+.map-card{
+  position: relative !important;
+}
+
+
+
+/* Leaflet: look más blanco/limpio */
+.ports-map .leaflet-container{
+  background: #f8fafc; /* por si tarda en cargar tiles */
+}
+
+.ports-map .leaflet-control-zoom a{
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,.10);
+}
+
+.ports-map .leaflet-bar{
+  box-shadow: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ports-map .leaflet-control-attribution{
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 2px 8px;
+  border: 1px solid rgba(0,0,0,.08);
 }
 
 
@@ -1937,6 +1955,171 @@ body.menu-open{
   .ports-map{ height: 460px; }
 }
 
+
+
+/* CREDIBILIDAD*/
+
+.home-stats{
+  margin-top: 40px;   /* antes estaba pegado */
+  padding-block: var(--space-5);
+  background: #fff;
+}
+
+.home-stats__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  text-align: center;
+}
+
+.stat-item{
+  padding: 26px 16px;
+}
+
+.stat-item + .stat-item{
+  border-left: 1px solid rgba(0,0,0,0.06);
+}
+
+.stat-icon{
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 12px;
+
+  display: grid;
+  place-items: center;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Evita que el SVG se expanda */
+.stat-icon svg{
+  width: 26px;
+  height: 26px;
+  max-width: 26px;
+  max-height: 26px;
+  display: block;
+  color: var(--text);          /* o #0F172A */
+}
+
+/* Ajustes para que .nc-title y .section-title encajen en este bloque */
+.stat-num.nc-title{
+  margin: 0;             /* nc-title ya pone margin:0; lo aseguramos */
+}
+
+.stat-label.section-title{
+  margin: 6px 0 0;       /* section-title tiene margin-bottom por defecto */
+}
+
+@media (max-width: 900px){
+  .home-stats__grid{ grid-template-columns: 1fr; }
+  .stat-item + .stat-item{
+    border-left: 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+}
+
+.stat-num.nc-title{
+  font-weight: 700;
+}
+
+.stat-label.section-title{
+  font-weight: 500;
+}
+
+
+
+
+/* ============================
+   HOME HOW (same style as map)
+============================ */
+
+.home-how-dark{
+  background:#f8fafc;
+  color: var(--text-1);
+  padding:90px 0;
+}
+
+/* ya no necesitamos tamaños custom aquí: usamos .page-title y .body-text */
+.home-how-title,
+.home-how-subtitle{
+  display:none; /* por si queda algo antiguo; puedes borrarlo si quieres */
+}
+
+.home-how-steps{
+  margin-top: 46px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.home-how-step{
+  text-align:center;
+}
+
+.home-how-iconpill{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  margin: 0 auto 18px auto;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.home-how-iconpill img{
+  width:26px;
+  height:26px;
+  object-fit: contain;
+  filter: none;      /* IMPORTANTE */
+  opacity: 0.95;
+}
+
+.home-how-step h3{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: var(--text-1);
+}
+
+.home-how-step p{
+  margin: 0;
+  color: var(--text-2);
+}
+
+.home-how-divider{
+  margin: 56px auto 0 auto;
+  height: 1px;
+  width: 100%;
+  max-width: 980px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .home-how-dark{ padding:70px 0; }
+  .home-how-steps{ grid-template-columns:1fr; gap:32px; }
+}
+
+.home-how-header{
+  max-width:760px;
+  margin-inline:auto;
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.home-services{
+  padding-bottom: 16px;
+}
+
+/* Acento del título (estilo “definitivo de Cataluña”) */
+.hero-title__accent{
+  color:#2CB1A6;
+  font-weight:900;
+}
 
 
 

@@ -62,15 +62,14 @@
 
   "meta.contact.title": "Contacto | Directorio Náutico",
   "meta.contact.description": "Contacta para añadir empresas, corregir fichas o pedir soporte.",
-  "contact.subtitle": "Añadir empresa, corregir ficha o soporte.",
+ 
   "contact.name": "Nombre",
   "contact.email": "Email",
   "contact.reason": "Motivo",
-  "contact.reason.fix": "Corregir ficha",
-  "contact.reason.support": "Soporte",
+  
   "contact.message": "Mensaje",
   "contact.send": "Enviar",
-  "contact.back": "Volver",
+
   "contact.note": "Este formulario es estático por ahora (sin backend).",
 
   "meta.company.title": "Empresa | Directorio Náutico",
@@ -105,7 +104,7 @@
   "ports.cta.text": "Añade tu empresa al directorio para aparecer en los puertos donde trabajas.",
   "ports.select.title": "Selecciona un puerto",
   "ports.select.text": "Elige un puerto desde la izquierda para ver su descripción, servicios y ubicación.",
-  "ports.viewCompanies": "Ver empresas en este puerto",
+  "ports.viewCompanies": "Ver empresas",
   "ports.openWebsite": "Abrir web",
   "ports.map": "Mapa",
   "ports.map.note": "El mapa se ajustará automáticamente al seleccionar un puerto.",
@@ -155,9 +154,253 @@
 "nav.companies": "Empresas",
 "meta.ports.description": "Explora puertos y marinas y descubre empresas y servicios náuticos en NautiCards.",
 "meta.ports.detailTitle": "{port} | Puerto | NautiCards",
-"meta.ports.detailDescription": "{port}: información del puerto y contacto. Descubre empresas y servicios náuticos asociados en NautiCards."
+"meta.ports.detailDescription": "{port}: información del puerto y contacto. Descubre empresas y servicios náuticos asociados en NautiCards.",
+"home.stats.companies": "Empresas náuticas",
+"home.stats.ports": "Puertos de Cataluña",
+"home.stats.services": "Servicios especializados",
+"home.map.title": "Explora empresas náuticas por puerto",
+"home.map.subtitle": "Encuentra servicios cerca de tu embarcación en los principales puertos de Cataluña.",
+"home.how.title": "¿Cómo funciona NautiCards?",
+"home.how.subtitle": "Tres simples pasos para encontrar el profesional adecuado.",
 
+"home.how.step1.title": "1. Busca un puerto o servicio",
+"home.how.step1.text": "Utiliza nuestro buscador para filtrar por localización o necesidad específica.",
 
+"home.how.step2.title": "2. Explora empresas verificadas",
+"home.how.step2.text": "Revisa perfiles, certificaciones y valoraciones de profesionales náuticos reales.",
+
+"home.how.step3.title": "3. Contacta directamente",
+"home.how.step3.text": "Comunícate sin intermediarios con la empresa para solicitar presupuesto o servicio.",
+"home.map.ctrlHint": "Mantén Ctrl para hacer zoom",
+"services.title": "Servicios más demandados",
+"services.desc": "Explora las categorías principales para encontrar especialistas cerca de tu amarre.",
+"services.view_all": "Ver todas las categorías",
+"services.view_companies": "Ver empresas",
+"services.explore_specialists_in": "Explora empresas especializadas en {service}.",
+"home.cta2.title": "¿Tu empresa no aparece en NautiCards?",
+"home.cta2.description": "Añade tu empresa al directorio náutico y conecta con navegantes, propietarios de barcos y profesionales del sector.",
+"home.cta2.button": "Añadir mi empresa",
+"footer.desc": "El directorio náutico profesional para encontrar empresas, servicios y puertos en un solo lugar.",
+"footer.terms": "Aviso legal",
+"footer.privacy": "Política de privacidad",
+"sidebar.title": "Selecciona ubicación",
+"port.about": "Sobre este puerto",
+"port.companies": "Empresas en este puerto",
+"search.state.noResults.eyebrow": "SIN RESULTADOS",
+  "search.state.noResults.title": "No hemos encontrado empresas con esos filtros",
+  "search.state.noResults.text": "Prueba una búsqueda más amplia, cambia el puerto o elimina algún filtro para ver más resultados.",
+  "search.state.noResults.reset": "Limpiar búsqueda",
+  "search.state.noResults.cta": "Añadir empresa",
+
+  "search.state.start.eyebrow": "DIRECTORIO NÁUTICO",
+  "search.state.start.title": "Empieza tu búsqueda",
+  "search.state.chip1": "Ej.: Barcelona",
+  "search.state.chip2": "Ej.: Electrónica",
+  "search.state.chip3": "Ej.: antifouling",
+  "services.hero.title": "Servicios náuticos",
+"services.hero.subtitle": "Explora categorías profesionales y encuentra rápidamente el servicio que necesitas para tu embarcación.",
+"services.hero.count": "50+ servicios disponibles",
+"services.hero.countDynamic": "{count} servicios disponibles",
+
+"services.search.label": "Buscar servicio",
+"services.search.placeholder": "Buscar por categoría (ej. motor, limpieza, electrónica...)",
+
+"services.filters.all": "Todos",
+"services.filters.featured": "Destacados",
+"services.filters.technical": "Técnicos",
+"services.filters.operations": "Operación",
+"services.filters.management": "Gestión",
+
+"services.highlights.eyebrow": "SERVICIOS DESTACADOS",
+"services.highlights.title": "Categorías más buscadas",
+"services.highlights.loading": "Cargando servicios destacados...",
+
+"services.families.eyebrow": "EXPLORADOR COMPLETO",
+"services.families.title": "Todos los servicios",
+"services.families.meta": "Selecciona una categoría para ver empresas relacionadas.",
+"services.families.aria": "Familias de servicios",
+"services.families.loading": "Cargando familias de servicios...",
+
+"services.results.meta": "{count} categorías disponibles. Selecciona una para ver empresas relacionadas.",
+"services.results.emptyMeta": "No hay categorías que coincidan con la búsqueda actual.",
+
+"services.count.single": "1 empresa",
+"services.count.plural": "{count} empresas",
+
+"services.highlight.cardHint": "Explora empresas especializadas en esta categoría.",
+
+"services.empty.title": "No se encontraron servicios",
+"services.empty.subtitle": "Prueba con otros términos de búsqueda o cambia el filtro.",
+
+"services.cta.title": "¿No tienes claro qué categoría necesitas?",
+"services.cta.subtitle": "Explora todas las empresas del directorio o contacta con nosotros para orientarte.",
+"services.cta.primary": "Cuéntanos qué buscas",
+"services.cta.secondary": "Explorar empresas",
+
+"services.error": "No se pudieron cargar los servicios en este momento.",
+
+"services.family.technical.title": "Sistemas y mantenimiento",
+"services.family.technical.desc": "Servicios técnicos para estructura, mecánica, instalaciones y mantenimiento especializado.",
+
+"services.family.refit.title": "Refit y materiales",
+"services.family.refit.desc": "Trabajos de estructura, acabados e interiorismo para mejora integral de embarcaciones.",
+
+"services.family.painting.title": "Pintura y tratamientos",
+"services.family.painting.desc": "Protección del casco, mantenimiento exterior y tratamientos preventivos.",
+
+"services.family.operations.title": "Operación portuaria y estancia",
+"services.family.operations.desc": "Servicios vinculados a marinas, amarres, logística de varadero y estancia.",
+
+"services.family.business.title": "Navegación y explotación",
+"services.family.business.desc": "Servicios comerciales como charter, compraventa o formación náutica.",
+
+"services.family.management.title": "Gestión y soporte profesional",
+"services.family.management.desc": "Apoyo administrativo, técnico y coordinación de proyectos náuticos.",
+
+"contact.subtitle": "Añade tu empresa al directorio, corrige una ficha o contacta con nosotros para soporte o colaboraciones.",
+
+"contact.cards.add.title": "Añadir empresa",
+"contact.cards.add.desc": "Solicita la inclusión de tu empresa en el directorio y mejora tu visibilidad dentro del sector náutico.",
+
+"contact.cards.fix.title": "Corregir una ficha",
+"contact.cards.fix.desc": "Si detectas datos incompletos o incorrectos, envíanos el cambio y lo revisaremos.",
+
+"contact.cards.support.title": "Soporte",
+"contact.cards.support.desc": "También puedes escribirnos para colaboraciones, dudas generales o mejoras de la plataforma.",
+
+"contact.sidebar.title": "Escríbenos con contexto",
+"contact.sidebar.desc": "Para ayudarte mejor, en el mensaje incluye la información clave de tu empresa o de la ficha que quieres corregir.",
+
+"contact.sidebar.add.title": "Si quieres añadir una empresa",
+"contact.sidebar.add.desc": "Indica nombre comercial, ubicación, servicios, web, teléfono y cualquier detalle relevante.",
+
+"contact.sidebar.fix.title": "Si quieres corregir una ficha",
+"contact.sidebar.fix.desc": "Pega la URL o el nombre de la empresa y especifica exactamente qué dato debe cambiar.",
+
+"contact.sidebar.time.title": "Tiempo de revisión",
+"contact.sidebar.time.desc": "Revisaremos tu solicitud lo antes posible. Cuanto más completa venga, mejor.",
+
+"contact.form.title": "Formulario de contacto",
+"contact.form.desc": "Usa este formulario para añadir empresa, corregir información o pedir soporte.",
+
+"contact.reason.fix": "Corregir ficha",
+"contact.reason.support": "Soporte",
+
+"contact.message.placeholder": "Ejemplo: nombre de la empresa, puerto o zona, servicios, web, teléfono y cualquier dato que quieras añadir o corregir.",
+
+"contact.before.title": "Antes de enviar",
+"contact.before.p1": "Esta página está pensada para empresas náuticas, correcciones de fichas y consultas generales.",
+"contact.before.p2": "Si quieres que revisemos una empresa concreta, escribe su nombre y, si puedes, añade la URL de su ficha o su ubicación.",
+"contact.before.p3": "Cuanta más información envíes en el mensaje, menos ida y vuelta hará falta después.",
+
+"contact.back": "Volver",
+
+"nav.menu": "Menú",
+
+"a11y.languageSelector": "Selector de idioma",
+"a11y.languageMenu": "Menú de idioma",
+"a11y.openMenu": "Abrir menú",
+"a11y.closeMenu": "Cerrar menú",
+
+"footer.legal": "Legal",
+
+"legal.notice.metaTitle": "Aviso legal | NautiCards",
+"legal.notice.metaDescription": "Aviso legal de NautiCards. Información del titular, condiciones de uso y responsabilidad del sitio web.",
+"legal.notice.badge": "Información legal",
+
+"legal.notice.subtitle": "En esta página se recoge la información general del titular del sitio, así como las condiciones de uso del directorio y las limitaciones de responsabilidad aplicables.",
+"legal.notice.section1.title": "1. Datos identificativos",
+"legal.notice.section1.ownerLabel": "Titular del sitio web:",
+"legal.notice.section1.taxIdLabel": "NIF/CIF:",
+"legal.notice.section1.addressLabel": "Domicilio:",
+"legal.notice.section1.emailLabel": "Correo electrónico de contacto:",
+"legal.notice.section1.websiteLabel": "Sitio web:",
+"legal.notice.section2.title": "2. Objeto del sitio web",
+"legal.notice.section2.p1": "NautiCards es un directorio informativo orientado al sector náutico, cuyo objetivo es mostrar empresas, servicios, puertos y otra información de interés para usuarios y profesionales.",
+"legal.notice.section2.p2": "La finalidad del sitio es facilitar la localización de negocios y servicios del sector, así como ofrecer un canal de contacto para solicitar altas, correcciones o actualizaciones de fichas.",
+"legal.notice.section3.title": "3. Condiciones de uso",
+"legal.notice.section3.p1": "El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de las presentes condiciones desde el momento en que se navega por la web.",
+"legal.notice.section3.p2": "El usuario se compromete a utilizar el sitio de forma lícita, adecuada y sin realizar actuaciones que puedan dañar, inutilizar o sobrecargar la web, sus contenidos o sus servicios.",
+"legal.notice.section3.p3": "Queda prohibido utilizar los contenidos del sitio con fines ilícitos, fraudulentos o contrarios a la buena fe y al orden público.",
+"legal.notice.section4.title": "4. Propiedad intelectual e industrial",
+"legal.notice.section4.p1": "Todos los contenidos de este sitio web, incluyendo textos, diseños, estructura, logotipos, imágenes, código y elementos gráficos, están protegidos por la normativa de propiedad intelectual e industrial, salvo que se indique expresamente lo contrario.",
+"legal.notice.section4.p2": "No se permite la reproducción, distribución, transformación o comunicación pública de los contenidos sin autorización previa y expresa del titular correspondiente.",
+"legal.notice.section5.title": "5. Responsabilidad sobre los contenidos",
+"legal.notice.section5.p1": "El titular procura que la información publicada sea útil, precisa y esté razonablemente actualizada. Aun así, no se garantiza la ausencia total de errores, la exactitud absoluta de todos los datos ni la actualización permanente de la información mostrada.",
+"legal.notice.section5.p2": "Las fichas de empresas, puertos o servicios pueden contener información procedente de fuentes públicas, colaboraciones o solicitudes de terceros, por lo que algunos datos podrían variar con el tiempo.",
+"legal.notice.section5.p3": "Si detectas un error o una información desactualizada, puedes comunicarlo a través de la página de contacto para su revisión.",
+"legal.notice.section6.title": "6. Enlaces externos",
+"legal.notice.section6.p1": "Este sitio puede incluir enlaces a páginas web de terceros con fines informativos o de referencia. El titular no se responsabiliza del contenido, disponibilidad, políticas o prácticas de dichos sitios externos.",
+"legal.notice.section7.title": "7. Modificaciones",
+"legal.notice.section7.p1": "El titular se reserva el derecho a modificar en cualquier momento y sin previo aviso los contenidos del sitio web, así como el presente aviso legal, para adaptarlo a cambios normativos, técnicos o de funcionamiento.",
+"legal.notice.section8.title": "8. Legislación aplicable y jurisdicción",
+"legal.notice.section8.p1": "La relación entre el titular del sitio y el usuario se regirá por la normativa española vigente. En caso de conflicto o controversia, ambas partes se someterán a los juzgados y tribunales que correspondan conforme a derecho.",
+
+"legal.privacy.metaTitle": "Política de privacidad | NautiCards",
+"legal.privacy.metaDescription": "Política de privacidad de NautiCards. Información sobre tratamiento de datos personales, finalidad, base jurídica y derechos.",
+"legal.privacy.badge": "Protección de datos",
+
+"legal.privacy.subtitle": "Aquí se explica cómo se tratan los datos personales que se recogen a través de formularios o comunicaciones realizadas desde este sitio web.",
+"legal.privacy.section1.title": "1. Responsable del tratamiento",
+"legal.privacy.section1.ownerLabel": "Responsable:",
+"legal.privacy.section1.taxIdLabel": "NIF/CIF:",
+"legal.privacy.section1.addressLabel": "Domicilio:",
+"legal.privacy.section1.emailLabel": "Email de contacto:",
+"legal.privacy.section2.title": "2. Datos que se recogen",
+"legal.privacy.section2.p1": "A través de los formularios o canales de contacto del sitio web pueden recogerse datos identificativos y de contacto, tales como:",
+"legal.privacy.section2.li1": "Nombre y apellidos o nombre de empresa",
+"legal.privacy.section2.li2": "Correo electrónico",
+"legal.privacy.section2.li3": "Teléfono, si el usuario lo facilita",
+"legal.privacy.section2.li4": "Información incluida voluntariamente en el mensaje",
+"legal.privacy.section2.p2": "No se solicitarán datos especialmente sensibles salvo que resulte imprescindible y exista una base legal adecuada para ello.",
+"legal.privacy.section3.title": "3. Finalidad del tratamiento",
+"legal.privacy.section3.p1": "Los datos personales podrán tratarse con las siguientes finalidades:",
+"legal.privacy.section3.li1": "Responder consultas enviadas por el usuario",
+"legal.privacy.section3.li2": "Gestionar solicitudes de alta, modificación o corrección de fichas",
+"legal.privacy.section3.li3": "Atender incidencias o comunicaciones relacionadas con el sitio web",
+"legal.privacy.section3.li4": "Realizar seguimiento básico de las solicitudes recibidas",
+"legal.privacy.section4.title": "4. Base jurídica",
+"legal.privacy.section4.p1": "La base jurídica para el tratamiento de los datos es, según el caso, el consentimiento del usuario al enviar el formulario o la aplicación de medidas precontractuales a petición del interesado.",
+"legal.privacy.section4.p2": "Cuando exista una relación contractual o una obligación legal, el tratamiento podrá apoyarse además en dichas bases legitimadoras.",
+"legal.privacy.section5.title": "5. Conservación de los datos",
+"legal.privacy.section5.p1": "Los datos se conservarán durante el tiempo necesario para atender la solicitud del usuario y, posteriormente, durante los plazos legales que resulten exigibles o convenientes para atender posibles responsabilidades.",
+"legal.privacy.section6.title": "6. Destinatarios",
+"legal.privacy.section6.p1": "Con carácter general, no se cederán datos a terceros salvo obligación legal o cuando sea necesario para la prestación de servicios técnicos relacionados con el funcionamiento de la web, siempre bajo las garantías legales correspondientes.",
+"legal.privacy.section7.title": "7. Derechos del usuario",
+"legal.privacy.section7.p1": "El usuario puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, cuando proceda, mediante solicitud dirigida a [EMAIL LEGAL].",
+"legal.privacy.section7.p2": "También podrá retirar su consentimiento en cualquier momento cuando el tratamiento esté basado en él, sin que ello afecte a la licitud del tratamiento previo.",
+"legal.privacy.section7.p3": "Si considera que sus derechos no han sido adecuadamente atendidos, podrá presentar una reclamación ante la Agencia Española de Protección de Datos.",
+"legal.privacy.section8.title": "8. Seguridad",
+"legal.privacy.section8.p1": "Se adoptan medidas técnicas y organizativas razonables para proteger los datos personales frente a pérdida, alteración, acceso no autorizado o tratamiento indebido, teniendo en cuenta la naturaleza de la información y los riesgos asociados.",
+"legal.privacy.section9.title": "9. Cambios en esta política",
+"legal.privacy.section9.p1": "Esta política de privacidad puede actualizarse en cualquier momento para adaptarse a cambios legales, técnicos o de funcionamiento del sitio web. Se recomienda revisarla periódicamente.",
+
+"legal.cookies.metaTitle": "Política de cookies | NautiCards",
+"legal.cookies.metaDescription": "Política de cookies de NautiCards. Información sobre el uso de cookies, tipos, finalidad y gestión por parte del usuario.",
+"legal.cookies.badge": "Cookies",
+
+"legal.cookies.subtitle": "Esta página explica qué son las cookies, qué tipos pueden utilizarse en esta web y cómo puede gestionarlas el usuario desde su navegador.",
+"legal.cookies.section1.title": "1. ¿Qué son las cookies?",
+"legal.cookies.section1.p1": "Las cookies son pequeños archivos de texto que se almacenan en el dispositivo del usuario cuando visita una página web. Sirven para recordar información sobre la navegación, mejorar la experiencia de uso o recopilar determinadas métricas, según el tipo de cookie.",
+"legal.cookies.section2.title": "2. Tipos de cookies",
+"legal.cookies.section2.p1": "Las cookies pueden clasificarse, entre otras, de la siguiente forma:",
+"legal.cookies.section2.li1": "Cookies técnicas: necesarias para el funcionamiento básico del sitio web.",
+"legal.cookies.section2.li2": "Cookies de preferencias: permiten recordar configuraciones del usuario, como idioma o región.",
+"legal.cookies.section2.li3": "Cookies de análisis: sirven para recopilar estadísticas de uso y mejorar el sitio.",
+"legal.cookies.section2.li4": "Cookies publicitarias: permiten gestionar anuncios o personalizar campañas.",
+"legal.cookies.section3.title": "3. Cookies utilizadas en este sitio",
+"legal.cookies.section3.p1": "En el estado actual del proyecto, esta web puede utilizar únicamente cookies técnicas o de preferencia que resulten necesarias para su funcionamiento básico, como por ejemplo recordar el idioma seleccionado por el usuario.",
+"legal.cookies.section3.p2": "Si en el futuro se incorporan herramientas de analítica, medición o servicios de terceros que impliquen el uso de cookies adicionales, esta política deberá actualizarse y, en su caso, mostrarse el correspondiente mecanismo de consentimiento.",
+"legal.cookies.section4.title": "4. Cookies de terceros",
+"legal.cookies.section4.p1": "Determinados servicios integrados en la web podrían, en su caso, instalar cookies gestionadas por terceros. Esto dependerá de las herramientas externas que finalmente se usen en el proyecto.",
+"legal.cookies.section4.p2": "En caso de incorporar dichos servicios, esta política deberá identificar de forma clara esos terceros y la finalidad de sus cookies.",
+"legal.cookies.section5.title": "5. Cómo desactivar o eliminar cookies",
+"legal.cookies.section5.p1": "El usuario puede permitir, bloquear o eliminar las cookies instaladas en su dispositivo mediante la configuración del navegador que utilice. La forma de hacerlo depende del navegador y del dispositivo.",
+"legal.cookies.section5.p2": "Debe tenerse en cuenta que la desactivación de determinadas cookies técnicas puede afectar al correcto funcionamiento del sitio web.",
+"legal.cookies.section6.title": "6. Actualizaciones de esta política",
+"legal.cookies.section6.p1": "Esta política de cookies puede modificarse cuando cambie la configuración técnica del sitio, se incorporen nuevos servicios o existan cambios normativos que así lo requieran.",
+
+"footer.legalNotice": "Aviso legal"
 
 
 

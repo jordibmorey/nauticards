@@ -1,465 +1,561 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Directorio Náutico | NautiCards</title>
   <meta name="description" content="Encuentra empresas náuticas por puerto y servicio en Cataluña." />
+
   <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- CSS global -->
   <link rel="stylesheet" href="/assets/styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nauti: {
+              base: '#2CB1A6',
+              hover: '#24988F',
+              dark: '#1a1f2e',
+              light: '#f8fafc',
+              gray: '#64748b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body data-page="home">
+<body data-page="home" class="font-sans antialiased text-slate-800 bg-slate-50">
 
-  <main id="main">
+  <!-- HERO + HEADER -->
+  <section
+    class="home-hero relative overflow-hidden min-h-screen min-h-[100svh] flex flex-col"
+    style="background:
+      linear-gradient(rgba(15,23,42,.48), rgba(15,23,42,.48)),
+      url('/assets/img/hero.webp') center/cover no-repeat;">
 
-    <!-- HERO (incluye HEADER dentro para que la imagen lo cubra) -->
-    <section
-  class="section home-hero"
-  style="background: linear-gradient(rgba(0,0,0,.40), rgba(0,0,0,.40)),
-      url('/assets/img/hero.webp') center / cover no-repeat; padding-top: 0%;">
+    <!-- Header -->
+    <header class="site-header site-header--light relative z-40" style="background: transparent; margin-top: 0; border-bottom: none;">
+      <div class="site-header__inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-      <!-- HEADER -->
-        <header class="site-header site-header--light" style="background: transparent; margin-top: 0;border-bottom: none;">
-          <div class="container site-header__inner">
-            <a class="brand" href="/" aria-label="BigBlue">
-              <img src="/assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+        <a href="/" class="brand no-underline hover:no-underline" aria-label="NautiCards" data-i18n-aria="a11y.homeLink">
+          <img src="/assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+          <span class="brand-text text-white font-bold tracking-tight text-xl">NautiCards</span>
+        </a>
+
+        <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+          
+          
+          <a href="/pages/servicios/index.html"
+           class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
+           data-i18n="nav.services">Servicios</a>
+
+          <a href="/pages/buscar/index.html"
+           class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
+           data-i18n="nav.companies">Empresas</a>
+
+          <a href="/pages/puertos/index.html"
+             class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
+             data-i18n="nav.ports">Puertos</a>
+
+          <a href="/pages/contacto/index.html"
+             class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
+             data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="site-header__actions flex items-center gap-3">
+          <div class="lang-dropdown relative" id="langDropdown">
+            <button
+              class="lang-dropdown__trigger inline-flex items-center gap-2 text-white text-sm font-medium px-3 py-2 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span id="langCurrent">ES</span>
+              <span class="lang-dropdown__arrow">▾</span>
+            </button>
+
+            <div class="lang-dropdown__menu absolute right-0 top-full min-w-[90px] rounded-xl bg-white shadow-xl border border-slate-100 py-2" role="menu" aria-label="Language">
+              <button type="button" role="menuitem" data-lang="en" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">EN</button>
+            </div>
+          </div>
+
+          <div class="site-header__cta hidden md:block">
+            <a
+              class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition"
+              href="/pages/contacto/index.html"
+              data-i18n="nav.addCompany">
+              Añadir empresa
             </a>
-
-            <nav class="site-nav">
-              <!-- Servicios (dropdown A–Z, se rellena por JS desde la API) -->
-              <div class="nav-dropdown nav-dropdown--light">
-                <button
-                  class="nav-dropdown__trigger"
-                  type="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
-                  onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
-                  onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
-                  data-i18n="nav.services"
-                >
-                  Servicios
-                </button>
-
-                <div
-                  class="nav-dropdown__panel"
-                  data-services-dropdown
-                  aria-label="Servicios"
-                  data-i18n-aria="nav.services"
-                ></div>
-              </div>
-
-              <a href="/pages/puertos/index.html"
-                style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
-                onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
-                onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
-                data-i18n="nav.ports"
-              >Puertos</a>
-
-              <a href="/pages/contacto/index.html"
-                style="color:#fff; background:transparent; padding:.55rem .9rem; transition: transform .15s ease, border-color .15s ease;"
-                onmouseover="this.style.borderColor='rgba(255,255,255,.85)'; this.style.transform='translateY(-1px)';"
-                onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)';"
-                data-i18n="nav.contact"
-              >Contacto</a>
-            </nav>
-
-            <div class="site-header__actions">
-            <!-- Language dropdown -->
-            <div class="lang-dropdown" id="langDropdown">
-              <button
-                class="lang-dropdown__trigger"
-                type="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span id="langCurrent">ES</span>
-                <span class="lang-dropdown__arrow">▾</span>
-              </button>
-
-              <div class="lang-dropdown__menu" role="menu" aria-label="Language">
-                <button type="button" role="menuitem" data-lang="en">EN</button>
-              </div>
-            </div>
-
-            <div class="site-header__cta">
-              <a
-                class="button button--secondary"
-                href="/pages/contacto/index.html"
-                style="color:#fff; border-color: rgba(255,255,255,.85); background: transparent;"
-                data-i18n="nav.addCompany"
-              >
-                Añadir empresa
-              </a>
-            </div>
-            </div>
-            <button class="menu-toggle" type="button"
-  aria-label="Open menu"
-  aria-expanded="false"
-  aria-controls="mobileMenu">
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-</button>
-
           </div>
-
-        <div class="mobile-menu" id="mobileMenu" hidden>
-  <div class="mobile-menu__overlay" data-close-menu></div>
-
-  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
-    <div class="mobile-menu__head">
-      <span class="mobile-menu__title">Menu</span>
-      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
-    </div>
-
-    <div class="mobile-menu__body">
-
-      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
-       <a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
-  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
-      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
-
-      <div class="mobile-menu__divider"></div>
-
-      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
-        Añadir empresa
-      </a>
-    </div>
-  </div>
-</div>
-
-        </header>
-
-
-      <!-- CONTENIDO HERO (padding grande aquí, no en la section) -->
-      <div class="container stack" style="padding-top: 8rem; padding-bottom: 10rem;">
-        <header class="stack" style="color: #fff;">
-          <h1 class="page-title" data-i18n="home.hero.title">
-            Encuentra empresas náuticas por puerto y servicio
-          </h1>
-          <p class="body-text" style="color: #fff;" data-i18n="home.hero.subtitle">
-            Talleres, mecánica, electricidad, velería, mantenimiento y más.
-          </p>
-        </header>
-
-        <!-- FILTROS -->
-        <form class="filter-bar filter-bar--hero" method="get">
-          <fieldset>
-            <legend class="sr-only" data-i18n="home.filters.legend">Filtros de búsqueda</legend>
-
-            <div class="filter-bar__row">
-              <label class="filter-bar__field">
-                <span data-i18n="home.filters.port">Puerto</span>
-                <select name="puerto">
-                  <option value="" data-i18n="common.any">Cualquiera</option>
-                  <option value="barcelona">Barcelona</option>
-                  <option value="badalona">Badalona</option>
-                  <option value="mataro">Mataró</option>
-                  <option value="port-olimpic">Port Olímpic</option>
-                  <option value="forum">Port Fòrum</option>
-                </select>
-              </label>
-
-              <label class="filter-bar__field">
-                <span data-i18n="home.filters.service">Servicio</span>
-                <select name="servicio">
-                  <option value="" data-i18n="common.any">Cualquiera</option>
-                  <option value="mecanica">Mecánica</option>
-                  <option value="mantenimiento">Mantenimiento</option>
-                  <option value="electricidad">Electricidad</option>
-                  <option value="veleria">Velería</option>
-                  <option value="fibra">Fibra</option>
-                </select>
-              </label>        
-
-              <label class="filter-bar__field">
-                <span data-i18n="home.filters.text">Texto</span>
-                <input
-                  type="search"
-                  name="q"
-                  placeholder="Busca tu empresa..." data-i18n-placeholder="home.search.placeholder"
-                />
-              </label>
-
-              <div class="filter-bar__actions">
-                <button class="button" type="submit" data-i18n="home.filters.button">Buscar</button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </section>
-
-
-<!-- NAUTICARDS -->
-<section class="section">
-  <div class="container">
-
-    
-      <div class="card__inner">
-
-        <div class="nc-hero">
-
-          <!-- IZQUIERDA -->
-          <div class="nc-hero__left">
-
-            
-
-            <h1 class="nc-title">NautiCards...</h1>
-
-            <p class="nc-lead" data-i18n="home.about.lead">
-              Más de 270 empresas activas en los principales puertos de Cataluña, organizadas en un directorio digital estructurado y en constante crecimiento.
-            </p>
-
-            <p class="nc-paragraph" data-i18n="home.about.p1">
-              La plataforma clasifica la oferta de servicios náuticos para localizar proveedores de forma rápida, clara y precisa.
-            </p>
-
-            <p class="nc-paragraph" data-i18n="home.about.p2">
-              Desde mantenimiento técnico y reparación hasta charter, marinas y actividades especializadas, facilita la conexión directa entre profesionales del ecosistema náutico y usuarios que necesitan soluciones fiables en su entorno portuario.
-            </p>
-
-            <div class="nc-cta">
-              <a class="button" href="/pages/buscar/index.html" data-i18n="home.about.ctaSearch">
-                Explorar directorio
-              </a>
-
-              <a class="button button--secondary" href="/pages/puertos/index.html" data-i18n="home.about.ctaPorts">
-                Ver puertos →
-              </a>
-            </div>
-
-          </div>
-
-          <!-- DERECHA -->
-          <div class="nc-hero__right">
-            <div class="nc-image-wrapper">
-              <img src="/assets/img/about.webp" class="nc-image" alt="Puerto en Cataluña">
-            </div>
-          </div>
-
         </div>
 
-      </div>
-    
-
-  </div>
-</section>
-
-
-<section class="section home-map">
-  <div class="container stack">
-    <header class="home-map__header">
-
-    </header>
-
-    <div class="map-card">
-      <div id="portsMap" class="ports-map" role="region" aria-label="Mapa interactivo de puertos"></div>
-      
-    </div>
-  </div>
-</section>
-
-
-    <!-- SERVICIOS DESTACADOS (mismo bloque que "Servicios más populares" de /servicios) -->
-<section class="section">
-  <div class="container stack stack--xl">
-
-    <section class="stack" aria-labelledby="popular-services-title">
-      <h2 id="popular-services-title" class="section-title" style="margin-bottom: 24px; margin-top: 0px;" data-i18n="home.featured.title">
-        Servicios destacados
-      </h2>
-
-      <ul
-        id="servicesPopular"
-        class="grid grid--cards grid--featured"
-        aria-label="Servicios destacados"
-        data-i18n-aria="a11y.featuredServices"
-      >
-        <!-- fallback -->
-        <li class="card">
-          <div class="card__inner">
-            <p class="body-text" data-i18n="home.featured.loading">Cargando servicios…</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-  </div>
-</section>
-
- <!-- CTA (Contacto rápido) -->
-<section class="section cta-form">
-  <div class="container cta-form__inner">
-
-    <h2 class="section-title cta-form__title" data-i18n="home.cta.title">
-      ¿Tu empresa no aparece?
-    </h2>
-
-    <form class="cta-form__form">
-
-      <input
-        class="cta-form__field"
-  type="text"
-  name="nombre"
-  placeholder="Empresa / Nombre"
-  data-i18n-placeholder="home.cta.input1"
-  required
-      />
-
-      <input
-        class="cta-form__field"
-  type="email"
-  name="email"
-  placeholder="Email de contacto"
-  data-i18n-placeholder="home.cta.input2"
-  required
-      />
-
-      <textarea
-        class="cta-form__field cta-form__field--textarea"
-  name="mensaje"
-  rows="3"
-  placeholder="Cuéntanos servicios, puerto, web, teléfono…"
-  data-i18n-placeholder="home.cta.textarea"
-  required
-      ></textarea>
-
-      <div class="cta-form__actions">
-        <button type="submit" class="button button--secondary cta-form__button" data-i18n="home.cta.send">
-          Enviar
+        <button
+          class="menu-toggle md:hidden inline-flex flex-col justify-center gap-1.5 p-2 text-white"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <span class="menu-toggle__bar block w-6 h-0.5 bg-white"></span>
+          <span class="menu-toggle__bar block w-6 h-0.5 bg-white"></span>
+          <span class="menu-toggle__bar block w-6 h-0.5 bg-white"></span>
         </button>
       </div>
 
-    </form>
-  </div>
-</section>
+      <!-- Mobile menu -->
+      <div class="mobile-menu fixed inset-0 z-50" id="mobileMenu" hidden>
+        <div class="mobile-menu__overlay absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-menu></div>
 
+        <div class="mobile-menu__panel absolute right-0 top-0 h-full w-[300px] max-w-[88vw] bg-white shadow-2xl">
+          <div class="mobile-menu__head flex items-center justify-between px-6 py-5 border-b border-slate-100">
+            <span class="mobile-menu__title font-semibold text-slate-900">Menu</span>
+            <button class="mobile-menu__close text-slate-500 hover:text-slate-900" type="button" aria-label="Close menu" data-close-menu>✕</button>
+          </div>
 
-<section class="section how-faq">
-  <div class="container stack">
-    <header class="how-faq__head">
-      <h2 class="section-title" data-i18n="home.faq.title">Preguntas frecuentes</h2>
+          <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/" data-i18n="nav.home">Home</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+            <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
+
+            <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-nauti-dark text-white font-medium" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
+              Añadir empresa
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <div class="how-faq__list" aria-label="FAQ">
-      <details class="how-faq__item">
-        <summary class="how-faq__q" data-i18n="home.faq.q1">¿Qué es NautiCards?</summary>
-        <div class="how-faq__a body-text muted">
-          <p class="mb-0" data-i18n="home.faq.a1">
-            NautiCards surge ante la dificultad de encontrar proveedores y talleres para 
-            las necesidades de armadores y usuarios de embarcaciones. Es un directorio abierto 
-            que agrupa empresas por puerto y servicio, facilitando la búsqueda y el acceso directo 
-            a su web y datos de contacto.
-          </p>
-        </div>
-      </details>
+    <!-- Hero content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 flex-1 flex flex-col justify-center items-center w-full">
 
-      <details class="how-faq__item">
-        <summary class="how-faq__q" data-i18n="home.faq.q2">¿Cómo encuentro una empresa?</summary>
-        <div class="how-faq__a body-text muted">
-          <p class="mb-0" data-i18n="home.faq.a2">
-            Accede a la sección Buscar y filtra por puerto o por tipo de servicio. El directorio 
-            está diseñado para ser útil tanto a embarcaciones amarradas como a navegantes en tránsito, e
-             incluye también proveedores ubicados fuera del recinto portuario.
-          </p>
-        </div>
-      </details>
+      <div class="max-w-4xl mx-auto text-center mb-12">
 
-      <details class="how-faq__item">
-        <summary class="how-faq__q" data-i18n="home.faq.q3">¿Tiene algún coste aparecer en NautiCards?</summary>
-        <div class="how-faq__a body-text muted">
-          <p class="mb-0" data-i18n="home.faq.a3">
-            NautiCards es un directorio público cuya misión es ofrecer la máxima información 
-            posible a los usuarios. El alta de empresas y profesionales es completamente gratuita, 
-            así como la gestión de su perfil y la publicación de imágenes.
-          </p>
-        </div>
-      </details>
+        <h1 class="text-white text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6"
+            data-i18n="home.hero.title">
+          Encuentra empresas náuticas por puerto y servicio
+        </h1>
 
-      <details class="how-faq__item">
-        <summary class="how-faq__q" data-i18n="home.faq.q4">¿Cómo puedo añadir mi empresa?</summary>
-        <div class="how-faq__a body-text muted">
-          <p class="mb-0" data-i18n="home.faq.a4">
-            Para añadir tu empresa, solo tienes que completar el formulario de alta. Con el nombre y la web se crea automáticamente un perfil inicial basado en información pública disponible. Recomendamos completar todos los campos y añadir imágenes para mejorar la presentación y visibilidad.
-          </p>
-        </div>
-      </details>
+        <p class="text-white/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
+          data-i18n="home.hero.subtitle">
+          Talleres, mecánica, electricidad, velería, mantenimiento y más.
+        </p>
+
+      </div>
+
+      <!-- Filtros -->
+      <div class="max-w-6xl w-full mx-auto">
+        <form class="filter-bar filter-bar--hero flex flex-col md:flex-row gap-3 bg-white rounded-2xl p-3 shadow-2xl shadow-slate-900/15 border border-white/60" method="get">
+
+          <!-- TEXTO -->
+          <div class="flex-1 relative group ">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+              <i data-lucide="search" class="w-5 h-5 text-slate-400 group-focus-within:text-nauti-base transition-colors"></i>
+            </div>
+            <input
+              type="search"
+              name="q"
+              placeholder="¿Qué estás buscando?"
+              data-i18n-placeholder="home.search.placeholder"
+              class="w-full h-14 pl-12 pr-4 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-nauti-base/30 focus:border-nauti-base focus:bg-white transition-all"
+            />
+          </div>
+
+          <!-- SERVICIO -->
+          <div class="flex-1 relative group">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
+              <i data-lucide="wrench" class="w-5 h-5 text-slate-400 group-focus-within:text-nauti-base transition-colors"></i>
+            </div>
+            <select
+              name="servicio"
+              class="w-full h-14 pl-12 pr-10 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-nauti-base/30 focus:border-nauti-base focus:bg-white transition-all appearance-none cursor-pointer"
+            >
+              <option value="" data-i18n="common.any">Cualquiera</option>
+              <option value="mecanica">Mecánica</option>
+              <option value="mantenimiento">Mantenimiento</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="veleria">Velería</option>
+              <option value="fibra">Fibra</option>
+            </select>
+            <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+            </div>
+          </div>
+
+          <!-- PUERTO -->
+          <div class="flex-1 relative group">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
+              <i data-lucide="map-pin" class="w-5 h-5 text-slate-400 group-focus-within:text-nauti-base transition-colors"></i>
+            </div>
+            <select
+              name="puerto"
+              class="w-full h-14 pl-12 pr-10 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-nauti-base/30 focus:border-nauti-base focus:bg-white transition-all appearance-none cursor-pointer"
+            >
+              <option value="" data-i18n="common.any">Cualquiera</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="badalona">Badalona</option>
+              <option value="mataro">Mataró</option>
+              <option value="port-olimpic">Port Olímpic</option>
+              <option value="forum">Port Fòrum</option>
+            </select>
+            <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+            </div>
+          </div>
+
+          <!-- BOTÓN -->
+          <button
+            class="h-14 px-8 bg-nauti-base text-white font-medium rounded-xl hover:bg-nauti-hover transition-all flex items-center justify-center gap-2 shadow-lg shadow-nauti-base/20 md:w-auto w-full whitespace-nowrap"
+            type="submit"
+            data-i18n="home.filters.button"
+          >
+            Buscar ahora
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- Services Popular -->
+<section class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold text-nauti-dark mb-4 tracking-tight" data-i18n="services.title">
+          Servicios más demandados
+        </h2>
+        <p class="text-slate-500 text-lg" data-i18n="services.desc">
+          Explora las categorías principales para encontrar especialistas cerca de tu amarre.
+        </p>
+      </div>
+
+      <a href="/pages/servicios/index.html" class="text-nauti-base font-medium flex items-center gap-2 hover:text-nauti-hover transition-colors group">
+        <span data-i18n="services.view_all">Ver todas las categorías</span>
+        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+      </a>
+    </div>
+
+    <div id="servicesPopular" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      <div class="animate-pulse bg-white rounded-2xl h-64 border border-slate-100"></div>
+      <div class="animate-pulse bg-white rounded-2xl h-64 border border-slate-100 hidden md:block"></div>
+      <div class="animate-pulse bg-white rounded-2xl h-64 border border-slate-100 hidden lg:block"></div>
+      <div class="animate-pulse bg-white rounded-2xl h-64 border border-slate-100 hidden lg:block"></div>
     </div>
   </div>
 </section>
 
+  <!-- MAP -->
+  <section 
+  class="relative py-24 border-y border-slate-200 overflow-hidden"
+  style="background:
+    linear-gradient(rgba(15,23,42,.65), rgba(15,23,42,.65)),
+    url('https://images.unsplash.com/photo-1559825481-12a05cc00344?q=80&w=2600&auto=format&fit=crop') center/cover no-repeat;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4" data-i18n="home.map.title">
+          Explora empresas náuticas por puerto
+        </h2>
+        <p class="text-slate-200 text-lg" data-i18n="home.map.subtitle">
+          Encuentra servicios cerca de tu embarcación en los principales puertos de Cataluña.
+        </p>
+      </div>
 
+      <div class="rounded-[32px] overflow-hidden bg-white/95 backdrop-blur border border-white/20 shadow-2xl">
+        <div id="portsMap" class="w-full h-[620px] ports-map" role="region" aria-label="Mapa interactivo de puertos"></div>
+      </div>
+    </div>
+  </section>
 
+    <!-- ABOUT / AUTHORITY -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="nc-hero__left">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">NautiCards...</h2>
 
+          <p class="text-lg text-slate-600 leading-relaxed mb-6" data-i18n="home.about.lead">
+            Más de 270 empresas activas en los principales puertos de Cataluña, organizadas en un directorio digital estructurado y en constante crecimiento.
+          </p>
 
+          <p class="text-slate-600 leading-relaxed mb-4" data-i18n="home.about.p1">
+            La plataforma clasifica la oferta de servicios náuticos para localizar proveedores de forma rápida, clara y precisa.
+          </p>
 
-  </main>
+          <p class="text-slate-600 leading-relaxed mb-8" data-i18n="home.about.p2">
+            Desde mantenimiento técnico y reparación hasta charter, marinas y actividades especializadas, facilita la conexión directa entre profesionales del ecosistema náutico y usuarios que necesitan soluciones fiables en su entorno portuario.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-nauti-base text-white font-medium hover:bg-nauti-hover transition" href="/pages/buscar/index.html" data-i18n="home.about.ctaSearch">
+              Explorar directorio
+            </a>
+            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition" href="/pages/puertos/index.html" data-i18n="home.about.ctaPorts">
+              Ver puertos →
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-[32px] overflow-hidden shadow-2xl border border-slate-200">
+            <img
+              src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?q=80&w=2000&auto=format&fit=crop"
+              alt="Yacht maintenance"
+              class="w-full h-[420px] md:h-[520px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4" data-i18n="home.cta2.title">
+        ¿Tu empresa no aparece en NautiCards?
+      </h2>
+
+      <p class="text-lg text-slate-300 mb-8" data-i18n="home.cta2.description">
+        Añade tu empresa al directorio náutico y conecta con navegantes, propietarios de barcos y profesionales del sector.
+      </p>
+
+      <a 
+        href="/pages/contacto/index.html"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-nauti-base text-white font-semibold hover:bg-nauti-hover transition"
+        data-i18n="home.cta2.button"
+      >
+        Añadir mi empresa
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900" data-i18n="home.faq.title">
+          Preguntas frecuentes
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 font-semibold text-slate-800 flex items-center justify-between">
+            <span data-i18n="home.faq.q1">¿Qué es NautiCards?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 leading-relaxed" data-i18n="home.faq.a1">
+            NautiCards surge ante la dificultad de encontrar proveedores y talleres para las necesidades de armadores y usuarios de embarcaciones.
+          </div>
+        </details>
+
+        <details class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 font-semibold text-slate-800 flex items-center justify-between">
+            <span data-i18n="home.faq.q2">¿Cómo encuentro una empresa?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 leading-relaxed" data-i18n="home.faq.a2">
+            Accede a la sección Buscar y filtra por puerto o por tipo de servicio.
+          </div>
+        </details>
+
+        <details class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 font-semibold text-slate-800 flex items-center justify-between">
+            <span data-i18n="home.faq.q3">¿Tiene algún coste aparecer en NautiCards?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 leading-relaxed" data-i18n="home.faq.a3">
+            NautiCards es un directorio público cuya misión es ofrecer la máxima información posible a los usuarios.
+          </div>
+        </details>
+
+        <details class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <summary class="cursor-pointer list-none px-6 py-5 font-semibold text-slate-800 flex items-center justify-between">
+            <span data-i18n="home.faq.q4">¿Cómo puedo añadir mi empresa?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 leading-relaxed" data-i18n="home.faq.a4">
+            Para añadir tu empresa, solo tienes que completar el formulario de alta.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-  <div class="footer-wrap">
+  <footer class="site-footer bg-nauti-dark pt-20 pb-10 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Left -->
-    <div class="footer-brand">
-      <img src="/assets/img/Logo NC Blanco.webp" alt="NautiCards" class="footer-logo" />
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center">
 
-      <p class="footer-desc" data-i18n="footer.tagline">
-        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
-      </p>
+        <!-- BRAND -->
+        <div class="md:col-span-1">
+          <a href="/" class="flex items-center gap-3 mb-6 opacity-100 hover:opacity-90 transition-opacity">
+            <img src="/assets/img/logoheader.svg" alt="NautiCards" class="footer-logo" />
+            <span class="font-bold text-xl tracking-tight text-white">NautiCards</span>
+          </a>
 
-      <p class="footer-copy">
-        © 2026 NautiCards
-      </p>
+          <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="footer.desc">
+            El directorio premium del sector náutico.
+          </p>
+        </div>
+
+        <!-- EXPLORE -->
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="footer.quickLinks">
+            Quick links
+          </h4>
+
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="/" class="hover:text-nauti-base transition-colors" data-i18n="footer.home">
+                Inicio
+              </a>
+            </li>
+
+            <li>
+              <a href="/pages/buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">
+                Buscar
+              </a>
+            </li>
+
+            <li>
+              <a href="/pages/puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">
+                Puertos
+              </a>
+            </li>
+
+            <li>
+              <a href="/pages/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COMPANY -->
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="nav.contact">
+            Contacto
+          </h4>
+
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="/pages/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- LEGAL -->
+        <div>
+          <h4 class="text-white font-medium mb-6">Legal</h4>
+
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="/pages/legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">
+                Aviso legal
+              </a>
+            </li>
+
+            <li>
+              <a href="/pages/legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">
+                Privacidad
+              </a>
+            </li>
+
+            <li>
+              <a href="/pages/legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">
+                Cookies
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- bottom -->
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+
+        <p>© 2026 NautiCards</p>
+
+        <p data-i18n="footer.desc">
+          El directorio premium del sector náutico.
+        </p>
+
+      </div>
+
     </div>
+  </footer>
 
-    <!-- Right -->
-    <div class="footer-links">
-      <h4  data-i18n="footer.quickLinks">Quick links</h4>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
 
-      <a href="/" data-i18n="footer.home">Inicio</a>
-      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
-      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
-      <a href="#" data-i18n="footer.cookies">Cookies</a>
-    </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+  <script type="module" src="/assets/js/main.js"></script>
 
-  </div>
-</footer>
-
-  <!-- JS -->
-   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
-  <script type="module" src="../../assets/js/main.js" defer></script>
   <script type="module">
-  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "/assets/i18n.js";
+    import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "/assets/i18n.js";
 
-  (async () => {
-    const lang = getLang();
-    document.documentElement.lang = lang;
+    (async () => {
+      try {
+        const lang = getLang();
+        window.__lang = lang;
+        document.documentElement.lang = lang;
 
-    const t = await loadDict(lang);
-    applyI18n(t);
-    window.__t = t;
-    window.dispatchEvent(new Event("i18n:ready"));
-    applyMeta(t, "home");
-    initLangDropdown(lang);
-  })();
-</script>
+        const t = await loadDict(lang);
+        window.__t = t;
 
+        applyI18n(t);
+        applyMeta(t, "home");
+        initLangDropdown(lang);
+
+        window.dispatchEvent(new Event("i18n:ready"));
+      } catch (err) {
+        console.error("I18N bootstrap error:", err);
+      }
+    })();
+  </script>
+
+  <script async id="flowith-inject-image-placeholder">
+    document.addEventListener('error', (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.target.onerror = null;
+        e.target.src = 'https://r2.flowith.net/sandbox-placeholder.png';
+        e.target.style.objectFit = 'cover';
+        e.target.style.objectPosition = 'center';
+      }
+    }, true);
+  </script>
 </body>
 </html>
-
-

@@ -36,6 +36,8 @@ import { renderCompanyCard } from "../ui/cards.js";
 import { initPortsMap } from "../ui/portmap.js";
 import { updateBuscarSEO } from "../seo.js";
 
+import { renderNoResultsMessage} from "../ui/filters.js";
+
 // DOM hooks (Home + Buscar share these)
 const grid = document.getElementById("companiesGrid");
 const resultsCounter = document.querySelector(".results__header .small strong");
@@ -90,53 +92,90 @@ await initPortsMap();
 
 
     // === SERVICIOS DESTACADOS EN HOME (mismo comportamiento que /pages/servicios) ===
-    const popularListEl = document.getElementById("servicesPopular"); // puede existir o no
-    if (popularListEl) {
-      const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
-      const PLACEHOLDER = new URL("assets/img/placeholder.jpg", SITE_ROOT).href;
+const popularListEl = document.getElementById("servicesPopular");
 
-      const renderServiceCard = (s) => {
-        const id = String(s.id);
-        const name = s.name || id;
-        const href = `${buscarBase}?servicio=${encodeURIComponent(id)}`;
-        const imgUrl = s.image_url ? String(s.image_url) : PLACEHOLDER;
+if (popularListEl) {
+  const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
+  const PLACEHOLDER = "https://r2.flowith.net/sandbox-placeholder.png";
 
-        return `
-          <li class="card card--category">
-            <a class="category-card__link" href="${safeAttr(
-              href
-            )}" aria-label="${safeAttr(name)}">
-              <img
-                class="category-card__img"
-                src="${safeAttr(imgUrl)}"
-                alt=""
-                loading="lazy"
-                onerror="this.onerror=null; this.src='${safeAttr(
-                  PLACEHOLDER
-                )}';"
-              />
-              <h3 class="company-card__title category-card__title">${safeText(
-                name
-              )}</h3>
-            </a>
-          </li>
-        `;
-      };
+  const getServiceIcon = (service) => {
+    const id = String(service?.id || "").toLowerCase();
+    const name = String(service?.name || "").toLowerCase();
 
-      const allSorted = (servicesList || [])
-        .slice()
-        .sort(sortByName);
+    if (id.includes("mecan") || name.includes("mecan")) return "wrench";
+    if (id.includes("elect") || name.includes("electr")) return "radio";
+    if (id.includes("vela") || id.includes("jarcia") || name.includes("veler")) return "wind";
+    if (id.includes("antifoul") || name.includes("antifoul")) return "droplets";
+    if (id.includes("fibra") || name.includes("composite")) return "layers";
+    if (id.includes("charter") || name.includes("charter")) return "ship";
+    if (id.includes("asesoria") || name.includes("asesor")) return "briefcase";
+    if (id.includes("gestoria") || name.includes("gestor")) return "files";
+    if (id.includes("varaderos") || name.includes("varadero")) return "warehouse";
+    if (id.includes("venta") || name.includes("venta")) return "badge-euro";
+    if (id.includes("carpinteria") || name.includes("carpinter")) return "hammer";
+    if (id.includes("pupilaje") || name.includes("pupilaje")) return "anchor";
+    return "wrench";
+  };
 
-      const featured = allSorted.filter((s) => Boolean(s.featured)).slice(0, 10);
-      const section = popularListEl.closest("section");
+  const renderServiceCard = (s) => {
+    const id = String(s.id);
+    const name = s.name || id;
+    const href = `${buscarBase}?servicio=${encodeURIComponent(id)}`;
+    const imgUrl = s.image_url ? String(s.image_url) : PLACEHOLDER;
+    const icon = getServiceIcon(s);
 
-      if (!featured.length) {
-        if (section) section.style.display = "none";
-      } else {
-        if (section) section.style.display = "";
-        popularListEl.innerHTML = featured.map(renderServiceCard).join("");
-      }
-    }
+    return `
+      <a href="${safeAttr(href)}" class="group block h-full">
+        <article class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full flex flex-col">
+          <div class="relative h-36 overflow-hidden bg-slate-200">
+            <img
+              src="${safeAttr(imgUrl)}"
+              alt="${safeAttr(name)}"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              onerror="this.onerror=null; this.src='${safeAttr(PLACEHOLDER)}';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-slate-900/10 to-transparent"></div>
+
+            <div class="absolute left-5 bottom-5 w-11 h-11 rounded-xl bg-white/15 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg">
+              <i data-lucide="${safeAttr(icon)}" class="w-5 h-5"></i>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-bold tracking-tight text-nauti-dark mb-2 leading-tight">
+              ${safeText(name)}
+            </h3>
+
+            <p class="text-slate-500 text-sm mb-6">
+              ${safeText(
+                tr("services.explore_specialists_in", "Explora empresas especializadas en {service}.")
+                  .replace("{service}", String(name).toLowerCase())
+              )}
+            </p>
+
+            <span class="mt-auto inline-flex items-center gap-2 text-nauti-base font-medium group-hover:text-nauti-hover transition-colors">
+              ${safeText(tr("services.view_companies", "Ver empresas"))}
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </span>
+          </div>
+        </article>
+      </a>
+    `;
+  };
+
+  const allSorted = (servicesList || []).slice().sort(sortByName);
+  const featured = allSorted.filter((s) => Boolean(s.featured)).slice(0, 10);
+  const section = popularListEl.closest("section");
+
+  if (!featured.length) {
+    if (section) section.style.display = "none";
+  } else {
+    if (section) section.style.display = "";
+    popularListEl.innerHTML = featured.map(renderServiceCard).join("");
+    if (window.lucide) lucide.createIcons();
+  }
+}
 
     // Populate selects from catalogs + hydrate form from URL
     if (filterForm) {
@@ -340,6 +379,16 @@ const total = Number(companiesPage?.total || 0);
 const safePage = Number(companiesPage?.page || 1);
 
 if (resultsCounter) resultsCounter.textContent = String(total);
+
+if (total === 0) {
+  renderNoResultsMessage({
+    filters,
+    gridEl: grid,
+    counterEl: resultsCounter,
+    paginationEl: paginationList
+  });
+  return;
+}
 
 if (grid) {
   grid.innerHTML = items

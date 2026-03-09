@@ -1,195 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contacto | Directorio Náutico</title>
   <meta name="description" content="Contacta para añadir empresas, corregir fichas o pedir soporte." />
-  <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="canonical" href="https://nauticards.es/pages/contacto/">
 
-  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+
+  <style>
+    a { text-decoration: none; }
+    a:hover { text-decoration: none; }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            nauti: {
+              base: '#2CB1A6',
+              hover: '#24988F',
+              dark: '#1a1f2e',
+              light: '#f6fbfa'
+            },
+            primary: '#2CB1A6',
+            primaryHover: '#24958c',
+            surface: '#ffffff',
+            surfaceMuted: '#f8fafc',
+            border: '#e5e7eb',
+            textMain: '#111827',
+            textMuted: '#6b7280'
+          },
+          boxShadow: {
+            soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            float: '0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body data-page="static">
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="../../index.html" aria-label="Ir a la home del Directorio Náutico">
-  <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
-</a>
+<body data-page="static" class="font-sans antialiased text-textMain bg-surfaceMuted selection:bg-primary selection:text-white">
 
-      <nav class="site-nav" aria-label="Navegación principal">
-        <div class="nav-dropdown">
-<button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.services">
-Servicios
-</button>
-<div class="nav-dropdown__panel" data-services-dropdown aria-label="Servicios"></div>
-</div>
-        <a href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
-        <a href="./index.html" data-i18n="nav.contact">Contacto</a>
+  <!-- HEADER -->
+ <header class="site-header relative z-40 bg-white border-b border-slate-200">
+    <div class="site-header__inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="../../index.html" class="brand no-underline hover:no-underline" aria-label="NautiCards">
+        <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+        <span class="brand-text text-slate-900 font-bold tracking-tight text-xl">NautiCards</span>
+      </a>
+
+      <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a href="../servicios/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.services">Servicios</a>
+
+        <a href="../buscar/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.companies">Empresas</a>
+
+        <a href="../puertos/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.ports">Puertos</a>
+
+        <a href="../contacto/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.contact">Contacto</a>
       </nav>
 
-      <div class="site-header__actions">
+      <div class="site-header__actions flex items-center gap-3">
+        <div class="lang-dropdown relative" id="langDropdown">
+          <button
+            class="lang-dropdown__trigger inline-flex items-center gap-2 text-slate-700 text-sm font-medium px-3 py-2 rounded-xl border border-slate-200 bg-white"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span id="langCurrent">ES</span>
+            <span class="lang-dropdown__arrow">▾</span>
+          </button>
 
-  <!-- Idioma -->
-  <div class="lang-dropdown" id="langDropdown">
-     <button class="lang-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false">
-    <span id="langCurrent">ES</span>
-    <span class="lang-dropdown__arrow">▾</span>
-  </button>
-    <div class="lang-dropdown__menu">
-      <button data-lang="es">ES</button>
-      <button data-lang="en">EN</button>
-    </div>
-  </div>
+          <div class="lang-dropdown__menu absolute right-0 top-full  min-w-[90px] rounded-xl bg-white shadow-xl border border-slate-100 py-2" role="menu" aria-label="Language">
+            <button type="button" role="menuitem" data-lang="en" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">EN</button>
+          </div>
+        </div>
 
-  <!-- CTA -->
-  <div class="site-header__cta">
-    <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">
-      Añadir empresa
-    </a>
-  </div>
+        <div class="site-header__cta hidden md:block">
+          <a
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition"
+            href="../contacto/index.html"
+            data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
 
-</div>
-<button class="menu-toggle" type="button"
-  aria-label="Open menu"
-  aria-expanded="false"
-  aria-controls="mobileMenu">
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-</button>
-
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu" hidden>
-  <div class="mobile-menu__overlay" data-close-menu></div>
-
-  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
-    <div class="mobile-menu__head">
-      <span class="mobile-menu__title">Menu</span>
-      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
+      <button
+        class="menu-toggle md:hidden inline-flex flex-col justify-center gap-1.5 p-2 text-slate-900"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+      </button>
     </div>
 
-    <div class="mobile-menu__body">
+    <div class="mobile-menu fixed inset-0 z-50" id="mobileMenu" hidden>
+      <div class="mobile-menu__overlay absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-menu></div>
 
-      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
-<a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
-  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
-      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      <div class="mobile-menu__panel absolute right-0 top-0 h-full w-[300px] max-w-[88vw] bg-white shadow-2xl">
+        <div class="mobile-menu__head flex items-center justify-between px-6 py-5 border-b border-slate-100">
+          <span class="mobile-menu__title font-semibold text-slate-900">Menu</span>
+          <button class="mobile-menu__close text-slate-500 hover:text-slate-900" type="button" aria-label="Close menu" data-close-menu>✕</button>
+        </div>
 
-      <div class="mobile-menu__divider"></div>
+        <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../../index.html" data-i18n="nav.home">Home</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../buscar/index.html" data-i18n="nav.companies">Empresas</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
 
-      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
-        Añadir empresa
-      </a>
+          <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
+
+          <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium" href="../contacto/index.html" data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </header>
 
-  <main id="main">
-    <section class="section">
-      <div class="container stack">
-        <header class="stack">
-          <h1 class="page-title" data-i18n="nav.contact">Contacto</h1>
-          <p class="body-text" data-i18n="contact.subtitle">Añadir empresa, corregir ficha o soporte.</p>
-        </header>
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-nauti-dark border-b border-white/10">
+    <div class="absolute inset-0 bg-gradient-to-br from-nauti-dark via-nauti-dark to-slate-900"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-nauti-base/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
-        <form id="contactForm" class="card stack" action="#" method="post" aria-label="Formulario de contacto">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 md:pt-12 md:pb-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-300 mb-5">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span data-i18n="nav.contact">Contacto</span>
+        </div>
 
-          <label>
-            <span data-i18n="contact.name">Nombre</span>
-            <input name="nombre" autocomplete="name" required />
-          </label>
+        <h1 class="page-title text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" data-i18n="nav.contact">
+          Contacto
+        </h1>
 
-          <label>
-            <span data-i18n="contact.email">Email</span>
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
+        <p class="text-lg text-slate-300 max-w-2xl leading-relaxed" data-i18n="contact.subtitle">
+          Añade tu empresa al directorio, corrige una ficha o contacta con nosotros para soporte y colaboraciones.
+        </p>
+      </div>
+    </div>
+  </section>
 
-          <label>
-            <span data-i18n="contact.reason">Motivo</span>
-            <select name="motivo" required>
-              <option value="alta" data-i18n="nav.addCompany">Añadir empresa</option>
-              <option value="correccion" data-i18n="contact.reason.fix">Corregir ficha</option>
-              <option value="soporte" data-i18n="contact.reason.support">Soporte</option>
-            </select>
-          </label>
+  <main id="main" class="pb-20">
+    <!-- INFO CARDS -->
+    <section class="py-10 md:py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-nauti-base/10 text-nauti-base flex items-center justify-center mb-4">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
+            </div>
+            <h2 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact.cards.add.title">Añadir empresa</h2>
+            <p class="text-sm leading-6 text-slate-600" data-i18n="contact.cards.add.desc">
+              Solicita la inclusión de tu empresa en el directorio y mejora tu visibilidad dentro del sector náutico.
+            </p>
+          </article>
 
-          <label>
-            <span data-i18n="contact.message">Mensaje</span>
-            <textarea name="mensaje" rows="6" required></textarea>
-          </label>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-4">
+              <i data-lucide="badge-alert" class="w-5 h-5"></i>
+            </div>
+            <h2 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact.cards.fix.title">Corregir una ficha</h2>
+            <p class="text-sm leading-6 text-slate-600" data-i18n="contact.cards.fix.desc">
+              Si detectas datos incompletos o incorrectos, envíanos el cambio y lo revisaremos.
+            </p>
+          </article>
 
-          <div class="filter-bar__actions">
-            <button class="button" type="submit" data-i18n="contact.send">Enviar</button>
-            <a class="button button--ghost" href="../../index.html" data-i18n="contact.back">Volver</a>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-slate-900/5 text-slate-800 flex items-center justify-center mb-4">
+              <i data-lucide="life-buoy" class="w-5 h-5"></i>
+            </div>
+            <h2 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact.cards.support.title">Soporte</h2>
+            <p class="text-sm leading-6 text-slate-600" data-i18n="contact.cards.support.desc">
+              También puedes escribirnos para colaboraciones, dudas generales o mejoras de la plataforma.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM + SIDE -->
+    <section class="pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- SIDEBAR -->
+          <aside class="lg:col-span-4 xl:col-span-4 lg:sticky lg:top-28 space-y-6">
+            <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-7 shadow-soft">
+              <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-5">
+                <i data-lucide="send" class="w-5 h-5"></i>
+              </div>
+
+              <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-3" data-i18n="contact.sidebar.title">
+                Escríbenos con contexto
+              </h2>
+
+              <p class="text-sm leading-6 text-slate-600 mb-6" data-i18n="contact.sidebar.desc">
+                Para ayudarte mejor, en el mensaje incluye la información clave de tu empresa o de la ficha que quieres corregir.
+              </p>
+
+              <div class="space-y-4">
+                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                  <p class="text-sm font-semibold text-slate-900 mb-1" data-i18n="contact.sidebar.add.title">Si quieres añadir una empresa</p>
+                  <p class="text-sm text-slate-600 leading-6" data-i18n="contact.sidebar.add.desc">
+                    Indica nombre comercial, ubicación, servicios, web, teléfono y cualquier detalle relevante.
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                  <p class="text-sm font-semibold text-slate-900 mb-1" data-i18n="contact.sidebar.fix.title">Si quieres corregir una ficha</p>
+                  <p class="text-sm text-slate-600 leading-6" data-i18n="contact.sidebar.fix.desc">
+                    Pega la URL o el nombre de la empresa y especifica exactamente qué dato debe cambiar.
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                  <p class="text-sm font-semibold text-slate-900 mb-1" data-i18n="contact.sidebar.time.title">Tiempo de revisión</p>
+                  <p class="text-sm text-slate-600 leading-6" data-i18n="contact.sidebar.time.desc">
+                    Revisaremos tu solicitud lo antes posible. Cuanto más completa venga, mejor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- FORM -->
+          <div class="lg:col-span-8 xl:col-span-8">
+            <div class="rounded-3xl border border-slate-200 bg-white shadow-float overflow-hidden">
+              <div class="px-6 md:px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-white to-slate-50">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-2" data-i18n="contact.form.title">
+                  Formulario de contacto
+                </h2>
+                <p class="text-sm md:text-base text-slate-600 leading-6" data-i18n="contact.form.desc">
+                  Usa este formulario para añadir empresa, corregir información o pedir soporte.
+                </p>
+              </div>
+
+              <form id="contactForm"
+                    class="px-6 md:px-8 py-6 md:py-8"
+                    action="#"
+                    method="post"
+                    aria-label="Formulario de contacto"
+                    data-i18n-aria="contact.form.title">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <label class="block space-y-2">
+                    <span class="text-sm font-medium text-slate-700" data-i18n="contact.name">Nombre</span>
+                    <input
+                      name="nombre"
+                      autocomplete="name"
+                      required
+                      class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  </label>
+
+                  <label class="block space-y-2">
+                    <span class="text-sm font-medium text-slate-700" data-i18n="contact.email">Email</span>
+                    <input
+                      type="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  </label>
+                </div>
+
+                <div class="mt-5">
+                  <label class="block space-y-2">
+                    <span class="text-sm font-medium text-slate-700" data-i18n="contact.reason">Motivo</span>
+                    <div class="relative">
+                      <select
+                        name="motivo"
+                        required
+                        class="w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 pr-10 text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20">
+                        <option value="alta" data-i18n="nav.addCompany">Añadir empresa</option>
+                        <option value="correccion" data-i18n="contact.reason.fix">Corregir ficha</option>
+                        <option value="soporte" data-i18n="contact.reason.support">Soporte</option>
+                      </select>
+                      <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="mt-5">
+                  <label class="block space-y-2">
+                    <span class="text-sm font-medium text-slate-700" data-i18n="contact.message">Mensaje</span>
+                    <textarea
+                      name="mensaje"
+                      rows="8"
+                      required
+                      data-i18n-placeholder="contact.message.placeholder"
+                      placeholder="Ejemplo: nombre de la empresa, puerto o zona, servicios, web, teléfono y cualquier dato que quieras añadir o corregir."
+                      class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 resize-y"></textarea>
+                  </label>
+                </div>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+                  <div class="flex flex-col sm:flex-row gap-3">
+                    <button
+                      class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition"
+                      type="submit"
+                      data-i18n="contact.send">
+                      Enviar
+                    </button>
+
+                    <a
+                      class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition"
+                      href="../../index.html"
+                      data-i18n="contact.back">
+                      Volver
+                    </a>
+                  </div>
+
+                  <p id="contactStatus" class="text-sm text-slate-500" aria-live="polite"></p>
+                </div>
+              </form>
+            </div>
           </div>
 
-          <p id="contactStatus" class="small muted mb-0" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
 
-        </form>
+    <!-- FAQ / TRUST -->
+    <section class="pb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+          <div class="max-w-3xl">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="contact.before.title">
+              Antes de enviar
+            </h2>
+            <div class="space-y-4 text-sm md:text-base leading-7 text-slate-600">
+              <p data-i18n="contact.before.p1">
+                Esta página está pensada para empresas náuticas, correcciones de fichas y consultas generales.
+              </p>
+              <p data-i18n="contact.before.p2">
+                Si quieres que revisemos una empresa concreta, escribe su nombre y, si puedes, añade la URL de su ficha o su ubicación.
+              </p>
+              <p data-i18n="contact.before.p3">
+                Cuanta más información envíes en el mensaje, menos ida y vuelta hará falta después.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-  <div class="footer-wrap">
+  <!-- FOOTER -->
+  <footer class="site-footer bg-nauti-dark pt-20 pb-10 text-slate-300 mt-16">
+    <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Left -->
-    <div class="footer-brand">
-      <img src="/assets/img/Logo NC Blanco.webp" alt="NautiCards" class="footer-logo" />
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center">
+        <div>
+          <a href="../../index.html" class="flex items-center gap-2 mb-6 opacity-100 hover:opacity-80 transition-opacity">
+            <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="h-8 w-auto" />
+            <span class="font-bold text-xl tracking-tight text-white">NautiCards</span>
+          </a>
 
-      <p class="footer-desc" data-i18n="footer.tagline">
-        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
-      </p>
+          <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="footer.desc">
+            El directorio premium del sector náutico.
+          </p>
+        </div>
 
-      <p class="footer-copy">
-        © 2026 NautiCards
-      </p>
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="footer.quickLinks">Quick links</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../../index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.home">Inicio</a>
+            </li>
+            <li>
+              <a href="../buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">Buscar</a>
+            </li>
+            <li>
+              <a href="../puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">Puertos</a>
+            </li>
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="nav.contact">Contacto</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6">Legal</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">Aviso legal</a>
+            </li>
+            <li>
+              <a href="../legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">Privacidad</a>
+            </li>
+            <li>
+              <a href="../legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 NautiCards</p>
+        <p data-i18n="footer.desc">El directorio premium del sector náutico.</p>
+      </div>
+
     </div>
+  </footer>
 
-    <!-- Right -->
-    <div class="footer-links">
-      <h4>Quick links</h4>
+  <script type="module">
+    import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
 
-      <a href="/" data-i18n="footer.home">Inicio</a>
-      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
-      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
-      <a href="#">Cookies</a>
-    </div>
+    (async () => {
+      const lang = getLang();
+      document.documentElement.lang = lang;
 
-  </div>
-</footer>
+      const t = await loadDict(lang);
 
-<script type="module">
-  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+      applyI18n(t);
 
-  (async () => {
-    const lang = getLang();
-    document.documentElement.lang = lang;
+      window.__lang = lang;
+      window.__t = t;
+      window.dispatchEvent(new Event("i18n:ready"));
 
-    const t = await loadDict(lang);
+      applyMeta(t, "contact");
+      initLangDropdown(lang);
 
-    applyI18n(t);
+      if (window.lucide) window.lucide.createIcons();
+    })();
+  </script>
 
-    // Para que app.js pueda usar traducciones desde JS
-    window.__t = t;
-    window.dispatchEvent(new Event("i18n:ready"));
-
-    applyMeta(t, "contact");
-    initLangDropdown(lang);
-  })();
-</script>
-
-
-<script type="module" src="../../assets/js/main.js" defer></script>
-
+  <script type="module" src="../../assets/js/main.js" defer></script>
 </body>
 </html>
-

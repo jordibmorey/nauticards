@@ -3,6 +3,55 @@ import { getCompany, getServices, getPorts, getRegions, getAreas } from "../dal.
 import { safeText, safeAttr, sanitizeUrl, indexById, tr } from "../utils.js";
 import { updateEmpresaSEO } from "../seo.js";
 
+const SERVICE_ICON_MAP = {
+  "acero": "hammer",
+  "aislamiento-termico": "shield",
+  "amarres": "anchor",
+  "andamiaje": "construction",
+  "anticontaminacion": "shield-alert",
+  "antifouling-pintura": "paintbrush",
+  "asesoria": "briefcase",
+  "astillero": "ship",
+  "barnices": "paintbrush-vertical",
+  "baterias": "battery",
+  "bunkering": "fuel",
+  "carpinteria": "ruler",
+  "charter": "sailboat",
+  "club-nautico": "sailboat",
+  "cristal-metacrilato": "panel-top",
+  "electrotecnia": "zap",
+  "escuela-nautica": "graduation-cap",
+  "fibra": "layers",
+  "fontaneria": "cylinder",
+  "gestoria": "file-text",
+  "helices": "fan",
+  "hidraulica": "droplets",
+  "hvac": "wind",
+  "inox": "wrench",
+  "invernaje": "warehouse",
+  "limpieza-pulido": "sparkles",
+  "marina": "map",
+  "mecanica": "cog",
+  "peritaje": "search-check",
+  "project-management": "clipboard-list",
+  "protecciones-de-pintura": "shield-plus",
+  "pupilaje": "house",
+  "refits-integrales": "hammer",
+  "rigging": "anchor",
+  "seguros": "shield",
+  "semirrigidas": "boat",
+  "soldadura-corte": "flame",
+  "tapiceria": "sofa",
+  "teka-cubierta": "grid-2x2",
+  "tienda-nautica": "shopping-bag",
+  "transmision": "settings-2",
+  "traslados": "truck",
+  "tratamiento-de-osmosis": "droplets",
+  "varaderos": "ship-wheel",
+  "veleria": "sailboat",
+  "venta-de-embarcaciones": "badge-euro"
+};
+
 export async function initCompanyPage() {
   const params = new URLSearchParams(window.location.search);
   const idParam = params.get("id");
@@ -100,47 +149,42 @@ export async function initCompanyPage() {
     setText("company-description", company.description || "");
 
     // Servicios
+
     const servicesEl = document.getElementById("company-services");
     if (servicesEl) {
       const sIds = Array.isArray(company.service_ids) ? company.service_ids.map(String) : [];
 
       if (!sIds.length) {
-        servicesEl.innerHTML = `<li class="service-row">—</li>`;
+        servicesEl.innerHTML = `
+          <div class="rounded-2xl border border-border bg-[#f6f7f8] px-5 py-4 text-sm text-textMuted sm:col-span-2">
+            —
+          </div>
+        `;
       } else {
         servicesEl.innerHTML = sIds
           .map((sid) => {
             const s = servicesById.get(String(sid));
             const label = s?.name || sid;
-            return `<li class="service-row">${safeText(label)}</li>`;
-          })
-          .join("");
-      }
-    }
+            const icon = SERVICE_ICON_MAP[sid] || "settings";
 
-    // Gallery
-    const galleryEl = document.getElementById("company-gallery");
-    if (galleryEl) {
-      const imgs = Array.isArray(company.images) ? company.images : [];
-
-      if (imgs.length === 0) {
-        galleryEl.innerHTML = `
-          <a href="/pages/contacto/index.html" class="gallery-thumb gallery-thumb--placeholder">
-            <span>+</span>
-          </a>
-        `;
-      } else {
-        galleryEl.innerHTML = imgs
-          .map((src) => {
-            const safeSrc = sanitizeUrl(src);
-            if (!safeSrc) return "";
             return `
-              <a class="gallery-thumb" href="${safeAttr(safeSrc)}" target="_blank" rel="noopener">
-                <img src="${safeAttr(safeSrc)}" alt="${safeAttr(company.name || tr("company.imageAltFallback", "Imagen"))}"
-                  loading="lazy" />
-              </a>
+              <div class="rounded-2xl border border-border bg-[#f6f7f8] px-4 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-white border border-border shadow-soft flex items-center justify-center shrink-0 text-primary">
+                    <i data-lucide="${safeAttr(icon)}" class="w-4 h-4"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="font-medium text-sm leading-snug text-textMain">
+                      ${safeText(label)}
+                    </div>
+                  </div>
+                </div>
+              </div>
             `;
           })
           .join("");
+
+        if (window.lucide) window.lucide.createIcons();
       }
     }
 
@@ -159,6 +203,7 @@ export async function initCompanyPage() {
     }
 
     setText("company-port", portName);
+    setText("company-location", company.address || "—");
     setText("company-address", company.address || "—");
     setText("company-phone", company.phone || "—");
     setText("company-email", company.email || "—");
@@ -191,17 +236,25 @@ export async function initCompanyPage() {
     }
 
     // Logo
-    const logoImg = document.getElementById("company-logo");
-    if (logoImg) {
-      const src = sanitizeUrl(company.logo);
-      if (src) {
-        logoImg.src = src;
-        logoImg.alt = company.name || "Logo";
-      } else {
-        const wrap = logoImg.closest(".company-header__logo");
-        if (wrap) wrap.style.display = "none";
-      }
+const logoImg = document.getElementById("company-logo");
+const logoMobile = document.getElementById("company-logo-mobile");   // ← AÑADIR
+
+if (logoImg) {
+  const src = sanitizeUrl(company.logo);
+  if (src) {
+    logoImg.src = src;
+    logoImg.alt = company.name || "Logo";
+
+    if (logoMobile) {                    // ← AÑADIR
+      logoMobile.src = src;
+      logoMobile.alt = company.name || "Logo";
     }
+
+  } else {
+    const wrap = logoImg.closest(".company-header__logo");
+    if (wrap) wrap.style.display = "none";
+  }
+}
 
     const webEl = document.getElementById("company-web");
     if (webEl) {

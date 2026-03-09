@@ -77,14 +77,76 @@ export async function initPortsMap(){
     return;
   }
 
-  const map = L.map(el, { zoomControl: true, scrollWheelZoom: true });
+  const map = L.map(el, { zoomControl: true, scrollWheelZoom: false });
+
+// UX: evitar "scroll trap" -> zoom con rueda SOLO si mantienes Ctrl
+map.scrollWheelZoom.disable();
+
+const overlay = document.getElementById("mapOverlay");
+const mapEl = map.getContainer();
+
+const SEEN_KEY = "nc_map_ctrl_overlay_seen";
+
+let mouseInside = false;
+
+function showOverlay() {
+  if (!overlay) return;
+  if (localStorage.getItem(SEEN_KEY)) return;
+  overlay.classList.add("is-visible");
+}
+
+function hideOverlay() {
+  if (!overlay) return;
+  overlay.classList.remove("is-visible");
+}
+
+// Hover
+mapEl.addEventListener("mouseenter", () => {
+  mouseInside = true;
+  showOverlay();
+});
+
+mapEl.addEventListener("mouseleave", () => {
+  mouseInside = false;
+  hideOverlay();
+  map.scrollWheelZoom.disable();
+});
+
+// Si pulsa CTRL dentro del mapa → quitar overlay
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Control" && mouseInside) {
+    hideOverlay();
+  }
+});
+
+// Control rueda
+mapEl.addEventListener(
+  "wheel",
+  (e) => {
+    if (e.ctrlKey) {
+      e.preventDefault();
+
+      map.scrollWheelZoom.enable();
+      hideOverlay();
+
+      // marcar como aprendido
+      localStorage.setItem(SEEN_KEY, "1");
+
+    } else {
+      map.scrollWheelZoom.disable();
+      showOverlay();
+    }
+  },
+  { passive:false }
+);
 
   
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap",
-  }).addTo(map);
+ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  subdomains: "abcd",
+  maxZoom: 19,
+  attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+}).addTo(map);
 
   const [ports, companiesLite, areas] = await Promise.all([
     getPorts(),

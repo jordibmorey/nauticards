@@ -5,407 +5,398 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Puertos | Directorio Náutico</title>
   <meta name="description" content="Elige un puerto para ver su ficha, servicios y empresas disponibles." />
+
   <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <link rel="stylesheet" href="../../assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- CSS mínimo específico SOLO para esta página (coherente con tus variables y utilidades) -->
   <style>
-    body[data-page="puertos"] .ports-shell{
-      display: grid;
-      gap: var(--space-4);
-      grid-template-columns: 340px 1fr;
-      align-items: start;
-    }
-    @media (max-width: 900px){
-      body[data-page="puertos"] .ports-shell{
-        grid-template-columns: 1fr;
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nauti: {
+              base: '#2CB1A6',
+              hover: '#24988F',
+              dark: '#1a1f2e',
+              light: '#f8fafc',
+              gray: '#64748b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
       }
     }
-
-    body[data-page="puertos"] .ports-sidebar{
-      position: sticky;
-      top: 16px;
-    }
-    @media (max-width: 900px){
-      body[data-page="puertos"] .ports-sidebar{
-        position: static;
-      }
-    }
-
-    body[data-page="puertos"] .ports-sidebar__list{
-      max-height: 62vh;
-      overflow: auto;
-      padding-right: 4px;
-    }
-    body[data-page="puertos"] .ports-sidebar__list ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: var(--space-2);
-    }
-
-    /* Hero del puerto (título sobre foto) */
-    body[data-page="puertos"] .port-hero{
-      border-radius: var(--radius-2);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-1);
-      background: #fff;
-    }
-    body[data-page="puertos"] .port-hero__media{
-      position: relative;
-      width: 100%;
-      height: clamp(180px, 22vw, 320px);
-      background: #f2f2f2;
-    }
-    body[data-page="puertos"] .port-hero__img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.02);
-    }
-    body[data-page="puertos"] .port-hero__overlay{
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
-    }
-    body[data-page="puertos"] .port-hero__title{
-      position: absolute;
-      left: var(--space-4);
-      right: var(--space-4);
-      bottom: var(--space-4);
-      margin: 0;
-      color: #fff;
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      text-shadow: 0 8px 24px rgba(0,0,0,.35);
-    }
-    body[data-page="puertos"] .port-hero__body{
-      padding: var(--space-4);
-    }
-
-    /* Mapa */
-    body[data-page="puertos"] .port-map{
-      width: 100%;
-      height: 340px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-2);
-      overflow: hidden;
-      box-shadow: var(--shadow-1);
-      background: #fff;
-    }
-    body[data-page="puertos"] .port-map iframe{
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    /* Servicios como chips */
-    body[data-page="puertos"] .chips{
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  </style>
+  </script>
 </head>
 
-<body data-page="puertos">
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="../../index.html" aria-label="Ir a la home del Directorio Náutico">
-  <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
-</a>
+<body data-page="puertos" class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col">
 
-      <nav class="site-nav" aria-label="Navegación principal">
-        <div class="nav-dropdown">
-<button class="nav-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.services">
-Servicios
-</button>
-<div class="nav-dropdown__panel" data-services-dropdown aria-label="Servicios"></div>
-</div>
-        <a href="../puertos/index.html" aria-current="page" data-i18n="nav.ports">Puertos</a>
-        <a href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
+  <header class="site-header relative z-40 bg-white border-b border-slate-200">
+    <div class="site-header__inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="../../index.html" class="brand no-underline hover:no-underline" aria-label="NautiCards">
+        <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+        <span class="brand-text text-slate-900 font-bold tracking-tight text-xl">NautiCards</span>
+      </a>
+
+      <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a href="../servicios/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.services">Servicios</a>
+
+        <a href="../buscar/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.companies">Empresas</a>
+
+        <a href="../puertos/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.ports">Puertos</a>
+
+        <a href="../contacto/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.contact">Contacto</a>
       </nav>
 
-      <div class="site-header__actions">
+      <div class="site-header__actions flex items-center gap-3">
+        <div class="lang-dropdown relative" id="langDropdown">
+          <button
+            class="lang-dropdown__trigger inline-flex items-center gap-2 text-slate-700 text-sm font-medium px-3 py-2 rounded-xl border border-slate-200 bg-white"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span id="langCurrent">ES</span>
+            <span class="lang-dropdown__arrow">▾</span>
+          </button>
 
-  <!-- Idioma -->
-  <div class="lang-dropdown" id="langDropdown">
-     <button class="lang-dropdown__trigger" type="button" aria-haspopup="true" aria-expanded="false">
-    <span id="langCurrent">ES</span>
-    <span class="lang-dropdown__arrow">▾</span>
-  </button>
-    <div class="lang-dropdown__menu">
-      <button data-lang="es">ES</button>
-      <button data-lang="en">EN</button>
-    </div>
-  </div>
+          <div class="lang-dropdown__menu absolute right-0 top-full  min-w-[90px] rounded-xl bg-white shadow-xl border border-slate-100 py-2" role="menu" aria-label="Language">
+            <button type="button" role="menuitem" data-lang="en" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">EN</button>
+          </div>
+        </div>
 
-  <!-- CTA -->
-  <div class="site-header__cta">
-    <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">
-      Añadir empresa
-    </a>
-  </div>
+        <div class="site-header__cta hidden md:block">
+          <a
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition"
+            href="../contacto/index.html"
+            data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
 
-</div>
-<button class="menu-toggle" type="button"
-  aria-label="Open menu"
-  aria-expanded="false"
-  aria-controls="mobileMenu">
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-  <span class="menu-toggle__bar"></span>
-</button>
-
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu" hidden>
-  <div class="mobile-menu__overlay" data-close-menu></div>
-
-  <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
-    <div class="mobile-menu__head">
-      <span class="mobile-menu__title">Menu</span>
-      <button class="mobile-menu__close" type="button" aria-label="Close menu" data-close-menu>✕</button>
+      <button
+        class="menu-toggle md:hidden inline-flex flex-col justify-center gap-1.5 p-2 text-slate-900"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+      </button>
     </div>
 
-    <div class="mobile-menu__body">
+    <div class="mobile-menu fixed inset-0 z-50" id="mobileMenu" hidden>
+      <div class="mobile-menu__overlay absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-menu></div>
 
-      <!-- Servicios: link simple (en móvil no metas el dropdown A–Z) -->
-<a class="mobile-menu__link" href="/" data-i18n="nav.home">Home</a>
-  <a class="mobile-menu__link" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
-      <a class="mobile-menu__link" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a class="mobile-menu__link" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+      <div class="mobile-menu__panel absolute right-0 top-0 h-full w-[300px] max-w-[88vw] bg-white shadow-2xl">
+        <div class="mobile-menu__head flex items-center justify-between px-6 py-5 border-b border-slate-100">
+          <span class="mobile-menu__title font-semibold text-slate-900">Menu</span>
+          <button class="mobile-menu__close text-slate-500 hover:text-slate-900" type="button" aria-label="Close menu" data-close-menu>✕</button>
+        </div>
 
-      <div class="mobile-menu__divider"></div>
+        <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../../index.html" data-i18n="nav.home">Home</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../buscar/index.html" data-i18n="nav.companies">Empresas</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
 
-      <a class="button button--secondary mobile-menu__cta" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
-        Añadir empresa
-      </a>
+          <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
+
+          <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium" href="../contacto/index.html" data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
   </header>
 
-  <main>
-    <section class="section">
-      <div class="container stack">
-        <header class="stack">
-          <h1 class="page-title" data-i18n="nav.ports">Puertos</h1>
-          <p class="body-text" data-i18n="ports.subtitle">
-            Selecciona un puerto para ver su ficha: descripción, servicios y mapa.
-          </p>
-        </header>
+  <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
 
-        <!-- Layout: izquierda selector/listado, derecha ficha -->
-        <div class="ports-shell" aria-label="Selector y ficha de puerto">
-          <!-- IZQUIERDA -->
-          <aside class="ports-sidebar stack" aria-label="Selector de puertos">
-  <div class="card stack">
-    <div class="stack" style="gap: var(--space-3);">
-
-      <!-- Zona -->
-      <label class="filter-bar__field">
-        <span data-i18n="ports.zone">Zona</span>
-        <select id="portsArea" name="area">
-          <option value="" data-i18n="common.any">Cualquiera</option>
-          <!-- JS: opciones desde data/areas.json (si lo usas) -->
-        </select>
-      </label>
-
-      <!-- Puerto -->
-      <label class="filter-bar__field">
-        <span data-i18n="ports.dropdownLabel">Listado desplegable</span>
-        <select id="portsSelect" name="port">
-          <option value="" data-i18n="ports.dropdownPlaceholder">— Selecciona un puerto —</option>
-          <!-- JS: opciones desde data/ports.json -->
-        </select>
-      </label>
-
+    <div class="mb-8 text-center md:text-left">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-2" data-i18n="nav.ports">Puertos</h1>
+      <p class="text-lg text-gray-500 max-w-2xl" data-i18n="ports.subtitle">
+        Selecciona un puerto para ver su ficha: descripción, servicios y mapa.
+      </p>
     </div>
-  </div>
 
-  <!-- CTA lateral opcional -->
-  <div class="card stack">
-    <h2 class="section-title" data-i18n="ports.cta.title">¿Tu empresa opera aquí?</h2>
+    <div class="flex flex-col lg:flex-row gap-8">
 
-    <p class="body-text" data-i18n="ports.cta.text">
-      Añade tu empresa al directorio para aparecer en los puertos donde trabajas.
-    </p>
+      <aside class="w-full lg:w-80 flex-shrink-0">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-24">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-[#2CB1A6]"></i>
+            <span data-i18n="sidebar.title">Selecciona ubicación</span>
+          </h2>
 
-    <a class="button button--secondary" href="../contacto/index.html" data-i18n="nav.addCompany">
-      Añadir empresa
-    </a>
-  </div>
-</aside>
+          <div class="space-y-5">
+            <div>
+              <label for="portsArea" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="ports.zone">Zona</label>
+              <div class="relative">
+                <select id="portsArea" class="block w-full pl-3 pr-10 py-2.5 text-base border-gray-200 focus:outline-none focus:ring-[#2CB1A6] focus:border-[#2CB1A6] sm:text-sm rounded-lg appearance-none bg-gray-50 border transition-colors cursor-pointer">
+                  <option value="" data-i18n="common.any">Cualquiera</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
 
+            <div>
+              <label for="portsSelect" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="ports.dropdownLabel">Puerto</label>
+              <div class="relative">
+                <select id="portsSelect" class="block w-full pl-3 pr-10 py-2.5 text-base border-gray-200 focus:outline-none focus:ring-[#2CB1A6] focus:border-[#2CB1A6] sm:text-sm rounded-lg appearance-none bg-gray-50 border transition-colors cursor-pointer">
+                  <option value="" data-i18n="ports.dropdownPlaceholder">— Selecciona un puerto —</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <!-- DERECHA -->
-          <section class="stack" aria-label="Ficha del puerto seleccionado">
-            <!-- HERO: título sobre foto -->
-            <article class="port-hero" aria-label="Cabecera del puerto">
-              <div class="port-hero__media">
-                <!-- Por defecto: tu placeholder real -->
-                <img
-                  id="portHeroImg"
-                  class="port-hero__img"
-                  src="../../assets/img/placeholder.webp"
-                  alt=""
-                  loading="lazy"
-                />
-                <div class="port-hero__overlay" aria-hidden="true"></div>
-                <h2 id="portName" class="port-hero__title" data-i18n="ports.select.title">Selecciona un puerto</h2>
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <div class="bg-gray-50 rounded-lg p-4 text-center">
+              <i data-lucide="ship" class="w-8 h-8 mx-auto text-gray-400 mb-2"></i>
+              <p class="text-sm text-gray-600 mb-3" data-i18n="ports.cta.text">
+                Añade tu empresa al directorio para aparecer en los puertos donde trabajas.
+              </p>
+              <a href="../contacto/index.html" class="inline-block w-full text-center bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors shadow-sm" data-i18n="nav.addCompany">
+                Añadir empresa
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="flex-grow min-w-0">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+
+          <div class="relative h-64 sm:h-80 md:h-96 w-full bg-gray-200">
+            <img
+              id="portHeroImg"
+              src="../../assets/img/placeholder.webp"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+              <h2 id="portName" class="text-3xl md:text-5xl font-bold text-white tracking-tight drop-shadow-md" data-i18n="ports.select.title">
+                Selecciona un puerto
+              </h2>
+            </div>
+          </div>
+
+          <div class="p-6 md:p-8" id="portDetailPanel" hidden>
+            <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.82fr)] xl:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.85fr)] gap-8">
+
+              <div class="min-w-0 space-y-8">
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="port.about">Sobre este puerto</h3>
+                  <div id="portDescription" class="max-w-none text-gray-600 leading-relaxed">
+                    Selecciona un puerto desde la izquierda para ver su descripción, servicios y ubicación.
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="company.section.services">Servicios</h3>
+                  <ul id="portServices" class="flex flex-wrap gap-2 list-none p-0 m-0" aria-label="Servicios disponibles" data-i18n-aria="a11y.portServices">
+                    <li><span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">—</span></li>
+                  </ul>
+                </div>
+
+                <div id="portCompaniesBlock" class="pt-6 border-t border-gray-100 hidden">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-900" data-i18n="port.companies">Empresas en este puerto</h3>
+                  </div>
+
+                  <div id="portCompanies" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-lg border border-gray-100 bg-gray-50 text-gray-500 text-sm text-center col-span-full">
+                      Selecciona un puerto para ver las empresas.
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
-              <div id="portDetailPanel" hidden class="port-hero__body stack">
-                <p id="portDescription" class="body-text" data-i18n="ports.select.text">
-                  Elige un puerto desde la izquierda para ver su descripción, servicios y ubicación.
-                </p>
+              <div class="min-w-0 space-y-6">
 
-                <!-- Contacto -->
-                <section class="stack" aria-labelledby="port-contact-title" style="gap: var(--space-3);">
-                  <h3 id="port-contact-title" class="section-title" data-i18n="company.section.contact">Contacto</h3>
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                  <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4" data-i18n="company.section.contact">Contacto</h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <i data-lucide="globe" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portWebsite" target="_blank" rel="noopener" class="text-gray-600 hover:text-[#2CB1A6] font-medium break-all">—</a>
+                    </li>
 
-                  <div class="stack" style="gap: var(--space-2);">
-                    <p class="small" style="margin:0;">
-                      <strong>🌐</strong>
-                      <a id="portWebsite" href="#" class="body-text" aria-disabled="true" target="_blank" rel="noopener">—</a>
-                    </p>
+                    <li id="portEmailRow" class="flex items-start" style="display:none;">
+                      <i data-lucide="mail" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portEmail" class="text-gray-600 hover:text-[#2CB1A6] font-medium break-all">—</a>
+                    </li>
 
-                    <p class="small" id="portEmailRow" style="margin:0; display:none;">
-                      <strong>📧</strong> <a id="portEmail" href="#" class="body-text">—</a>
-                    </p>
-
-                    <p class="small" id="portPhoneRow" style="margin:0; display:none;">
-                      <strong>📞</strong> <a id="portPhone" href="#" class="body-text">—</a>
-                    </p>
-                  </div>
-                </section>
-
-                <!-- Servicios del puerto -->
-                <section class="stack" aria-labelledby="port-services-title" style="gap: var(--space-3);">
-                  <h3 id="port-services-title" class="section-title" data-i18n="company.section.services">Servicios</h3>
-
-                  <!-- Chips (usa tu .tag real) -->
-                  <ul id="portServices" class="chips" aria-label="Servicios disponibles" data-i18n-aria="a11y.portServices">
-                    <li><span class="tag">—</span></li>
+                    <li id="portPhoneRow" class="flex items-start" style="display:none;">
+                      <i data-lucide="phone" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portPhone" class="text-gray-600 hover:text-[#2CB1A6] font-medium">—</a>
+                    </li>
                   </ul>
-                </section>
+                </div>
 
-                <!-- Botones de acción -->
-                <div class="stack" style="gap: var(--space-2);">
-                  <!-- Por coherencia con tu flujo actual: ir a buscar filtrando por puerto -->
-                  <a id="portBrowseLink" class="button" href="../buscar/index.html" data-i18n="ports.viewCompanies">
+                <div class="space-y-3">
+                  <a href="../buscar/index.html" id="portBrowseLink" class="w-full flex justify-center items-center px-4 py-3 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-[#2CB1A6] hover:bg-[#249A90] transition-colors no-underline hover:no-underline" data-i18n="ports.viewCompanies">
+                    <i data-lucide="search" class="w-4 h-4 mr-2"></i>
                     Ver empresas en este puerto
                   </a>
 
-                  <!-- Botón secundario opcional (por ejemplo, abrir mapa externo si luego lo implementas) -->
-                  <a id="portWebExternal" class="button button--secondary is-disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" data-i18n="ports.openWebsite">
+                  <a href="#" id="portWebExternal" target="_blank" rel="noopener" class="w-full flex justify-center items-center px-4 py-3 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors is-disabled no-underline hover:no-underline" aria-disabled="true" data-i18n="ports.openWebsite">
                     Abrir web
+                    <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
                   </a>
                 </div>
-              </div>
-            </article>
 
-            <!-- MAPA -->
-            <section class="stack" aria-labelledby="port-map-title">
-              <h3 id="port-map-title" class="section-title" data-i18n="ports.map">Mapa</h3>
+                <div class="rounded-xl overflow-hidden border border-gray-100 shadow-sm h-64 bg-gray-100 relative">
+                  <iframe
+                    id="portMap"
+                    title="Mapa del puerto"
+                    data-i18n-title="title.portMap"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full h-full border-0 block"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=2.150%2C41.350%2C2.190%2C41.390&layer=mapnik">
+                  </iframe>
+                </div>
 
-              <div class="port-map" role="region" aria-label="Mapa del puerto" data-i18n-aria="a11y.portMap">
-                <!-- Por defecto: mapa neutro. JS puede reemplazar src según lat/lon -->
-                <iframe
-                  id="portMap"
-                  title="Mapa del puerto"
-                  data-i18n-title="title.portMap"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=2.150%2C41.350%2C2.190%2C41.390&layer=mapnik"
-                ></iframe>
               </div>
 
-        
-            </section>
+            </div>
+          </div>
 
-            <!-- (Futuro) Empresas destacadas del puerto -->
-            <section class="stack is-hidden" id="portCompaniesBlock" aria-labelledby="port-companies-title">
-              <h3 id="port-companies-title" class="section-title" >Empresas en este puerto</h3>
-              <ul id="portCompanies" class="grid grid--cards" aria-label="Listado de empresas del puerto">
-                <!-- JS render -->
-              </ul>
-            </section>
-          </section>
         </div>
       </div>
-    </section>
+
+    </div>
   </main>
 
-  <footer class="site-footer">
-  <div class="footer-wrap">
+  <footer class="site-footer bg-nauti-dark pt-20 pb-10 text-slate-300 mt-16">
+    <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Left -->
-    <div class="footer-brand">
-      <img src="../../assets/img/Logo NC Blanco.webp" alt="BigBlue" class="footer-logo" />
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center">
+        <div>
+          <a href="../../index.html" class="flex items-center gap-2 mb-6 opacity-100 hover:opacity-80 transition-opacity">
+            <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="h-8 w-auto" />
+            <span class="font-bold text-xl tracking-tight text-white">NautiCards</span>
+          </a>
 
-      <p class="footer-desc" data-i18n="footer.tagline">
-        Directorio náutico profesional. Encuentra empresas, servicios y puertos en un solo lugar.
-      </p>
+          <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="footer.desc">
+            El directorio premium del sector náutico.
+          </p>
+        </div>
 
-      <p class="footer-copy">
-        © 2026 NautiCards
-      </p>
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="footer.quickLinks">Quick links</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../../index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.home">Inicio</a>
+            </li>
+            <li>
+              <a href="../buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">Buscar</a>
+            </li>
+            <li>
+              <a href="../puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">Puertos</a>
+            </li>
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="nav.contact">Contacto</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6">Legal</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">Aviso legal</a>
+            </li>
+            <li>
+              <a href="../legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">Privacidad</a>
+            </li>
+            <li>
+              <a href="../legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 NautiCards</p>
+        <p data-i18n="footer.desc">El directorio premium del sector náutico.</p>
+      </div>
+
     </div>
+  </footer>
 
-    <!-- Right -->
-    <div class="footer-links">
-      <h4>Quick links</h4>
-
-      <a href="/" data-i18n="footer.home">Inicio</a>
-      <a href="/pages/buscar/index.html" data-i18n="footer.search">Buscar</a>
-      <a href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-      <a href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
-      <a href="#">Cookies</a>
-    </div>
-
-  </div>
-</footer>
-
-  <!-- Mantengo tu app.js global tal cual -->
   <script type="module">
-  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+    import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
 
-  (async () => {
-    const lang = getLang();
-    document.documentElement.lang = lang;
+    (async () => {
+      const lang = getLang();
+      document.documentElement.lang = lang;
 
-    const t = await loadDict(lang);
-    applyI18n(t);
-    window.__t = t;
-    window.dispatchEvent(new Event("i18n:ready"));
+      const t = await loadDict(lang);
+      applyI18n(t);
+      window.__t = t;
+      window.dispatchEvent(new Event("i18n:ready"));
 
-    applyMeta(t, "ports");
-    initLangDropdown(lang);
-  })();
-</script>
+      applyMeta(t, "ports");
+      initLangDropdown(lang);
+    })();
+  </script>
 
-<script type="module" src="../../assets/js/main.js"></script>
+  <script type="module" src="../../assets/js/main.js"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-

@@ -1,60 +1,353 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aviso legal | Directorio Náutico</title>
-  <link rel="stylesheet" href="../../assets/styles.css" />
+  <title data-i18n="legal.notice.metaTitle">Aviso legal | NautiCards</title>
+  <meta name="description" content="Aviso legal de NautiCards. Información del titular, condiciones de uso y responsabilidad del sitio web." data-i18n-content="legal.notice.metaDescription" />
+  <link rel="canonical" href="https://nauticards.es/pages/legal/aviso-legal.html">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            nauti: {
+              base: '#2CB1A6',
+              hover: '#24988F',
+              dark: '#1a1f2e',
+              light: '#f6fbfa'
+            }
+          },
+          boxShadow: {
+            soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="../../index.html"><span class="brand__name" style="color:#fff;">BigBlue</span></a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="../servicios/index.html">Servicios</a>
-        <a href="../puertos/index.html">Puertos</a>
-        <a href="../contacto/index.html">Contacto</a>
+<body data-page="static" class="font-sans antialiased text-slate-900 bg-slate-50 selection:bg-[#2CB1A6] selection:text-white">
+
+  <header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+    <div class="site-header__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <a href="../../index.html" class="brand no-underline hover:no-underline" aria-label="NautiCards" data-i18n-aria="a11y.homeLink">
+        <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+        <span class="brand-text text-slate-900 font-bold tracking-tight text-xl">NautiCards</span>
+      </a>
+
+      <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a href="../servicios/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.services">Servicios</a>
+
+        <a href="../buscar/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.companies">Empresas</a>
+
+        <a href="../puertos/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.ports">Puertos</a>
+
+        <a href="../contacto/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.contact">Contacto</a>
       </nav>
-      <div class="site-header__cta">
-        <a class="button button--secondary" href="../contacto/index.html">Añadir empresa</a>
+
+      <div class="site-header__actions flex items-center gap-3">
+        <div class="lang-dropdown relative" id="langDropdown">
+          <button
+            class="lang-dropdown__trigger inline-flex items-center gap-2 text-slate-700 text-sm font-medium px-3 py-2 rounded-xl border border-slate-200 bg-white"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span id="langCurrent">ES</span>
+            <span class="lang-dropdown__arrow">▾</span>
+          </button>
+
+          <div class="lang-dropdown__menu absolute right-0 top-full  min-w-[90px] rounded-xl bg-white shadow-xl border border-slate-100 py-2" role="menu" aria-label="Language">
+            <button type="button" role="menuitem" data-lang="es" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">ES</button>
+            <button type="button" role="menuitem" data-lang="en" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">EN</button>
+          </div>
+        </div>
+
+        <div class="site-header__cta hidden md:block">
+          <a
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition"
+            href="../contacto/index.html"
+            data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="menu-toggle md:hidden inline-flex flex-col justify-center gap-1.5 p-2 text-slate-900"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu fixed inset-0 z-50" id="mobileMenu" hidden>
+      <div class="mobile-menu__overlay absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-menu></div>
+
+      <div class="mobile-menu__panel absolute right-0 top-0 h-full w-[300px] max-w-[88vw] bg-white shadow-2xl">
+        <div class="mobile-menu__head flex items-center justify-between px-6 py-5 border-b border-slate-100">
+          <span class="mobile-menu__title font-semibold text-slate-900">Menu</span>
+          <button class="mobile-menu__close text-slate-500 hover:text-slate-900" type="button" aria-label="Close menu" data-close-menu>✕</button>
+        </div>
+
+        <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../../index.html" data-i18n="nav.home">Home</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../buscar/index.html" data-i18n="nav.companies">Empresas</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+          <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
+
+          <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium" href="../contacto/index.html" data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="section">
-      <div class="container stack">
-        <h1 class="page-title">Aviso legal</h1>
+  <section class="relative overflow-hidden bg-white border-b border-slate-200">
+    <div class="absolute inset-0 bg-gradient-to-br from-nauti-light via-white to-slate-50"></div>
 
-        <div class="card stack">
-          <h2 class="section-title mt-0">Titular</h2>
-          <p class="body-text">[Nombre/empresa], NIF/CIF: [____].</p>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12 md:pt-16 md:pb-14">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold tracking-wide uppercase mb-5">
+          <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+          <span data-i18n="legal.notice.badge">Información legal</span>
+        </div>
 
-          <h2 class="section-title">Contacto</h2>
-          <p class="body-text">Email: [____] · Dirección: [____]</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.title">
+          Aviso legal
+        </h1>
 
-          <h2 class="section-title">Condiciones de uso</h2>
-          <p class="body-text">
-            Este sitio ofrece un directorio informativo. La información puede cambiar; si ves un error, contacta para corregirlo.
-          </p>
+        <p class="text-lg text-slate-600 max-w-2xl leading-relaxed" data-i18n="legal.notice.subtitle">
+          En esta página se recoge la información general del titular del sitio, así como las condiciones de uso del directorio y las limitaciones de responsabilidad aplicables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="py-12 md:py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6">
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section1.title">1. Datos identificativos</h2>
+            <div class="space-y-3 text-slate-600 leading-7">
+              <p><strong class="text-slate-900" data-i18n="legal.notice.section1.ownerLabel">Titular del sitio web:</strong> Jordi Bestard Morey</p>
+              <p><strong class="text-slate-900" data-i18n="legal.notice.section1.taxIdLabel">NIF/CIF:</strong> 49867123H </p>
+              <p><strong class="text-slate-900" data-i18n="legal.notice.section1.addressLabel">Domicilio:</strong> España </p>
+              <p><strong class="text-slate-900" data-i18n="legal.notice.section1.emailLabel">Correo electrónico de contacto:</strong> info@nauticards.es </p>
+              <p><strong class="text-slate-900" data-i18n="legal.notice.section1.websiteLabel">Sitio web:</strong> NautiCards</p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section2.title">2. Objeto del sitio web</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section2.p1">
+                NautiCards es un directorio informativo orientado al sector náutico, cuyo objetivo es mostrar empresas, servicios, puertos y otra información de interés para usuarios y profesionales.
+              </p>
+              <p data-i18n="legal.notice.section2.p2">
+                La finalidad del sitio es facilitar la localización de negocios y servicios del sector, así como ofrecer un canal de contacto para solicitar altas, correcciones o actualizaciones de fichas.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section3.title">3. Condiciones de uso</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section3.p1">
+                El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de las presentes condiciones desde el momento en que se navega por la web.
+              </p>
+              <p data-i18n="legal.notice.section3.p2">
+                El usuario se compromete a utilizar el sitio de forma lícita, adecuada y sin realizar actuaciones que puedan dañar, inutilizar o sobrecargar la web, sus contenidos o sus servicios.
+              </p>
+              <p data-i18n="legal.notice.section3.p3">
+                Queda prohibido utilizar los contenidos del sitio con fines ilícitos, fraudulentos o contrarios a la buena fe y al orden público.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section4.title">4. Propiedad intelectual e industrial</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section4.p1">
+                Todos los contenidos de este sitio web, incluyendo textos, diseños, estructura, logotipos, imágenes, código y elementos gráficos, están protegidos por la normativa de propiedad intelectual e industrial, salvo que se indique expresamente lo contrario.
+              </p>
+              <p data-i18n="legal.notice.section4.p2">
+                No se permite la reproducción, distribución, transformación o comunicación pública de los contenidos sin autorización previa y expresa del titular correspondiente.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section5.title">5. Responsabilidad sobre los contenidos</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section5.p1">
+                El titular procura que la información publicada sea útil, precisa y esté razonablemente actualizada. Aun así, no se garantiza la ausencia total de errores, la exactitud absoluta de todos los datos ni la actualización permanente de la información mostrada.
+              </p>
+              <p data-i18n="legal.notice.section5.p2">
+                Las fichas de empresas, puertos o servicios pueden contener información procedente de fuentes públicas, colaboraciones o solicitudes de terceros, por lo que algunos datos podrían variar con el tiempo.
+              </p>
+              <p data-i18n="legal.notice.section5.p3">
+                Si detectas un error o una información desactualizada, puedes comunicarlo a través de la página de contacto para su revisión.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section6.title">6. Enlaces externos</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section6.p1">
+                Este sitio puede incluir enlaces a páginas web de terceros con fines informativos o de referencia. El titular no se responsabiliza del contenido, disponibilidad, políticas o prácticas de dichos sitios externos.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section7.title">7. Modificaciones</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section7.p1">
+                El titular se reserva el derecho a modificar en cualquier momento y sin previo aviso los contenidos del sitio web, así como el presente aviso legal, para adaptarlo a cambios normativos, técnicos o de funcionamiento.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-soft">
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-4" data-i18n="legal.notice.section8.title">8. Legislación aplicable y jurisdicción</h2>
+            <div class="space-y-4 text-slate-600 leading-7">
+              <p data-i18n="legal.notice.section8.p1">
+                La relación entre el titular del sitio y el usuario se regirá por la normativa española vigente. En caso de conflicto o controversia, ambas partes se someterán a los juzgados y tribunales que correspondan conforme a derecho.
+              </p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <nav class="site-footer__nav" aria-label="Enlaces legales">
-        <ul>
-          <li><a href="./aviso-legal.html">Aviso legal</a></li>
-          <li><a href="./privacidad.html">Privacidad</a></li>
-          <li><a href="./cookies.html">Cookies</a></li>
-        </ul>
-      </nav>
-      <small class="site-footer__copy">© 2026 Directorio Náutico</small>
+  <footer class="site-footer bg-nauti-dark pt-20 pb-10 text-slate-300 mt-16">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center">
+        <div>
+          <a href="../../index.html" class="flex items-center gap-2 mb-6 opacity-100 hover:opacity-80 transition-opacity">
+            <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="h-8 w-auto" />
+            <span class="font-bold text-xl tracking-tight text-white">NautiCards</span>
+          </a>
+
+          <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="footer.desc">
+            El directorio premium del sector náutico.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="footer.quickLinks">Quick links</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../../index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.home">Inicio</a>
+            </li>
+            <li>
+              <a href="../buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">Buscar</a>
+            </li>
+            <li>
+              <a href="../puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">Puertos</a>
+            </li>
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="nav.contact">Contacto</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6">Legal</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">Aviso legal</a>
+            </li>
+            <li>
+              <a href="../legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">Privacidad</a>
+            </li>
+            <li>
+              <a href="../legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 NautiCards</p>
+        <p data-i18n="footer.desc">El directorio premium del sector náutico.</p>
+      </div>
+
     </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+  });
+</script>
+
+<script type="module">
+  import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+
+  (async () => {
+    const lang = getLang();
+    document.documentElement.lang = lang;
+
+    const t = await loadDict(lang);
+    applyI18n(t);
+
+    window.__t = t;
+    window.dispatchEvent(new Event("i18n:ready"));
+
+    initLangDropdown(lang);
+  })();
+</script>
+
+<script type="module" src="../../assets/js/main.js" defer></script>
 </body>
 </html>
-
