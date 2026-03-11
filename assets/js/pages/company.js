@@ -39,7 +39,7 @@ const SERVICE_ICON_MAP = {
   "refits-integrales": "hammer",
   "rigging": "anchor",
   "seguros": "shield",
-  "semirrigidas": "boat",
+  "semirrigidas": "crosshair",
   "soldadura-corte": "flame",
   "tapiceria": "sofa",
   "teka-cubierta": "grid-2x2",
@@ -294,4 +294,5 @@ if (logoImg) {
     // ✅ SEO: error => noindex (evita que Google indexe soft-404)
     updateEmpresaSEO({ company: null, seoPortName: "", idParam, slugParam });
   }
+
 }
