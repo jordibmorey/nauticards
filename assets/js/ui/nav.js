@@ -41,7 +41,7 @@ export function initHeaderServicesDropdown(servicesList) {
   const ul = document.getElementById("servicesMenuList");
   if (!ul) return;
 
-  const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
+  const buscarBase = new URL("buscar/", SITE_ROOT).href;
 
   const sorted = (servicesList || [])
     .slice()
@@ -127,7 +127,7 @@ function bindNavDropdownBehavior(root) {
 function renderServicesDropdownPanel(panel, servicesList) {
   if (!panel) return;
 
-  const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
+  const buscarBase = new URL("buscar/", SITE_ROOT).href;
 
   // ===== Agrupar servicios por letra =====
   const groups = new Map();

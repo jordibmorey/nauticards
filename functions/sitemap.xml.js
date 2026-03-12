@@ -38,7 +38,7 @@ export async function onRequestGet({ env }) {
   // ===== PÁGINAS ESTÁTICAS =====
 
   urls.push(new URL("", BASE).href);
-  urls.push(new URL("pages/buscar/", BASE).href);
+  urls.push(new URL("buscar/", BASE).href);
 
   // ===== CARGAR DATOS =====
 
@@ -54,7 +54,7 @@ export async function onRequestGet({ env }) {
     for (const c of companies) {
       urls.push(
         new URL(
-          `pages/empresa/?id=${encodeURIComponent(c.id)}`,
+          `empresa/?id=${encodeURIComponent(c.id)}`,
           BASE
         ).href
       );
@@ -67,7 +67,7 @@ export async function onRequestGet({ env }) {
     for (const p of ports) {
       urls.push(
         new URL(
-          `pages/buscar/?puerto=${encodeURIComponent(p.id)}`,
+          `buscar/?puerto=${encodeURIComponent(p.id)}`,
           BASE
         ).href
       );
@@ -80,7 +80,7 @@ export async function onRequestGet({ env }) {
     for (const s of services) {
       urls.push(
         new URL(
-          `pages/buscar/?servicio=${encodeURIComponent(s.id)}`,
+          `buscar/?servicio=${encodeURIComponent(s.id)}`,
           BASE
         ).href
       );
@@ -94,7 +94,7 @@ export async function onRequestGet({ env }) {
       for (const p of ports) {
         urls.push(
           new URL(
-            `pages/buscar/?servicio=${encodeURIComponent(
+            `buscar/?servicio=${encodeURIComponent(
               s.id
             )}&puerto=${encodeURIComponent(p.id)}`,
             BASE

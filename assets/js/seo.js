@@ -21,8 +21,18 @@ function ensureCanonical() {
   return el;
 }
 
+function ensureHreflang(rel, href) {
+  let el = document.querySelector(`link[rel="alternate"][hreflang="${rel}"]`);
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", "alternate");
+    el.setAttribute("hreflang", rel);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+}
+
 function getLang() {
-  // Prioridad: <html lang="..">, luego localStorage
   const htmlLang = (document.documentElement.lang || "").toLowerCase();
   if (htmlLang.startsWith("en")) return "en";
   if (htmlLang.startsWith("es")) return "es";
@@ -32,8 +42,8 @@ function getLang() {
   return "es";
 }
 
-// Canonical “limpio”: quita vacíos, quita page=1, NO mete q para evitar infinitas combinaciones
 function buildBuscarCanonical(filters) {
+  const lang = getLang();
   const params = new URLSearchParams();
 
   const servicio = (filters?.servicio || "").toString().trim();
@@ -41,31 +51,34 @@ function buildBuscarCanonical(filters) {
   const puerto = (filters?.puerto || "").toString().trim();
   const page = (filters?.page || "").toString().trim();
 
+  if (lang === "en") params.set("lang", "en");
   if (servicio) params.set("servicio", servicio);
   if (area) params.set("area", area);
   if (puerto) params.set("puerto", puerto);
   if (page && page !== "1") params.set("page", page);
 
-  const base = new URL("pages/buscar/", SITE_ROOT).href;
+  const base = new URL("buscar/", SITE_ROOT).href;
   return params.toString() ? `${base}?${params.toString()}` : base;
 }
 
 function buildEmpresaCanonical({ idParam, slugParam }) {
-  const base = new URL("pages/empresa/", SITE_ROOT);
-  // canonical estable: prioriza ID
+  const lang = getLang();
+  const base = new URL("empresa/", SITE_ROOT);
+
+  if (lang === "en") base.searchParams.set("lang", "en");
+
   if (idParam) base.searchParams.set("id", String(idParam));
   else if (slugParam) base.searchParams.set("slug", String(slugParam));
+
   return base.href;
 }
 
 function pickName(obj, fallback) {
-  // Si en el futuro metes name_i18n, aquí es donde lo aprovecharías
-  // por ahora tiramos de .name
   return (obj?.name || fallback || "").toString().trim();
 }
 
 /**
- * SEO para /pages/buscar/
+ * SEO para /buscar/
  */
 export function updateBuscarSEO({ filters, lookups, total }) {
   const lang = getLang();
@@ -85,7 +98,6 @@ export function updateBuscarSEO({ filters, lookups, total }) {
 
   const lugar = puertoName || areaName;
 
-  // --- Plantillas fijas ES/EN
   let h1, title, description;
 
   if (lang === "en") {
@@ -126,49 +138,71 @@ export function updateBuscarSEO({ filters, lookups, total }) {
     }
   }
 
-  // Robots: conservador
-  const hasUseful = Boolean(servicioId || puertoId || areaId);
+  const hasStrongSEO = Boolean(servicioId && (puertoId || areaId));
   const robots =
-    (q && q.length >= 1) || !hasUseful || (typeof total === "number" && total === 0)
+    (q && q.length >= 1) ||
+    (typeof total === "number" && total === 0) ||
+    !hasStrongSEO
       ? "noindex,follow"
       : "index,follow";
 
   document.title = title;
   ensureMeta("description").setAttribute("content", description);
   ensureMeta("robots").setAttribute("content", robots);
-  ensureCanonical().setAttribute("href", buildBuscarCanonical(filters));
+
+  const canonical = buildBuscarCanonical(filters);
+  ensureCanonical().setAttribute("href", canonical);
+
+  // hreflang
+  const esUrl = new URL("buscar/", SITE_ROOT);
+  const enUrl = new URL("buscar/", SITE_ROOT);
+  enUrl.searchParams.set("lang", "en");
+
+  ensureHreflang("es", esUrl.href);
+  ensureHreflang("en", enUrl.href);
+  ensureHreflang("x-default", esUrl.href);
 
   const h1El = document.querySelector("h1.page-title");
   if (h1El) h1El.textContent = h1;
 }
 
 /**
- * SEO para /pages/empresa/
- * - Usa el MISMO esquema ES/EN, sin frases por servicio.
+ * SEO para /empresa/
  */
 export function updateEmpresaSEO({ company, seoPortName, idParam, slugParam }) {
   const lang = getLang();
 
-  // si no hay empresa => noindex
   if (!company) {
     document.title = lang === "en" ? "Company | NautiCards" : "Empresa | NautiCards";
+
     ensureMeta("description").setAttribute(
       "content",
       lang === "en"
         ? "Company profile in the nautical directory."
         : "Ficha de empresa en el directorio náutico."
     );
+
     ensureMeta("robots").setAttribute("content", "noindex,follow");
-    ensureCanonical().setAttribute("href", new URL("pages/empresa/", SITE_ROOT).href);
+
+    const esUrl = new URL("empresa/", SITE_ROOT);
+    const enUrl = new URL("empresa/", SITE_ROOT);
+    enUrl.searchParams.set("lang", "en");
+
+    ensureCanonical().setAttribute("href", esUrl.href);
+
+    ensureHreflang("es", esUrl.href);
+    ensureHreflang("en", enUrl.href);
+    ensureHreflang("x-default", esUrl.href);
+
     return;
   }
 
   const name = (company?.name || company?.title || "Empresa").toString().trim();
   const lugar = (seoPortName || "").toString().trim();
-  const placePart =
-    lugar ? (lang === "en" ? ` in ${lugar}` : ` en ${lugar}`) : "";
+  const placePart = lugar ? (lang === "en" ? ` in ${lugar}` : ` en ${lugar}`) : "";
 
   const title = `${name}${placePart} | NautiCards`;
+
   const description =
     lang === "en"
       ? `Find information about ${name}${placePart}. Nautical services directory with contact details and location.`
@@ -177,7 +211,25 @@ export function updateEmpresaSEO({ company, seoPortName, idParam, slugParam }) {
   document.title = title;
   ensureMeta("description").setAttribute("content", description);
   ensureMeta("robots").setAttribute("content", "index,follow");
-  ensureCanonical().setAttribute("href", buildEmpresaCanonical({ idParam, slugParam }));
+
+  const canonical = buildEmpresaCanonical({ idParam, slugParam });
+  ensureCanonical().setAttribute("href", canonical);
+
+  const esUrl = new URL("empresa/", SITE_ROOT);
+  const enUrl = new URL("empresa/", SITE_ROOT);
+  enUrl.searchParams.set("lang", "en");
+
+  if (idParam) {
+    esUrl.searchParams.set("id", idParam);
+    enUrl.searchParams.set("id", idParam);
+  } else if (slugParam) {
+    esUrl.searchParams.set("slug", slugParam);
+    enUrl.searchParams.set("slug", slugParam);
+  }
+
+  ensureHreflang("es", esUrl.href);
+  ensureHreflang("en", enUrl.href);
+  ensureHreflang("x-default", esUrl.href);
 
   const h1El = document.querySelector("h1.page-title");
   if (h1El) h1El.textContent = name;

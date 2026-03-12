@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puertos | Directorio Náutico</title>
+  <meta name="description" content="Elige un puerto para ver su ficha, servicios y empresas disponibles." />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nauti: {
+              base: '#2CB1A6',
+              hover: '#24988F',
+              dark: '#1a1f2e',
+              light: '#f8fafc',
+              gray: '#64748b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body data-page="puertos" class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+
+  <header class="site-header relative z-40 bg-white border-b border-slate-200">
+    <div class="site-header__inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="../../index.html" class="brand no-underline hover:no-underline" aria-label="NautiCards">
+        <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="header-logo" />
+        <span class="brand-text text-slate-900 font-bold tracking-tight text-xl">NautiCards</span>
+      </a>
+
+      <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a href="../servicios/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.services">Servicios</a>
+
+        <a href="../buscar/index.html"
+           class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+           data-i18n="nav.companies">Empresas</a>
+
+        <a href="../puertos/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.ports">Puertos</a>
+
+        <a href="../contacto/index.html"
+          class="text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 transition"
+          data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="site-header__actions flex items-center gap-3">
+        <div class="lang-dropdown relative" id="langDropdown">
+          <button
+            class="lang-dropdown__trigger inline-flex items-center gap-2 text-slate-700 text-sm font-medium px-3 py-2 rounded-xl border border-slate-200 bg-white"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span id="langCurrent">ES</span>
+            <span class="lang-dropdown__arrow">▾</span>
+          </button>
+
+          <div class="lang-dropdown__menu absolute right-0 top-full  min-w-[90px] rounded-xl bg-white shadow-xl border border-slate-100 py-2" role="menu" aria-label="Language">
+            <button type="button" role="menuitem" data-lang="en" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">EN</button>
+          </div>
+        </div>
+
+        <div class="site-header__cta hidden md:block">
+          <a
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition"
+            href="../contacto/index.html"
+            data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="menu-toggle md:hidden inline-flex flex-col justify-center gap-1.5 p-2 text-slate-900"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+        <span class="menu-toggle__bar block w-6 h-0.5 bg-slate-900"></span>
+      </button>
+    </div>
+
+    
+  </header>
+
+  <div class="mobile-menu fixed inset-0 z-50" id="mobileMenu" hidden>
+      <div class="mobile-menu__overlay absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-menu></div>
+
+      <div class="mobile-menu__panel absolute right-0 top-0 h-full w-[300px] max-w-[88vw] bg-white shadow-2xl">
+        <div class="mobile-menu__head flex items-center justify-between px-6 py-5 border-b border-slate-100">
+          <span class="mobile-menu__title font-semibold text-slate-900">Menu</span>
+          <button class="mobile-menu__close text-slate-500 hover:text-slate-900" type="button" aria-label="Close menu" data-close-menu>✕</button>
+        </div>
+
+        <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../../index.html" data-i18n="nav.home">Home</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../buscar/index.html" data-i18n="nav.companies">Empresas</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../puertos/index.html" data-i18n="nav.ports">Puertos</a>
+          <a class="mobile-menu__link text-slate-800 font-medium" href="../contacto/index.html" data-i18n="nav.contact">Contacto</a>
+
+          <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
+
+          <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium" href="../contacto/index.html" data-i18n="nav.addCompany">
+            Añadir empresa
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+
+    <div class="mb-8 text-center md:text-left">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-2" data-i18n="nav.ports">Puertos</h1>
+      <p class="text-lg text-gray-500 max-w-2xl" data-i18n="ports.subtitle">
+        Selecciona un puerto para ver su ficha: descripción, servicios y mapa.
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <aside class="w-full lg:w-80 flex-shrink-0">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-24">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-[#2CB1A6]"></i>
+            <span data-i18n="sidebar.title">Selecciona ubicación</span>
+          </h2>
+
+          <div class="space-y-5">
+            <div>
+              <label for="portsArea" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="ports.zone">Zona</label>
+              <div class="relative">
+                <select id="portsArea" class="block w-full pl-3 pr-10 py-2.5 text-base border-gray-200 focus:outline-none focus:ring-[#2CB1A6] focus:border-[#2CB1A6] sm:text-sm rounded-lg appearance-none bg-gray-50 border transition-colors cursor-pointer">
+                  <option value="" data-i18n="common.any">Cualquiera</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="portsSelect" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="ports.dropdownLabel">Puerto</label>
+              <div class="relative">
+                <select id="portsSelect" class="block w-full pl-3 pr-10 py-2.5 text-base border-gray-200 focus:outline-none focus:ring-[#2CB1A6] focus:border-[#2CB1A6] sm:text-sm rounded-lg appearance-none bg-gray-50 border transition-colors cursor-pointer">
+                  <option value="" data-i18n="ports.dropdownPlaceholder">— Selecciona un puerto —</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <div class="bg-gray-50 rounded-lg p-4 text-center">
+              <i data-lucide="ship" class="w-8 h-8 mx-auto text-gray-400 mb-2"></i>
+              <p class="text-sm text-gray-600 mb-3" data-i18n="ports.cta.text">
+                Añade tu empresa al directorio para aparecer en los puertos donde trabajas.
+              </p>
+              <a href="../contacto/index.html" class="inline-block w-full text-center bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors shadow-sm" data-i18n="nav.addCompany">
+                Añadir empresa
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="flex-grow min-w-0">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+
+          <div class="relative h-64 sm:h-80 md:h-96 w-full bg-gray-200">
+            <img
+              id="portHeroImg"
+              src="../../assets/img/placeholder.webp"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+              <h2 id="portName" class="text-3xl md:text-5xl font-bold text-white tracking-tight drop-shadow-md" data-i18n="ports.select.title">
+                Selecciona un puerto
+              </h2>
+            </div>
+          </div>
+
+          <div class="p-6 md:p-8" id="portDetailPanel" hidden>
+            <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.82fr)] xl:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.85fr)] gap-8">
+
+              <div class="min-w-0 space-y-8">
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3" data-i18n="port.about">Sobre este puerto</h3>
+                  <div id="portDescription" class="max-w-none text-gray-600 leading-relaxed">
+                    Selecciona un puerto desde la izquierda para ver su descripción, servicios y ubicación.
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="company.section.services">Servicios</h3>
+                  <ul id="portServices" class="flex flex-wrap gap-2 list-none p-0 m-0" aria-label="Servicios disponibles" data-i18n-aria="a11y.portServices">
+                    <li><span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">—</span></li>
+                  </ul>
+                </div>
+
+                <div id="portCompaniesBlock" class="pt-6 border-t border-gray-100 hidden">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-900" data-i18n="port.companies">Empresas en este puerto</h3>
+                  </div>
+
+                  <div id="portCompanies" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-lg border border-gray-100 bg-gray-50 text-gray-500 text-sm text-center col-span-full">
+                      Selecciona un puerto para ver las empresas.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="min-w-0 space-y-6">
+
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                  <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4" data-i18n="company.section.contact">Contacto</h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <i data-lucide="globe" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portWebsite" target="_blank" rel="noopener" class="text-gray-600 hover:text-[#2CB1A6] font-medium break-all">—</a>
+                    </li>
+
+                    <li id="portEmailRow" class="flex items-start" style="display:none;">
+                      <i data-lucide="mail" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portEmail" class="text-gray-600 hover:text-[#2CB1A6] font-medium break-all">—</a>
+                    </li>
+
+                    <li id="portPhoneRow" class="flex items-start" style="display:none;">
+                      <i data-lucide="phone" class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"></i>
+                      <a href="#" id="portPhone" class="text-gray-600 hover:text-[#2CB1A6] font-medium">—</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="space-y-3">
+                  <a href="../buscar/index.html" id="portBrowseLink" class="w-full flex justify-center items-center px-4 py-3 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-[#2CB1A6] hover:bg-[#249A90] transition-colors no-underline hover:no-underline" data-i18n="ports.viewCompanies">
+                    <i data-lucide="search" class="w-4 h-4 mr-2"></i>
+                    Ver empresas en este puerto
+                  </a>
+
+                  <a href="#" id="portWebExternal" target="_blank" rel="noopener" class="w-full flex justify-center items-center px-4 py-3 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors is-disabled no-underline hover:no-underline" aria-disabled="true" data-i18n="ports.openWebsite">
+                    Abrir web
+                    <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                  </a>
+                </div>
+
+                <div class="rounded-xl overflow-hidden border border-gray-100 shadow-sm h-64 bg-gray-100 relative">
+                  <iframe
+                    id="portMap"
+                    title="Mapa del puerto"
+                    data-i18n-title="title.portMap"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full h-full border-0 block"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=2.150%2C41.350%2C2.190%2C41.390&layer=mapnik">
+                  </iframe>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer bg-nauti-dark pt-20 pb-10 text-slate-300 mt-16">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center">
+        <div>
+          <a href="../../index.html" class="flex items-center gap-2 mb-6 opacity-100 hover:opacity-80 transition-opacity">
+            <img src="../../assets/img/logoheader.svg" alt="NautiCards" class="h-8 w-auto" />
+            <span class="font-bold text-xl tracking-tight text-white">NautiCards</span>
+          </a>
+
+          <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="footer.desc">
+            El directorio premium del sector náutico.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="footer.quickLinks">Quick links</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../../index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.home">Inicio</a>
+            </li>
+            <li>
+              <a href="../buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">Buscar</a>
+            </li>
+            <li>
+              <a href="../puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">Puertos</a>
+            </li>
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6" data-i18n="nav.contact">Contacto</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-6">Legal</h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a href="../legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">Aviso legal</a>
+            </li>
+            <li>
+              <a href="../legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">Privacidad</a>
+            </li>
+            <li>
+              <a href="../legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>© 2026 NautiCards</p>
+        <p data-i18n="footer.desc">El directorio premium del sector náutico.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module">
+    import { getLang, loadDict, applyI18n, applyMeta, initLangDropdown } from "../../assets/i18n.js";
+
+    (async () => {
+      const lang = getLang();
+      document.documentElement.lang = lang;
+
+      const t = await loadDict(lang);
+      applyI18n(t);
+      window.__t = t;
+      window.dispatchEvent(new Event("i18n:ready"));
+
+      applyMeta(t, "ports");
+      initLangDropdown(lang);
+    })();
+  </script>
+
+  <script type="module" src="../../assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>

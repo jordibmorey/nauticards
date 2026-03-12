@@ -39,7 +39,7 @@ const SERVICE_ICON_MAP = {
   "refits-integrales": "hammer",
   "rigging": "anchor",
   "seguros": "shield",
-  "semirrigidas": "crosshair",
+  "semirrigidas": "boat",
   "soldadura-corte": "flame",
   "tapiceria": "sofa",
   "teka-cubierta": "grid-2x2",
@@ -277,7 +277,7 @@ if (logoImg) {
 
     const fixBtn = document.getElementById("company-fix-btn");
     if (fixBtn) {
-      fixBtn.setAttribute("href", new URL("pages/contacto/index.html", SITE_ROOT).href);
+      fixBtn.setAttribute("href", new URL("contacto/", SITE_ROOT).href);
     }
 
     // Region
@@ -294,5 +294,4 @@ if (logoImg) {
     // ✅ SEO: error => noindex (evita que Google indexe soft-404)
     updateEmpresaSEO({ company: null, seoPortName: "", idParam, slugParam });
   }
-
 }

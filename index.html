@@ -20,6 +20,14 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <style>
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>
 
   <script>
     tailwind.config = {
@@ -64,19 +72,19 @@
         <nav class="site-nav hidden md:flex items-center gap-3" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
           
           
-          <a href="/pages/servicios/index.html"
+          <a href="/servicios/index.html"
            class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
            data-i18n="nav.services">Servicios</a>
 
-          <a href="/pages/buscar/index.html"
+          <a href="/buscar/index.html"
            class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
            data-i18n="nav.companies">Empresas</a>
 
-          <a href="/pages/puertos/index.html"
+          <a href="/puertos/index.html"
              class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
              data-i18n="nav.ports">Puertos</a>
 
-          <a href="/pages/contacto/index.html"
+          <a href="/contacto/index.html"
              class="text-white text-sm font-medium px-4 py-2 rounded-xl border border-transparent hover:border-white/30 transition"
              data-i18n="nav.contact">Contacto</a>
         </nav>
@@ -101,7 +109,7 @@
           <div class="site-header__cta hidden md:block">
             <a
               class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-medium text-white border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition"
-              href="/pages/contacto/index.html"
+              href="/contacto/index.html"
               data-i18n="nav.addCompany">
               Añadir empresa
             </a>
@@ -134,13 +142,13 @@
 
           <div class="mobile-menu__body px-6 py-6 flex flex-col gap-4">
             <a class="mobile-menu__link text-slate-800 font-medium" href="/" data-i18n="nav.home">Home</a>
-            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/buscar/index.html" data-i18n="nav.companies">Empresas</a>
-            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/puertos/index.html" data-i18n="nav.ports">Puertos</a>
-            <a class="mobile-menu__link text-slate-800 font-medium" href="/pages/contacto/index.html" data-i18n="nav.contact">Contacto</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/buscar/index.html" data-i18n="nav.companies">Empresas</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/puertos/index.html" data-i18n="nav.ports">Puertos</a>
+            <a class="mobile-menu__link text-slate-800 font-medium" href="/contacto/index.html" data-i18n="nav.contact">Contacto</a>
 
             <div class="mobile-menu__divider h-px bg-slate-200 my-2"></div>
 
-            <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-nauti-dark text-white font-medium" href="/pages/contacto/index.html" data-i18n="nav.addCompany">
+            <a class="button button--secondary mobile-menu__cta inline-flex items-center justify-center px-4 py-3 rounded-xl bg-nauti-dark text-white font-medium" href="/contacto/index.html" data-i18n="nav.addCompany">
               Añadir empresa
             </a>
           </div>
@@ -253,7 +261,7 @@
         </p>
       </div>
 
-      <a href="/pages/servicios/index.html" class="text-nauti-base font-medium flex items-center gap-2 hover:text-nauti-hover transition-colors group">
+      <a href="/servicios/index.html" class="text-nauti-base font-medium flex items-center gap-2 hover:text-nauti-hover transition-colors group">
         <span data-i18n="services.view_all">Ver todas las categorías</span>
         <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
       </a>
@@ -310,10 +318,10 @@
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-nauti-base text-white font-medium hover:bg-nauti-hover transition" href="/pages/buscar/index.html" data-i18n="home.about.ctaSearch">
+            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-nauti-base text-white font-medium hover:bg-nauti-hover transition" href="/buscar/index.html" data-i18n="home.about.ctaSearch">
               Explorar directorio
             </a>
-            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition" href="/pages/puertos/index.html" data-i18n="home.about.ctaPorts">
+            <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition" href="/puertos/index.html" data-i18n="home.about.ctaPorts">
               Ver puertos →
             </a>
           </div>
@@ -345,7 +353,7 @@
       </p>
 
       <a 
-        href="/pages/contacto/index.html"
+        href="/contacto/index.html"
         class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-nauti-base text-white font-semibold hover:bg-nauti-hover transition"
         data-i18n="home.cta2.button"
       >
@@ -440,19 +448,19 @@
             </li>
 
             <li>
-              <a href="/pages/buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">
+              <a href="/buscar/index.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.search">
                 Buscar
               </a>
             </li>
 
             <li>
-              <a href="/pages/puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">
+              <a href="/puertos/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.ports">
                 Puertos
               </a>
             </li>
 
             <li>
-              <a href="/pages/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
+              <a href="/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
                 Contacto
               </a>
             </li>
@@ -467,7 +475,7 @@
 
           <ul class="space-y-4 text-sm">
             <li>
-              <a href="/pages/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
+              <a href="/contacto/index.html" class="hover:text-nauti-base transition-colors" data-i18n="nav.contact">
                 Contacto
               </a>
             </li>
@@ -480,19 +488,19 @@
 
           <ul class="space-y-4 text-sm">
             <li>
-              <a href="/pages/legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">
+              <a href="/legal/aviso-legal.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.terms">
                 Aviso legal
               </a>
             </li>
 
             <li>
-              <a href="/pages/legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">
+              <a href="/legal/privacidad.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.privacy">
                 Privacidad
               </a>
             </li>
 
             <li>
-              <a href="/pages/legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">
+              <a href="/legal/cookies.html" class="hover:text-nauti-base transition-colors" data-i18n="footer.cookies">
                 Cookies
               </a>
             </li>

@@ -95,7 +95,7 @@ await initPortsMap();
 const popularListEl = document.getElementById("servicesPopular");
 
 if (popularListEl) {
-  const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
+  const buscarBase = new URL("buscar/", SITE_ROOT).href;
   const PLACEHOLDER = "https://r2.flowith.net/sandbox-placeholder.png";
 
   const getServiceIcon = (service) => {
@@ -330,7 +330,7 @@ refreshPortsForArea = (areaId) => {
 
           if (isHome) {
             const params = new URLSearchParams(filters).toString();
-            window.location.href = `${SITE_ROOT}pages/buscar/index.html?${params}`;
+            window.location.href = `${new URL("buscar/", SITE_ROOT).href}?${params}`;
             return;
           }
 

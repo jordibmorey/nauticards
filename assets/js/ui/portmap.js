@@ -158,7 +158,7 @@ mapEl.addEventListener(
 
   const areaNameById = new Map((areas || []).map(a => [String(a.id), String(a.name || a.id)]));
 
-  const buscarBase = new URL("pages/buscar/index.html", SITE_ROOT).href;
+  const buscarBase = new URL("buscar/", SITE_ROOT).href;
 
   const portsCluster = L.markerClusterGroup({
     iconCreateFunction: makeClusterIcon,

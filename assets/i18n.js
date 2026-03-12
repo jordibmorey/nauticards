@@ -4,7 +4,11 @@ export function getLang() {
   const urlLang = new URLSearchParams(location.search).get("lang");
   const saved = localStorage.getItem("lang");
   const lang = (urlLang || saved || "es").toLowerCase();
-  return lang === "en" ? "en" : "es";
+  const finalLang = lang === "en" ? "en" : "es";
+
+  document.documentElement.lang = finalLang;
+
+  return finalLang;
 }
 
 export async function loadDict(lang) {
@@ -109,6 +113,8 @@ export function initLangDropdown(currentLang) {
 
     const newLang = btn.dataset.lang;
     localStorage.setItem("lang", newLang);
+
+    document.documentElement.lang = newLang;
 
     const url = new URL(location.href);
     url.searchParams.set("lang", newLang);

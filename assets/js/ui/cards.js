@@ -5,7 +5,7 @@ import { safeText, safeAttr, sanitizeUrl, tr } from "../utils.js";
 
 function companyDetailHref(company) {
   // Keep coherence with your real HTML: /pages/empresa/index.html
-  const base = new URL("pages/empresa/index.html", SITE_ROOT).href;
+  const base = new URL("empresa/", SITE_ROOT).href;
   if (company?.id != null) return `${base}?id=${encodeURIComponent(String(company.id))}`;
   return `${base}?slug=${encodeURIComponent(String(company?.slug || ""))}`;
 }

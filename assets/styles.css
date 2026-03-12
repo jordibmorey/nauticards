@@ -175,6 +175,7 @@ hr { border: 0; border-top: 1px solid #e6e6e6; margin: 24px 0; }
 .site-header{
   background: #fff;
   border-bottom: 1px solid var(--border);
+  z-index: 1000;
 }
 .site-header__inner{
   display: flex;

@@ -224,7 +224,7 @@ function serviceMatchesFilter(service, activeFilter, family) {
 }
 
 function buildSearchUrl(serviceId) {
-  const url = new URL("pages/buscar/index.html", SITE_ROOT);
+  const url = new URL("buscar/", SITE_ROOT);
   url.searchParams.set("servicio", serviceId);
   return url.href;
 }
